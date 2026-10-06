@@ -17,7 +17,7 @@ static inline JML_Mat4x4d JML_rotationVec3dD(
     const double s = JML_DETAIL_SIN_D(angle);
     const double t = 1. - c;
 
-    return JML_mat4x4f(
+    return JML_mat4x4d(
         t * axis.x * axis.x + c, t * axis.x * axis.y + s * axis.z , t * axis.x * axis.z - s * axis.y, 0.,
         t * axis.x * axis.y - s * axis.z , t * axis.y * axis.y + c, t * axis.y * axis.z + s * axis.x, 0.,
         t * axis.x * axis.z + s * axis.y, t * axis.y * axis.z - s * axis.x, t * axis.z * axis.z + c, 0.,
