@@ -48,7 +48,7 @@ static inline JML_Mat4x4f JML_frustumFFFFFF(
     );
 }
 
-#define JML_frustum_GENERIC_1(left, right, bottom, top, near, far) _Generic( \
+#define JML_frustum_GENERIC_6(left, right, bottom, top, near, far) _Generic( \
     (left),                                                                  \
     double: _Generic(                                                        \
         (right),                                                             \
