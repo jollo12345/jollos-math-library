@@ -12,10 +12,10 @@ static inline JML_Mat4x4d JML_translationVec3d(
     const JML_Vec3d offset
 ) {
     return JML_mat4x4d(
-        1.0, 0.0, 0.0, offset.data[0],
-        0.0, 1.0, 0.0, offset.data[1],
-        0.0, 0.0, 1.0, offset.data[2],
-        0.0, 0.0, 0.0, 1.0
+        1.0, 0.0, 0.0, 0.0,
+        0.0, 1.0, 0.0, 0.0,
+        0.0, 0.0, 1.0, 0.0,
+        offset.data[0], offset.data[1], offset.data[2], 1.0
     );
 }
 
@@ -23,10 +23,10 @@ static inline JML_Mat4x4f JML_translationVec3f(
     const JML_Vec3f offset
 ) {
     return JML_mat4x4f(
-        1.f, 0.f, 0.f, offset.data[0],
-        0.f, 1.f, 0.f, offset.data[1],
-        0.f, 0.f, 1.f, offset.data[2],
-        0.f, 0.f, 0.f, 1.f
+        1.f, 0.f, 0.f, 0.f,
+        0.f, 1.f, 0.f, 0.f,
+        0.f, 0.f, 1.f, 0.f,
+        offset.data[0], offset.data[1], offset.data[2], 1.f
     );
 }
 

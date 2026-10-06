@@ -15,13 +15,13 @@ static inline JML_Mat4x4d JML_rotationVec3dD(
 ) {
     const double c = JML_DETAIL_COS_D(angle);
     const double s = JML_DETAIL_SIN_D(angle);
-    const double t = 1.0 - c;
+    const double t = 1. - c;
 
-    return JML_mat4x4d(
-        t * axis.data[0] * axis.data[0] + c, t * axis.data[0] * axis.data[1] - s * axis.data[2], t * axis.data[0] * axis.data[2] + s * axis.data[1], 0.0,
-        t * axis.data[0] * axis.data[1] + s * axis.data[2], t * axis.data[1] * axis.data[1] + c, t * axis.data[1] * axis.data[2] - s * axis.data[0], 0.0,
-        t * axis.data[0] * axis.data[2] - s * axis.data[1], t * axis.data[1] * axis.data[2] + s * axis.data[0], t * axis.data[2] * axis.data[2] + c, 0.0,
-        0.0, 0.0, 0.0, 1.0
+    return JML_mat4x4f(
+        t * axis.x * axis.x + c, t * axis.x * axis.y + s * axis.z , t * axis.x * axis.z - s * axis.y, 0.,
+        t * axis.x * axis.y - s * axis.z , t * axis.y * axis.y + c, t * axis.y * axis.z + s * axis.x, 0.,
+        t * axis.x * axis.z + s * axis.y, t * axis.y * axis.z - s * axis.x, t * axis.z * axis.z + c, 0.,
+        0., 0., 0., 1.
     );
 }
 
@@ -31,12 +31,12 @@ static inline JML_Mat4x4f JML_rotationVec3fF(
 ) {
     const float c = JML_DETAIL_COS_D(angle);
     const float s = JML_DETAIL_SIN_D(angle);
-    const float t = 1.0 - c;
+    const float t = 1.f - c;
 
     return JML_mat4x4f(
-        t * axis.data[0] * axis.data[0] + c, t * axis.data[0] * axis.data[1] - s * axis.data[2], t * axis.data[0] * axis.data[2] + s * axis.data[1], 0.f,
-        t * axis.data[0] * axis.data[1] + s * axis.data[2], t * axis.data[1] * axis.data[1] + c, t * axis.data[1] * axis.data[2] - s * axis.data[0], 0.f,
-        t * axis.data[0] * axis.data[2] - s * axis.data[1], t * axis.data[1] * axis.data[2] + s * axis.data[0], t * axis.data[2] * axis.data[2] + c, 0.f,
+        t * axis.x * axis.x + c, t * axis.x * axis.y + s * axis.z , t * axis.x * axis.z - s * axis.y, 0.f,
+        t * axis.x * axis.y - s * axis.z , t * axis.y * axis.y + c, t * axis.y * axis.z + s * axis.x, 0.f,
+        t * axis.x * axis.z + s * axis.y, t * axis.y * axis.z - s * axis.x, t * axis.z * axis.z + c, 0.f,
         0.f, 0.f, 0.f, 1.f
     );
 }

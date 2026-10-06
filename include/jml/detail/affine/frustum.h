@@ -21,10 +21,10 @@ static inline JML_Mat4x4d JML_frustumDDDDDD(
     const double fn = far - near;
 
     return JML_mat4x4d(
-        2.0 * near / rl, 0.0, (right + left) / rl, 0.0,
-        0.0, 2.0 * near / tb, (top + bottom) / tb, 0.0,
-        0.0, 0.0, -(far + near) / fn, -2.0 * far * near / fn,
-        0.0, 0.0, -1.0, 0.0
+        2.0 * near / rl, 0.0, 0.0, 0.0,
+        0.0, 2.0 * near / tb, 0.0, 0.0,
+        (right + left) / rl, (top + bottom) / tb, -(far + near) / fn, -1.0,
+        0.0, 0.0, -2.0 * far * near / fn, 0.0
     );
 }
 
@@ -41,10 +41,10 @@ static inline JML_Mat4x4f JML_frustumFFFFFF(
     const float fn = far - near;
 
     return JML_mat4x4f(
-        2.f * near / rl, 0.f, (right + left) / rl, 0.f,
-        0.f, 2.f * near / tb, (top + bottom) / tb, 0.f,
-        0.f, 0.f, -(far + near) / fn, -2.f * far * near / fn,
-        0.f, 0.f, -1.f, 0.f
+        2.f * near / rl, 0.f, 0.f, 0.f,
+        0.f, 2.f * near / tb, 0.f, 0.f,
+        (right + left) / rl, (top + bottom) / tb, -(far + near) / fn, -1.f,
+        0.f, 0.f, -2.f * far * near / fn, 0.f
     );
 }
 
