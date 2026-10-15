@@ -30,10 +30,10 @@ static inline JML_Mat2x2d JML_negMat2x2d(
     const JML_Mat2x2d arg
 ) {
     return JML_mat2x2d(
-        -arg.data[0][0],
-        -arg.data[0][1],
-        -arg.data[1][0],
-        -arg.data[1][1]
+        -arg.m00,
+        -arg.m01,
+        -arg.m10,
+        -arg.m11
     );
 }
 
@@ -41,10 +41,10 @@ static inline JML_Mat2x2f JML_negMat2x2f(
     const JML_Mat2x2f arg
 ) {
     return JML_mat2x2f(
-        -arg.data[0][0],
-        -arg.data[0][1],
-        -arg.data[1][0],
-        -arg.data[1][1]
+        -arg.m00,
+        -arg.m01,
+        -arg.m10,
+        -arg.m11
     );
 }
 
@@ -52,15 +52,15 @@ static inline JML_Mat3x3d JML_negMat3x3d(
     const JML_Mat3x3d arg
 ) {
     return JML_mat3x3d(
-        -arg.data[0][0],
-        -arg.data[0][1],
-        -arg.data[0][2],
-        -arg.data[1][0],
-        -arg.data[1][1],
-        -arg.data[1][2],
-        -arg.data[2][0],
-        -arg.data[2][1],
-        -arg.data[2][2]
+        -arg.m00,
+        -arg.m01,
+        -arg.m02,
+        -arg.m10,
+        -arg.m11,
+        -arg.m12,
+        -arg.m20,
+        -arg.m21,
+        -arg.m22
     );
 }
 
@@ -68,15 +68,15 @@ static inline JML_Mat3x3f JML_negMat3x3f(
     const JML_Mat3x3f arg
 ) {
     return JML_mat3x3f(
-        -arg.data[0][0],
-        -arg.data[0][1],
-        -arg.data[0][2],
-        -arg.data[1][0],
-        -arg.data[1][1],
-        -arg.data[1][2],
-        -arg.data[2][0],
-        -arg.data[2][1],
-        -arg.data[2][2]
+        -arg.m00,
+        -arg.m01,
+        -arg.m02,
+        -arg.m10,
+        -arg.m11,
+        -arg.m12,
+        -arg.m20,
+        -arg.m21,
+        -arg.m22
     );
 }
 
@@ -84,22 +84,22 @@ static inline JML_Mat4x4d JML_negMat4x4d(
     const JML_Mat4x4d arg
 ) {
     return JML_mat4x4d(
-        -arg.data[0][0],
-        -arg.data[0][1],
-        -arg.data[0][2],
-        -arg.data[0][3],
-        -arg.data[1][0],
-        -arg.data[1][1],
-        -arg.data[1][2],
-        -arg.data[1][3],
-        -arg.data[2][0],
-        -arg.data[2][1],
-        -arg.data[2][2],
-        -arg.data[2][3],
-        -arg.data[3][0],
-        -arg.data[3][1],
-        -arg.data[3][2],
-        -arg.data[3][3]
+        -arg.m00,
+        -arg.m01,
+        -arg.m02,
+        -arg.m03,
+        -arg.m10,
+        -arg.m11,
+        -arg.m12,
+        -arg.m13,
+        -arg.m20,
+        -arg.m21,
+        -arg.m22,
+        -arg.m23,
+        -arg.m30,
+        -arg.m31,
+        -arg.m32,
+        -arg.m33
     );
 }
 
@@ -107,22 +107,22 @@ static inline JML_Mat4x4f JML_negMat4x4f(
     const JML_Mat4x4f arg
 ) {
     return JML_mat4x4f(
-        -arg.data[0][0],
-        -arg.data[0][1],
-        -arg.data[0][2],
-        -arg.data[0][3],
-        -arg.data[1][0],
-        -arg.data[1][1],
-        -arg.data[1][2],
-        -arg.data[1][3],
-        -arg.data[2][0],
-        -arg.data[2][1],
-        -arg.data[2][2],
-        -arg.data[2][3],
-        -arg.data[3][0],
-        -arg.data[3][1],
-        -arg.data[3][2],
-        -arg.data[3][3]
+        -arg.m00,
+        -arg.m01,
+        -arg.m02,
+        -arg.m03,
+        -arg.m10,
+        -arg.m11,
+        -arg.m12,
+        -arg.m13,
+        -arg.m20,
+        -arg.m21,
+        -arg.m22,
+        -arg.m23,
+        -arg.m30,
+        -arg.m31,
+        -arg.m32,
+        -arg.m33
     );
 }
 
@@ -130,7 +130,7 @@ static inline JML_Vec2d JML_negVec2d(
     const JML_Vec2d arg
 ) {
     return JML_vec2d(
-        -arg.data[0],
+        -arg.x,
         -arg.data[1]
     );
 }
@@ -139,7 +139,7 @@ static inline JML_Vec2f JML_negVec2f(
     const JML_Vec2f arg
 ) {
     return JML_vec2f(
-        -arg.data[0],
+        -arg.x,
         -arg.data[1]
     );
 }
@@ -148,9 +148,9 @@ static inline JML_Vec3d JML_negVec3d(
     const JML_Vec3d arg
 ) {
     return JML_vec3d(
-        -arg.data[0],
-        -arg.data[1],
-        -arg.data[2]
+        -arg.x,
+        -arg.y,
+        -arg.z
     );
 }
 
@@ -158,9 +158,9 @@ static inline JML_Vec3f JML_negVec3f(
     const JML_Vec3f arg
 ) {
     return JML_vec3f(
-        -arg.data[0],
-        -arg.data[1],
-        -arg.data[2]
+        -arg.x,
+        -arg.y,
+        -arg.z
     );
 }
 
@@ -168,10 +168,10 @@ static inline JML_Vec4d JML_negVec4d(
     const JML_Vec4d arg
 ) {
     return JML_vec4d(
-        -arg.data[0],
-        -arg.data[1],
-        -arg.data[2],
-        -arg.data[3]
+        -arg.x,
+        -arg.y,
+        -arg.z,
+        -arg.w
     );
 }
 
@@ -179,10 +179,10 @@ static inline JML_Vec4f JML_negVec4f(
     const JML_Vec4f arg
 ) {
     return JML_vec4f(
-        -arg.data[0],
-        -arg.data[1],
-        -arg.data[2],
-        -arg.data[3]
+        -arg.x,
+        -arg.y,
+        -arg.z,
+        -arg.w
     );
 }
 

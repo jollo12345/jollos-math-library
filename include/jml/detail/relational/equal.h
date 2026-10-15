@@ -19,8 +19,8 @@ static inline JML_Vec2b JML_equalVec2dVec2d(
     const JML_Vec2d arg_1
 ) {
     return JML_vec2b(
-        (bool)(arg_0.data[0] == arg_1.data[0]),
-        (bool)(arg_0.data[1] == arg_1.data[1])
+        (bool)(arg_0.x == arg_1.x),
+        (bool)(arg_0.y == arg_1.y)
     );
 }
 
@@ -29,8 +29,8 @@ static inline JML_Vec2b JML_equalVec2fVec2f(
     const JML_Vec2f arg_1
 ) {
     return JML_vec2b(
-        (bool)(arg_0.data[0] == arg_1.data[0]),
-        (bool)(arg_0.data[1] == arg_1.data[1])
+        (bool)(arg_0.x == arg_1.x),
+        (bool)(arg_0.y == arg_1.y)
     );
 }
 
@@ -39,9 +39,9 @@ static inline JML_Vec3b JML_equalVec3dVec3d(
     const JML_Vec3d arg_1
 ) {
     return JML_vec3b(
-        (bool)(arg_0.data[0] == arg_1.data[0]),
-        (bool)(arg_0.data[1] == arg_1.data[1]),
-        (bool)(arg_0.data[2] == arg_1.data[2])
+        (bool)(arg_0.x == arg_1.x),
+        (bool)(arg_0.y == arg_1.y),
+        (bool)(arg_0.z == arg_1.z)
     );
 }
 
@@ -50,9 +50,9 @@ static inline JML_Vec3b JML_equalVec3fVec3f(
     const JML_Vec3f arg_1
 ) {
     return JML_vec3b(
-        (bool)(arg_0.data[0] == arg_1.data[0]),
-        (bool)(arg_0.data[1] == arg_1.data[1]),
-        (bool)(arg_0.data[2] == arg_1.data[2])
+        (bool)(arg_0.x == arg_1.x),
+        (bool)(arg_0.y == arg_1.y),
+        (bool)(arg_0.z == arg_1.z)
     );
 }
 
@@ -61,10 +61,10 @@ static inline JML_Vec4b JML_equalVec4dVec4d(
     const JML_Vec4d arg_1
 ) {
     return JML_vec4b(
-        (bool)(arg_0.data[0] == arg_1.data[0]),
-        (bool)(arg_0.data[1] == arg_1.data[1]),
-        (bool)(arg_0.data[2] == arg_1.data[2]),
-        (bool)(arg_0.data[3] == arg_1.data[3])
+        (bool)(arg_0.x == arg_1.x),
+        (bool)(arg_0.y == arg_1.y),
+        (bool)(arg_0.z == arg_1.z),
+        (bool)(arg_0.w == arg_1.w)
     );
 }
 
@@ -73,10 +73,10 @@ static inline JML_Vec4b JML_equalVec4fVec4f(
     const JML_Vec4f arg_1
 ) {
     return JML_vec4b(
-        (bool)(arg_0.data[0] == arg_1.data[0]),
-        (bool)(arg_0.data[1] == arg_1.data[1]),
-        (bool)(arg_0.data[2] == arg_1.data[2]),
-        (bool)(arg_0.data[3] == arg_1.data[3])
+        (bool)(arg_0.x == arg_1.x),
+        (bool)(arg_0.y == arg_1.y),
+        (bool)(arg_0.z == arg_1.z),
+        (bool)(arg_0.w == arg_1.w)
     );
 }
 

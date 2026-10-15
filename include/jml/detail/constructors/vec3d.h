@@ -10,9 +10,9 @@ static inline JML_Vec3d JML_vec3dDVec2d(
     const JML_Vec2d arg_1
 ) {
     JML_Vec3d result;
-    result.data[0] = arg_0;
-    result.data[1] = arg_1.data[0];
-    result.data[2] = arg_1.data[1];
+    result.x = arg_0;
+    result.y = arg_1.x;
+    result.z = arg_1.y;
     return result;
 }
 
@@ -21,9 +21,9 @@ static inline JML_Vec3d JML_vec3dVec2dD(
     const double arg_1
 ) {
     JML_Vec3d result;
-    result.data[0] = arg_0.data[0];
-    result.data[1] = arg_0.data[1];
-    result.data[2] = arg_1;
+    result.x = arg_0.x;
+    result.y = arg_0.y;
+    result.z = arg_1;
     return result;
 }
 
@@ -48,9 +48,9 @@ static inline JML_Vec3d JML_vec3dDDD(
     const double arg_2
 ) {
     JML_Vec3d result;
-    result.data[0] = arg_0;
-    result.data[1] = arg_1;
-    result.data[2] = arg_2;
+    result.x = arg_0;
+    result.y = arg_1;
+    result.z = arg_2;
     return result;
 }
 

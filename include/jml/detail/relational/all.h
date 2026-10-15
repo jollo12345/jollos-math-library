@@ -8,19 +8,19 @@
 static inline bool JML_allVec2b(
     const JML_Vec2b arg
 ) {
-    return (bool)(arg.data[0] && arg.data[1]);
+    return (bool)(arg.x && arg.y);
 }
 
 static inline bool JML_allVec3b(
     const JML_Vec3b arg
 ) {
-    return (bool)(arg.data[0] && arg.data[1] && arg.data[2]);
+    return (bool)(arg.x && arg.y && arg.z);
 }
 
 static inline bool JML_allVec4b(
     const JML_Vec4b arg
 ) {
-    return (bool)(arg.data[0] && arg.data[1] && arg.data[2] && arg.data[3]);
+    return (bool)(arg.x && arg.y && arg.z && arg.w);
 }
 
 #define JML_all_GENERIC_1(arg) _Generic( \

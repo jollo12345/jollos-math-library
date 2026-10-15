@@ -13,42 +13,42 @@ static inline double JML_dotVec2dVec2d(
     const JML_Vec2d arg_0,
     const JML_Vec2d arg_1
 ) {
-    return arg_0.data[0] * arg_1.data[0] + arg_0.data[1] * arg_1.data[1];
+    return arg_0.x * arg_1.x + arg_0.y * arg_1.y;
 }
 
 static inline float JML_dotVec2fVec2f(
     const JML_Vec2f arg_0,
     const JML_Vec2f arg_1
 ) {
-    return arg_0.data[0] * arg_1.data[0] + arg_0.data[1] * arg_1.data[1];
+    return arg_0.x * arg_1.x + arg_0.y * arg_1.y;
 }
 
 static inline double JML_dotVec3dVec3d(
     const JML_Vec3d arg_0,
     const JML_Vec3d arg_1
 ) {
-    return arg_0.data[0] * arg_1.data[0] + arg_0.data[1] * arg_1.data[1] + arg_0.data[2] * arg_1.data[2];
+    return arg_0.x * arg_1.x + arg_0.y * arg_1.y + arg_0.z * arg_1.z;
 }
 
 static inline float JML_dotVec3fVec3f(
     const JML_Vec3f arg_0,
     const JML_Vec3f arg_1
 ) {
-    return arg_0.data[0] * arg_1.data[0] + arg_0.data[1] * arg_1.data[1] + arg_0.data[2] * arg_1.data[2];
+    return arg_0.x * arg_1.x + arg_0.y * arg_1.y + arg_0.z * arg_1.z;
 }
 
 static inline double JML_dotVec4dVec4d(
     const JML_Vec4d arg_0,
     const JML_Vec4d arg_1
 ) {
-    return arg_0.data[0] * arg_1.data[0] + arg_0.data[1] * arg_1.data[1] + arg_0.data[2] * arg_1.data[2] + arg_0.data[3] * arg_1.data[3];
+    return arg_0.x * arg_1.x + arg_0.y * arg_1.y + arg_0.z * arg_1.z + arg_0.w * arg_1.w;
 }
 
 static inline float JML_dotVec4fVec4f(
     const JML_Vec4f arg_0,
     const JML_Vec4f arg_1
 ) {
-    return arg_0.data[0] * arg_1.data[0] + arg_0.data[1] * arg_1.data[1] + arg_0.data[2] * arg_1.data[2] + arg_0.data[3] * arg_1.data[3];
+    return arg_0.x * arg_1.x + arg_0.y * arg_1.y + arg_0.z * arg_1.z + arg_0.w * arg_1.w;
 }
 
 #define JML_dot_GENERIC_2(arg_0, arg_1) _Generic( \

@@ -31,10 +31,10 @@ static inline JML_Mat2x2d JML_divMat2x2dD(
     const double arg_1
 ) {
     return JML_mat2x2d(
-        arg_0.data[0][0] / arg_1,
-        arg_0.data[0][1] / arg_1,
-        arg_0.data[1][0] / arg_1,
-        arg_0.data[1][1] / arg_1
+        arg_0.m00 / arg_1,
+        arg_0.m01 / arg_1,
+        arg_0.m10 / arg_1,
+        arg_0.m11 / arg_1
     );
 }
 
@@ -43,10 +43,10 @@ static inline JML_Mat2x2f JML_divMat2x2fF(
     const float arg_1
 ) {
     return JML_mat2x2f(
-        arg_0.data[0][0] / arg_1,
-        arg_0.data[0][1] / arg_1,
-        arg_0.data[1][0] / arg_1,
-        arg_0.data[1][1] / arg_1
+        arg_0.m00 / arg_1,
+        arg_0.m01 / arg_1,
+        arg_0.m10 / arg_1,
+        arg_0.m11 / arg_1
     );
 }
 
@@ -55,15 +55,15 @@ static inline JML_Mat3x3d JML_divMat3x3dD(
     const double arg_1
 ) {
     return JML_mat3x3d(
-        arg_0.data[0][0] / arg_1,
-        arg_0.data[0][1] / arg_1,
-        arg_0.data[0][2] / arg_1,
-        arg_0.data[1][0] / arg_1,
-        arg_0.data[1][1] / arg_1,
-        arg_0.data[1][2] / arg_1,
-        arg_0.data[2][0] / arg_1,
-        arg_0.data[2][1] / arg_1,
-        arg_0.data[2][2] / arg_1
+        arg_0.m00 / arg_1,
+        arg_0.m01 / arg_1,
+        arg_0.m02 / arg_1,
+        arg_0.m10 / arg_1,
+        arg_0.m11 / arg_1,
+        arg_0.m12 / arg_1,
+        arg_0.m20 / arg_1,
+        arg_0.m21 / arg_1,
+        arg_0.m22 / arg_1
     );
 }
 
@@ -72,15 +72,15 @@ static inline JML_Mat3x3f JML_divMat3x3fF(
     const float arg_1
 ) {
     return JML_mat3x3f(
-        arg_0.data[0][0] / arg_1,
-        arg_0.data[0][1] / arg_1,
-        arg_0.data[0][2] / arg_1,
-        arg_0.data[1][0] / arg_1,
-        arg_0.data[1][1] / arg_1,
-        arg_0.data[1][2] / arg_1,
-        arg_0.data[2][0] / arg_1,
-        arg_0.data[2][1] / arg_1,
-        arg_0.data[2][2] / arg_1
+        arg_0.m00 / arg_1,
+        arg_0.m01 / arg_1,
+        arg_0.m02 / arg_1,
+        arg_0.m10 / arg_1,
+        arg_0.m11 / arg_1,
+        arg_0.m12 / arg_1,
+        arg_0.m20 / arg_1,
+        arg_0.m21 / arg_1,
+        arg_0.m22 / arg_1
     );
 }
 
@@ -89,22 +89,22 @@ static inline JML_Mat4x4d JML_divMat4x4dD(
     const double arg_1
 ) {
     return JML_mat4x4d(
-        arg_0.data[0][0] / arg_1,
-        arg_0.data[0][1] / arg_1,
-        arg_0.data[0][2] / arg_1,
-        arg_0.data[0][3] / arg_1,
-        arg_0.data[1][0] / arg_1,
-        arg_0.data[1][1] / arg_1,
-        arg_0.data[1][2] / arg_1,
-        arg_0.data[1][3] / arg_1,
-        arg_0.data[2][0] / arg_1,
-        arg_0.data[2][1] / arg_1,
-        arg_0.data[2][2] / arg_1,
-        arg_0.data[2][3] / arg_1,
-        arg_0.data[3][0] / arg_1,
-        arg_0.data[3][1] / arg_1,
-        arg_0.data[3][2] / arg_1,
-        arg_0.data[3][3] / arg_1
+        arg_0.m00 / arg_1,
+        arg_0.m01 / arg_1,
+        arg_0.m02 / arg_1,
+        arg_0.m03 / arg_1,
+        arg_0.m10 / arg_1,
+        arg_0.m11 / arg_1,
+        arg_0.m12 / arg_1,
+        arg_0.m13 / arg_1,
+        arg_0.m20 / arg_1,
+        arg_0.m21 / arg_1,
+        arg_0.m22 / arg_1,
+        arg_0.m23 / arg_1,
+        arg_0.m30 / arg_1,
+        arg_0.m31 / arg_1,
+        arg_0.m32 / arg_1,
+        arg_0.m33 / arg_1
     );
 }
 
@@ -113,22 +113,22 @@ static inline JML_Mat4x4f JML_divMat4x4fF(
     const float arg_1
 ) {
     return JML_mat4x4f(
-        arg_0.data[0][0] / arg_1,
-        arg_0.data[0][1] / arg_1,
-        arg_0.data[0][2] / arg_1,
-        arg_0.data[0][3] / arg_1,
-        arg_0.data[1][0] / arg_1,
-        arg_0.data[1][1] / arg_1,
-        arg_0.data[1][2] / arg_1,
-        arg_0.data[1][3] / arg_1,
-        arg_0.data[2][0] / arg_1,
-        arg_0.data[2][1] / arg_1,
-        arg_0.data[2][2] / arg_1,
-        arg_0.data[2][3] / arg_1,
-        arg_0.data[3][0] / arg_1,
-        arg_0.data[3][1] / arg_1,
-        arg_0.data[3][2] / arg_1,
-        arg_0.data[3][3] / arg_1
+        arg_0.m00 / arg_1,
+        arg_0.m01 / arg_1,
+        arg_0.m02 / arg_1,
+        arg_0.m03 / arg_1,
+        arg_0.m10 / arg_1,
+        arg_0.m11 / arg_1,
+        arg_0.m12 / arg_1,
+        arg_0.m13 / arg_1,
+        arg_0.m20 / arg_1,
+        arg_0.m21 / arg_1,
+        arg_0.m22 / arg_1,
+        arg_0.m23 / arg_1,
+        arg_0.m30 / arg_1,
+        arg_0.m31 / arg_1,
+        arg_0.m32 / arg_1,
+        arg_0.m33 / arg_1
     );
 }
 
@@ -137,8 +137,8 @@ static inline JML_Vec2d JML_divVec2dD(
     const double arg_1
 ) {
     return JML_vec2d(
-        arg_0.data[0] / arg_1,
-        arg_0.data[1] / arg_1
+        arg_0.x / arg_1,
+        arg_0.y / arg_1
     );
 }
 
@@ -147,8 +147,8 @@ static inline JML_Vec2f JML_divVec2fF(
     const float arg_1
 ) {
     return JML_vec2f(
-        arg_0.data[0] / arg_1,
-        arg_0.data[1] / arg_1
+        arg_0.x / arg_1,
+        arg_0.y / arg_1
     );
 }
 
@@ -157,9 +157,9 @@ static inline JML_Vec3d JML_divVec3dD(
     const double arg_1
 ) {
     return JML_vec3d(
-        arg_0.data[0] / arg_1,
-        arg_0.data[1] / arg_1,
-        arg_0.data[2] / arg_1
+        arg_0.x / arg_1,
+        arg_0.y / arg_1,
+        arg_0.z / arg_1
     );
 }
 
@@ -168,9 +168,9 @@ static inline JML_Vec3f JML_divVec3fF(
     const float arg_1
 ) {
     return JML_vec3f(
-        arg_0.data[0] / arg_1,
-        arg_0.data[1] / arg_1,
-        arg_0.data[2] / arg_1
+        arg_0.x / arg_1,
+        arg_0.y / arg_1,
+        arg_0.z / arg_1
     );
 }
 
@@ -179,10 +179,10 @@ static inline JML_Vec4d JML_divVec4dD(
     const double arg_1
 ) {
     return JML_vec4d(
-        arg_0.data[0] / arg_1,
-        arg_0.data[1] / arg_1,
-        arg_0.data[2] / arg_1,
-        arg_0.data[3] / arg_1
+        arg_0.x / arg_1,
+        arg_0.y / arg_1,
+        arg_0.z / arg_1,
+        arg_0.w / arg_1
     );
 }
 
@@ -191,10 +191,10 @@ static inline JML_Vec4f JML_divVec4fF(
     const float arg_1
 ) {
     return JML_vec4f(
-        arg_0.data[0] / arg_1,
-        arg_0.data[1] / arg_1,
-        arg_0.data[2] / arg_1,
-        arg_0.data[3] / arg_1
+        arg_0.x / arg_1,
+        arg_0.y / arg_1,
+        arg_0.z / arg_1,
+        arg_0.w / arg_1
     );
 }
 

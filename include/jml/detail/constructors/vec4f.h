@@ -11,10 +11,10 @@ static inline JML_Vec4f JML_vec4fFVec3f(
     const JML_Vec3f arg_1
 ) {
     JML_Vec4f result;
-    result.data[0] = arg_0;
-    result.data[1] = arg_1.data[0];
-    result.data[2] = arg_1.data[1];
-    result.data[3] = arg_1.data[2];
+    result.x = arg_0;
+    result.y = arg_1.x;
+    result.z = arg_1.y;
+    result.w = arg_1.z;
     return result;
 }
 
@@ -23,10 +23,10 @@ static inline JML_Vec4f JML_vec4fVec2fVec2f(
     const JML_Vec2f arg_1
 ) {
     JML_Vec4f result;
-    result.data[0] = arg_0.data[0];
-    result.data[1] = arg_0.data[1];
-    result.data[2] = arg_1.data[0];
-    result.data[3] = arg_1.data[1];
+    result.x = arg_0.x;
+    result.y = arg_0.y;
+    result.z = arg_1.x;
+    result.w = arg_1.y;
     return result;
 }
 
@@ -35,10 +35,10 @@ static inline JML_Vec4f JML_vec4fVec3fF(
     const float arg_1
 ) {
     JML_Vec4f result;
-    result.data[0] = arg_0.data[0];
-    result.data[1] = arg_0.data[1];
-    result.data[2] = arg_0.data[2];
-    result.data[3] = arg_1;
+    result.x = arg_0.x;
+    result.y = arg_0.y;
+    result.z = arg_0.z;
+    result.w = arg_1;
     return result;
 }
 
@@ -68,10 +68,10 @@ static inline JML_Vec4f JML_vec4fFFVec2f(
     const JML_Vec2f arg_2
 ) {
     JML_Vec4f result;
-    result.data[0] = arg_0;
-    result.data[1] = arg_1;
-    result.data[2] = arg_2.data[0];
-    result.data[3] = arg_2.data[1];
+    result.x = arg_0;
+    result.y = arg_1;
+    result.z = arg_2.x;
+    result.w = arg_2.y;
     return result;
 }
 
@@ -81,10 +81,10 @@ static inline JML_Vec4f JML_vec4fFVec2fF(
     const float arg_2
 ) {
     JML_Vec4f result;
-    result.data[0] = arg_0;
-    result.data[1] = arg_1.data[0];
-    result.data[2] = arg_1.data[1];
-    result.data[3] = arg_2;
+    result.x = arg_0;
+    result.y = arg_1.x;
+    result.z = arg_1.y;
+    result.w = arg_2;
     return result;
 }
 
@@ -94,10 +94,10 @@ static inline JML_Vec4f JML_vec4fVec2fFF(
     const float arg_2
 ) {
     JML_Vec4f result;
-    result.data[0] = arg_0.data[0];
-    result.data[1] = arg_0.data[1];
-    result.data[2] = arg_1;
-    result.data[3] = arg_2;
+    result.x = arg_0.x;
+    result.y = arg_0.y;
+    result.z = arg_1;
+    result.w = arg_2;
     return result;
 }
 
@@ -136,10 +136,10 @@ static inline JML_Vec4f JML_vec4fFFFF(
     const float arg_3
 ) {
     JML_Vec4f result;
-    result.data[0] = arg_0;
-    result.data[1] = arg_1;
-    result.data[2] = arg_2;
-    result.data[3] = arg_3;
+    result.x = arg_0;
+    result.y = arg_1;
+    result.z = arg_2;
+    result.w = arg_3;
     return result;
 }
 

@@ -12,22 +12,22 @@ static inline JML_Mat4x4d JML_mat4x4dVec4dVec4dVec4dVec4d(
     const JML_Vec4d arg_3
 ) {
     JML_Mat4x4d result;
-    result.data[0][0] = arg_0.data[0];
-    result.data[0][1] = arg_0.data[1];
-    result.data[0][2] = arg_0.data[2];
-    result.data[0][3] = arg_0.data[3];
-    result.data[1][0] = arg_1.data[0];
-    result.data[1][1] = arg_1.data[1];
-    result.data[1][2] = arg_1.data[2];
-    result.data[1][3] = arg_1.data[3];
-    result.data[2][0] = arg_2.data[0];
-    result.data[2][1] = arg_2.data[1];
-    result.data[2][2] = arg_2.data[2];
-    result.data[2][3] = arg_2.data[3];
-    result.data[3][0] = arg_3.data[0];
-    result.data[3][1] = arg_3.data[1];
-    result.data[3][2] = arg_3.data[2];
-    result.data[3][3] = arg_3.data[3];
+    result.m00 = arg_0.x;
+    result.m01 = arg_0.y;
+    result.m02 = arg_0.z;
+    result.m03 = arg_0.w;
+    result.m10 = arg_1.x;
+    result.m11 = arg_1.y;
+    result.m12 = arg_1.z;
+    result.m13 = arg_1.w;
+    result.m20 = arg_2.x;
+    result.m21 = arg_2.y;
+    result.m22 = arg_2.z;
+    result.m23 = arg_2.w;
+    result.m30 = arg_3.x;
+    result.m31 = arg_3.y;
+    result.m32 = arg_3.z;
+    result.m33 = arg_3.w;
     return result;
 }
 
@@ -68,22 +68,22 @@ static inline JML_Mat4x4d JML_mat4x4dDDDDDDDDDDDDDDDD(
     const double arg_15
 ) {
     JML_Mat4x4d result;
-    result.data[0][0] = arg_0;
-    result.data[0][1] = arg_1;
-    result.data[0][2] = arg_2;
-    result.data[0][3] = arg_3;
-    result.data[1][0] = arg_4;
-    result.data[1][1] = arg_5;
-    result.data[1][2] = arg_6;
-    result.data[1][3] = arg_7;
-    result.data[2][0] = arg_8;
-    result.data[2][1] = arg_9;
-    result.data[2][2] = arg_10;
-    result.data[2][3] = arg_11;
-    result.data[3][0] = arg_12;
-    result.data[3][1] = arg_13;
-    result.data[3][2] = arg_14;
-    result.data[3][3] = arg_15;
+    result.m00 = arg_0;
+    result.m01 = arg_1;
+    result.m02 = arg_2;
+    result.m03 = arg_3;
+    result.m10 = arg_4;
+    result.m11 = arg_5;
+    result.m12 = arg_6;
+    result.m13 = arg_7;
+    result.m20 = arg_8;
+    result.m21 = arg_9;
+    result.m22 = arg_10;
+    result.m23 = arg_11;
+    result.m30 = arg_12;
+    result.m31 = arg_13;
+    result.m32 = arg_14;
+    result.m33 = arg_15;
     return result;
 }
 

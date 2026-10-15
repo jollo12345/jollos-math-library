@@ -9,8 +9,8 @@ static inline JML_Vec2d JML_vec2dDD(
     const double arg_1
 ) {
     JML_Vec2d result;
-    result.data[0] = arg_0;
-    result.data[1] = arg_1;
+    result.x = arg_0;
+    result.y = arg_1;
     return result;
 }
 

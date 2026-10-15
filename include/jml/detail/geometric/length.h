@@ -12,25 +12,25 @@
 static inline double JML_lengthVec2d(
     const JML_Vec2d arg
 ) {
-    return JML_DETAIL_SQRT_D(arg.data[0] * arg.data[0] + arg.data[1] * arg.data[1]);
+    return JML_DETAIL_SQRT_D(arg.x * arg.x + arg.y * arg.y);
 }
 
 static inline float JML_lengthVec2f(
     const JML_Vec2f arg
 ) {
-    return JML_DETAIL_SQRT_F(arg.data[0] * arg.data[0] + arg.data[1] * arg.data[1]);
+    return JML_DETAIL_SQRT_F(arg.x * arg.x + arg.y * arg.y);
 }
 
 static inline double JML_lengthVec3d(
     const JML_Vec3d arg
 ) {
-    return JML_DETAIL_SQRT_D(arg.data[0] * arg.data[0] + arg.data[1] * arg.data[1] + arg.data[2] * arg.data[2]);
+    return JML_DETAIL_SQRT_D(arg.x * arg.x + arg.y * arg.y + arg.z * arg.z);
 }
 
 static inline float JML_lengthVec3f(
     const JML_Vec3f arg
 ) {
-    return JML_DETAIL_SQRT_F(arg.data[0] * arg.data[0] + arg.data[1] * arg.data[1] + arg.data[2] * arg.data[2]);
+    return JML_DETAIL_SQRT_F(arg.x * arg.x + arg.y * arg.y + arg.z * arg.z);
 }
 
 #define JML_length_GENERIC_1(arg) _Generic( \

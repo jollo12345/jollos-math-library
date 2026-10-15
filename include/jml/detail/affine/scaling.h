@@ -12,9 +12,9 @@ static inline JML_Mat4x4d JML_scalingVec3d(
     const JML_Vec3d scale
 ) {
     return JML_mat4x4d(
-        scale.data[0], 0.0, 0.0, 0.0,
-        0.0, scale.data[1], 0.0, 0.0,
-        0.0, 0.0, scale.data[2], 0.0,
+        scale.x, 0.0, 0.0, 0.0,
+        0.0, scale.y, 0.0, 0.0,
+        0.0, 0.0, scale.z, 0.0,
         0.0, 0.0, 0.0, 1.0
     );
 }
@@ -23,9 +23,9 @@ static inline JML_Mat4x4f JML_scalingVec3f(
     const JML_Vec3f scale
 ) {
     return JML_mat4x4f(
-        scale.data[0], 0.f, 0.f, 0.f,
-        0.f, scale.data[1], 0.f, 0.f,
-        0.f, 0.f, scale.data[2], 0.f,
+        scale.x, 0.f, 0.f, 0.f,
+        0.f, scale.y, 0.f, 0.f,
+        0.f, 0.f, scale.z, 0.f,
         0.f, 0.f, 0.f, 1.f
     );
 }

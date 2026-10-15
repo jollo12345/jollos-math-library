@@ -11,15 +11,15 @@ static inline JML_Mat3x3f JML_mat3x3fVec3fVec3fVec3f(
     const JML_Vec3f arg_2
 ) {
     JML_Mat3x3f result;
-    result.data[0][0] = arg_0.data[0];
-    result.data[0][1] = arg_0.data[1];
-    result.data[0][2] = arg_0.data[2];
-    result.data[1][0] = arg_1.data[0];
-    result.data[1][1] = arg_1.data[1];
-    result.data[1][2] = arg_1.data[2];
-    result.data[2][0] = arg_2.data[0];
-    result.data[2][1] = arg_2.data[1];
-    result.data[2][2] = arg_2.data[2];
+    result.m00 = arg_0.x;
+    result.m01 = arg_0.y;
+    result.m02 = arg_0.z;
+    result.m10 = arg_1.x;
+    result.m11 = arg_1.y;
+    result.m12 = arg_1.z;
+    result.m20 = arg_2.x;
+    result.m21 = arg_2.y;
+    result.m22 = arg_2.z;
     return result;
 }
 
@@ -49,15 +49,15 @@ static inline JML_Mat3x3f JML_mat3x3fFFFFFFFFF(
     const float arg_8
 ) {
     JML_Mat3x3f result;
-    result.data[0][0] = arg_0;
-    result.data[0][1] = arg_1;
-    result.data[0][2] = arg_2;
-    result.data[1][0] = arg_3;
-    result.data[1][1] = arg_4;
-    result.data[1][2] = arg_5;
-    result.data[2][0] = arg_6;
-    result.data[2][1] = arg_7;
-    result.data[2][2] = arg_8;
+    result.m00 = arg_0;
+    result.m01 = arg_1;
+    result.m02 = arg_2;
+    result.m10 = arg_3;
+    result.m11 = arg_4;
+    result.m12 = arg_5;
+    result.m20 = arg_6;
+    result.m21 = arg_7;
+    result.m22 = arg_8;
     return result;
 }
 

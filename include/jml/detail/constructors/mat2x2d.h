@@ -10,10 +10,10 @@ static inline JML_Mat2x2d JML_mat2x2dVec2dVec2d(
     const JML_Vec2d arg_1
 ) {
     JML_Mat2x2d result;
-    result.data[0][0] = arg_0.data[0];
-    result.data[0][1] = arg_0.data[1];
-    result.data[1][0] = arg_1.data[0];
-    result.data[1][1] = arg_1.data[1];
+    result.m00 = arg_0.x;
+    result.m01 = arg_0.y;
+    result.m10 = arg_1.x;
+    result.m11 = arg_1.y;
     return result;
 }
 
@@ -34,10 +34,10 @@ static inline JML_Mat2x2d JML_mat2x2dDDDD(
     const double arg_3
 ) {
     JML_Mat2x2d result;
-    result.data[0][0] = arg_0;
-    result.data[0][1] = arg_1;
-    result.data[1][0] = arg_2;
-    result.data[1][1] = arg_3;
+    result.m00 = arg_0;
+    result.m01 = arg_1;
+    result.m10 = arg_2;
+    result.m11 = arg_3;
     return result;
 }
 

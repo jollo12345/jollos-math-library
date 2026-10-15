@@ -12,9 +12,9 @@ static inline JML_Vec3d JML_crossVec3dVec3d(
     const JML_Vec3d arg_1
 ) {
     return JML_vec3d(
-        arg_0.data[1] * arg_1.data[2] - arg_0.data[2] * arg_1.data[1],
-        arg_0.data[2] * arg_1.data[0] - arg_0.data[0] * arg_1.data[2],
-        arg_0.data[0] * arg_1.data[1] - arg_0.data[1] * arg_1.data[0]
+        arg_0.y * arg_1.z - arg_0.z * arg_1.y,
+        arg_0.z * arg_1.x - arg_0.x * arg_1.z,
+        arg_0.x * arg_1.y - arg_0.y * arg_1.data[0]
     );
 }
 
@@ -23,9 +23,9 @@ static inline JML_Vec3f JML_crossVec3fVec3f(
     const JML_Vec3f arg_1
 ) {
     return JML_vec3f(
-        arg_0.data[1] * arg_1.data[2] - arg_0.data[2] * arg_1.data[1],
-        arg_0.data[2] * arg_1.data[0] - arg_0.data[0] * arg_1.data[2],
-        arg_0.data[0] * arg_1.data[1] - arg_0.data[1] * arg_1.data[0]
+        arg_0.y * arg_1.z - arg_0.z * arg_1.y,
+        arg_0.z * arg_1.x - arg_0.x * arg_1.z,
+        arg_0.x * arg_1.y - arg_0.y * arg_1.data[0]
     );
 }
 
