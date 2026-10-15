@@ -36,12 +36,12 @@ static inline JML_Vec3f JML_normalizedVec3f(
 }
 
 #define JML_normalized_GENERIC_1(arg) _Generic( \
-    (arg),                                     \
+    (arg),                                      \
     JML_Vec2d: JML_normalizedVec2d,             \
     JML_Vec2f: JML_normalizedVec2f,             \
     JML_Vec3d: JML_normalizedVec3d,             \
     JML_Vec3f: JML_normalizedVec3f,             \
-    default: (void (*)(void))0                 \
+    default: (void (*)(void))0                  \
 )(arg)
 
 #define JML_normalized(...) \

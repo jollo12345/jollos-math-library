@@ -42,22 +42,22 @@ static inline float JML_distanceVec3fVec3f(
 #define JML_distance_GENERIC_2(arg_0, arg_1) _Generic( \
     (arg_0),                                           \
     JML_Vec2d: _Generic(                               \
-        (arg_0),                                       \
+        (arg_1),                                       \
         JML_Vec2d: JML_distanceVec2dVec2d,             \
         default: (void (*)(void))0                     \
     ),                                                 \
     JML_Vec2f: _Generic(                               \
-        (arg_0),                                       \
+        (arg_1),                                       \
         JML_Vec2f: JML_distanceVec2fVec2f,             \
         default: (void (*)(void))0                     \
     ),                                                 \
     JML_Vec3d: _Generic(                               \
-        (arg_0),                                       \
+        (arg_1),                                       \
         JML_Vec3d: JML_distanceVec3dVec3d,             \
         default: (void (*)(void))0                     \
     ),                                                 \
     JML_Vec3f: _Generic(                               \
-        (arg_0),                                       \
+        (arg_1),                                       \
         JML_Vec3f: JML_distanceVec3fVec3f,             \
         default: (void (*)(void))0                     \
     ),                                                 \

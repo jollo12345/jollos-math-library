@@ -32,12 +32,12 @@ static inline JML_Vec3f JML_crossVec3fVec3f(
 #define JML_cross_GENERIC_2(arg_0, arg_1) _Generic( \
     (arg_0),                                        \
     JML_Vec3d: _Generic(                            \
-        (arg_0),                                    \
+        (arg_1),                                    \
         JML_Vec3d: JML_crossVec3dVec3d,             \
         default: (void (*)(void))0                  \
     ),                                              \
     JML_Vec3f: _Generic(                            \
-        (arg_0),                                    \
+        (arg_1),                                    \
         JML_Vec3f: JML_crossVec3fVec3f,             \
         default: (void (*)(void))0                  \
     ),                                              \
