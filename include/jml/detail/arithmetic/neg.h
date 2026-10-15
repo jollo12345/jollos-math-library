@@ -9,10 +9,13 @@
 #include "jml/detail/constructors/mat4x4f.h"
 #include "jml/detail/constructors/vec2d.h"
 #include "jml/detail/constructors/vec2f.h"
+#include "jml/detail/constructors/vec2i.h"
 #include "jml/detail/constructors/vec3d.h"
 #include "jml/detail/constructors/vec3f.h"
+#include "jml/detail/constructors/vec3i.h"
 #include "jml/detail/constructors/vec4d.h"
 #include "jml/detail/constructors/vec4f.h"
+#include "jml/detail/constructors/vec4i.h"
 #include "jml/detail/types/mat2x2d.h"
 #include "jml/detail/types/mat2x2f.h"
 #include "jml/detail/types/mat3x3d.h"
@@ -21,10 +24,13 @@
 #include "jml/detail/types/mat4x4f.h"
 #include "jml/detail/types/vec2d.h"
 #include "jml/detail/types/vec2f.h"
+#include "jml/detail/types/vec2i.h"
 #include "jml/detail/types/vec3d.h"
 #include "jml/detail/types/vec3f.h"
+#include "jml/detail/types/vec3i.h"
 #include "jml/detail/types/vec4d.h"
 #include "jml/detail/types/vec4f.h"
+#include "jml/detail/types/vec4i.h"
 
 static inline JML_Mat2x2d JML_negMat2x2d(
     const JML_Mat2x2d arg
@@ -144,6 +150,15 @@ static inline JML_Vec2f JML_negVec2f(
     );
 }
 
+static inline JML_Vec2i JML_negVec2i(
+    const JML_Vec2i arg
+) {
+    return JML_vec2i(
+        -arg.x,
+        -arg.data[1]
+    );
+}
+
 static inline JML_Vec3d JML_negVec3d(
     const JML_Vec3d arg
 ) {
@@ -158,6 +173,16 @@ static inline JML_Vec3f JML_negVec3f(
     const JML_Vec3f arg
 ) {
     return JML_vec3f(
+        -arg.x,
+        -arg.y,
+        -arg.z
+    );
+}
+
+static inline JML_Vec3i JML_negVec3i(
+    const JML_Vec3i arg
+) {
+    return JML_vec3i(
         -arg.x,
         -arg.y,
         -arg.z
@@ -186,6 +211,17 @@ static inline JML_Vec4f JML_negVec4f(
     );
 }
 
+static inline JML_Vec4i JML_negVec4i(
+    const JML_Vec4i arg
+) {
+    return JML_vec4i(
+        -arg.x,
+        -arg.y,
+        -arg.z,
+        -arg.w
+    );
+}
+
 #define JML_neg_GENERIC_1(arg) _Generic( \
     (arg),                               \
     JML_Mat2x2d: JML_negMat2x2d,         \
@@ -196,10 +232,13 @@ static inline JML_Vec4f JML_negVec4f(
     JML_Mat4x4f: JML_negMat4x4f,         \
     JML_Vec2d: JML_negVec2d,             \
     JML_Vec2f: JML_negVec2f,             \
+    JML_Vec2f: JML_negVec2i,             \
     JML_Vec3d: JML_negVec3d,             \
     JML_Vec3f: JML_negVec3f,             \
+    JML_Vec3f: JML_negVec3i,             \
     JML_Vec4d: JML_negVec4d,             \
     JML_Vec4f: JML_negVec4f,             \
+    JML_Vec4f: JML_negVec4i,             \
     default: (void (*)(void))0           \
 )(arg)
 
