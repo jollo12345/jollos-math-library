@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.21)
 
 project(
   JML
@@ -6,34 +6,22 @@ project(
   LANGUAGES C)
 
 option(${PROJECT_NAME}_BUILD_TESTS "Build tests" OFF)
-
-set(CMAKE_C_STANDARD 23)
-set(CMAKE_C_STANDARD_REQUIRED ON)
+option(${PROJECT_NAME}_BUILD_DOC "Build documentation" OFF)
 
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
-file(GLOB_RECURSE ${PROJECT_NAME}_HEADERS "include/*.h")
-
-add_library(${PROJECT_NAME} INTERFACE ${${PROJECT_NAME}_HEADERS})
+add_library(${PROJECT_NAME} INTERFACE)
 add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
-if(${PROJECT_NAME}_BUILD_TESTS)
-  enable_testing()
-  add_subdirectory(tests)
-endif()
+target_compile_features(${PROJECT_NAME} INTERFACE c_std_23)
 
 target_include_directories(
   ${PROJECT_NAME}
   INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-            $<INSTALL_INTERFACE:include>)
+            $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 
-install(
-  TARGETS ${PROJECT_NAME}
-  EXPORT ${PROJECT_NAME}Targets
-  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
+install(TARGETS ${PROJECT_NAME} EXPORT ${PROJECT_NAME}Targets)
 
 install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 
@@ -52,10 +40,31 @@ configure_package_config_file(
   INSTALL_DESTINATION ${${PROJECT_NAME}_INSTALL_CMAKEDIR})
 
 write_basic_package_version_file(
-  ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}VersionConfig.cmake
+  ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
   VERSION ${PROJECT_VERSION}
-  COMPATIBILITY SameMajorVersion)
+  COMPATIBILITY SameMinorVersion ARCH_INDEPENDENT)
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake
-              ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}VersionConfig.cmake
+              ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
         DESTINATION ${${PROJECT_NAME}_INSTALL_CMAKEDIR})
+
+if(${PROJECT_NAME}_BUILD_TESTS)
+  enable_testing()
+  add_subdirectory(tests)
+endif()
+
+if(${PROJECT_NAME}_BUILD_DOC)
+  find_package(Doxygen REQUIRED)
+
+  set(${PROJECT_NAME}_DOXYGEN_IN
+      ${CMAKE_CURRENT_SOURCE_DIR}/doxygen/Doxyfile.in)
+  set(${PROJECT_NAME}_DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
+
+  configure_file(${${PROJECT_NAME}_DOXYGEN_IN} ${${PROJECT_NAME}_DOXYGEN_OUT})
+  add_custom_target(
+    doc_doxygen ALL
+    COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+    COMMENT "Generating API documentation with Doxygen"
+    VERBATIM)
+endif()
