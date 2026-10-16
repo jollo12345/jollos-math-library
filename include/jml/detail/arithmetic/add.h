@@ -25,12 +25,15 @@
 #include "jml/detail/types/vec2d.h"
 #include "jml/detail/types/vec2f.h"
 #include "jml/detail/types/vec2i.h"
+#include "jml/detail/types/vec2u.h"
 #include "jml/detail/types/vec3d.h"
 #include "jml/detail/types/vec3f.h"
 #include "jml/detail/types/vec3i.h"
+#include "jml/detail/types/vec3u.h"
 #include "jml/detail/types/vec4d.h"
 #include "jml/detail/types/vec4f.h"
 #include "jml/detail/types/vec4i.h"
+#include "jml/detail/types/vec4u.h"
 
 static inline JML_Mat2x2d JML_addMat2x2dMat2x2d(
     const JML_Mat2x2d arg_0,
@@ -168,6 +171,16 @@ static inline JML_Vec2i JML_addVec2iVec2i(
     );
 }
 
+static inline JML_Vec2u JML_addVec2uVec2u(
+    const JML_Vec2u arg_0,
+    const JML_Vec2u arg_1
+) {
+    return JML_vec2u(
+        arg_0.x + arg_1.x,
+        arg_0.y + arg_1.y
+    );
+}
+
 static inline JML_Vec3d JML_addVec3dVec3d(
     const JML_Vec3d arg_0,
     const JML_Vec3d arg_1
@@ -195,6 +208,17 @@ static inline JML_Vec3i JML_addVec3iVec3i(
     const JML_Vec3i arg_1
 ) {
     return JML_vec3i(
+        arg_0.x + arg_1.x,
+        arg_0.y + arg_1.y,
+        arg_0.z + arg_1.z
+    );
+}
+
+static inline JML_Vec3u JML_addVec3uVec3u(
+    const JML_Vec3u arg_0,
+    const JML_Vec3u arg_1
+) {
+    return JML_vec3u(
         arg_0.x + arg_1.x,
         arg_0.y + arg_1.y,
         arg_0.z + arg_1.z
@@ -230,6 +254,18 @@ static inline JML_Vec4i JML_addVec4iVec4i(
     const JML_Vec4i arg_1
 ) {
     return JML_vec4i(
+        arg_0.x + arg_1.x,
+        arg_0.y + arg_1.y,
+        arg_0.z + arg_1.z,
+        arg_0.w + arg_1.w
+    );
+}
+
+static inline JML_Vec4u JML_addVec4uVec4u(
+    const JML_Vec4u arg_0,
+    const JML_Vec4u arg_1
+) {
+    return JML_vec4u(
         arg_0.x + arg_1.x,
         arg_0.y + arg_1.y,
         arg_0.z + arg_1.z,
@@ -284,6 +320,11 @@ static inline JML_Vec4i JML_addVec4iVec4i(
         JML_Vec2i: JML_addVec2iVec2i,             \
         default: (void (*)(void))0                \
     ),                                            \
+    JML_Vec2u: _Generic(                          \
+        (arg_1),                                  \
+        JML_Vec2u: JML_addVec2uVec2u,             \
+        default: (void (*)(void))0                \
+    ),                                            \
     JML_Vec3d: _Generic(                          \
         (arg_1),                                  \
         JML_Vec3d: JML_addVec3dVec3d,             \
@@ -299,6 +340,11 @@ static inline JML_Vec4i JML_addVec4iVec4i(
         JML_Vec3i: JML_addVec3iVec3i,             \
         default: (void (*)(void))0                \
     ),                                            \
+    JML_Vec3u: _Generic(                          \
+        (arg_1),                                  \
+        JML_Vec3u: JML_addVec3uVec3u,             \
+        default: (void (*)(void))0                \
+    ),                                            \
     JML_Vec4d: _Generic(                          \
         (arg_1),                                  \
         JML_Vec4d: JML_addVec4dVec4d,             \
@@ -312,6 +358,11 @@ static inline JML_Vec4i JML_addVec4iVec4i(
     JML_Vec4i: _Generic(                          \
         (arg_1),                                  \
         JML_Vec4i: JML_addVec4iVec4i,             \
+        default: (void (*)(void))0                \
+    ),                                            \
+    JML_Vec4u: _Generic(                          \
+        (arg_1),                                  \
+        JML_Vec4u: JML_addVec4uVec4u,             \
         default: (void (*)(void))0                \
     ),                                            \
     default: (void (*)(void))0                    \

@@ -168,6 +168,16 @@ static inline JML_Vec2i JML_divVec2iI(
     );
 }
 
+static inline JML_Vec2u JML_divVec2uU(
+    const JML_Vec2u arg_0,
+    const unsigned arg_1
+) {
+    return JML_vec2u(
+        arg_0.x / arg_1,
+        arg_0.y / arg_1
+    );
+}
+
 static inline JML_Vec3d JML_divVec3dD(
     const JML_Vec3d arg_0,
     const double arg_1
@@ -195,6 +205,17 @@ static inline JML_Vec3i JML_divVec3iI(
     const int arg_1
 ) {
     return JML_vec3i(
+        arg_0.x / arg_1,
+        arg_0.y / arg_1,
+        arg_0.z / arg_1
+    );
+}
+
+static inline JML_Vec3u JML_divVec3uU(
+    const JML_Vec3u arg_0,
+    const unsigned arg_1
+) {
+    return JML_vec3u(
         arg_0.x / arg_1,
         arg_0.y / arg_1,
         arg_0.z / arg_1
@@ -230,6 +251,18 @@ static inline JML_Vec4i JML_divVec4iI(
     const int arg_1
 ) {
     return JML_vec4i(
+        arg_0.x / arg_1,
+        arg_0.y / arg_1,
+        arg_0.z / arg_1,
+        arg_0.w / arg_1
+    );
+}
+
+static inline JML_Vec4u JML_divVec4uU(
+    const JML_Vec4u arg_0,
+    const unsigned arg_1
+) {
+    return JML_vec4u(
         arg_0.x / arg_1,
         arg_0.y / arg_1,
         arg_0.z / arg_1,
@@ -284,6 +317,11 @@ static inline JML_Vec4i JML_divVec4iI(
         float: JML_divVec2iI,                     \
         default: (void (*)(void))0                \
     ),                                            \
+    JML_Vec2u: _Generic(                          \
+        (arg_1),                                  \
+        float: JML_divVec2uU,                     \
+        default: (void (*)(void))0                \
+    ),                                            \
     JML_Vec3d: _Generic(                          \
         (arg_1),                                  \
         double: JML_divVec3dD,                    \
@@ -299,6 +337,11 @@ static inline JML_Vec4i JML_divVec4iI(
         float: JML_divVec3iI,                     \
         default: (void (*)(void))0                \
     ),                                            \
+    JML_Vec3u: _Generic(                          \
+        (arg_1),                                  \
+        float: JML_divVec3uU,                     \
+        default: (void (*)(void))0                \
+    ),                                            \
     JML_Vec4d: _Generic(                          \
         (arg_1),                                  \
         double: JML_divVec4dD,                    \
@@ -312,6 +355,11 @@ static inline JML_Vec4i JML_divVec4iI(
     JML_Vec4i: _Generic(                          \
         (arg_1),                                  \
         float: JML_divVec4iI,                     \
+        default: (void (*)(void))0                \
+    ),                                            \
+    JML_Vec4u: _Generic(                          \
+        (arg_1),                                  \
+        float: JML_divVec4uU,                     \
         default: (void (*)(void))0                \
     ),                                            \
     default: (void (*)(void))0                    \

@@ -159,6 +159,15 @@ static inline JML_Vec2i JML_negVec2i(
     );
 }
 
+static inline JML_Vec2u JML_negVec2u(
+    const JML_Vec2u arg
+) {
+    return JML_vec2u(
+        -arg.x,
+        -arg.data[1]
+    );
+}
+
 static inline JML_Vec3d JML_negVec3d(
     const JML_Vec3d arg
 ) {
@@ -183,6 +192,16 @@ static inline JML_Vec3i JML_negVec3i(
     const JML_Vec3i arg
 ) {
     return JML_vec3i(
+        -arg.x,
+        -arg.y,
+        -arg.z
+    );
+}
+
+static inline JML_Vec3u JML_negVec3u(
+    const JML_Vec3u arg
+) {
+    return JML_vec3u(
         -arg.x,
         -arg.y,
         -arg.z
@@ -222,6 +241,17 @@ static inline JML_Vec4i JML_negVec4i(
     );
 }
 
+static inline JML_Vec4u JML_negVec4u(
+    const JML_Vec4u arg
+) {
+    return JML_vec4u(
+        -arg.x,
+        -arg.y,
+        -arg.z,
+        -arg.w
+    );
+}
+
 #define JML_neg_GENERIC_1(arg) _Generic( \
     (arg),                               \
     JML_Mat2x2d: JML_negMat2x2d,         \
@@ -233,12 +263,15 @@ static inline JML_Vec4i JML_negVec4i(
     JML_Vec2d: JML_negVec2d,             \
     JML_Vec2f: JML_negVec2f,             \
     JML_Vec2f: JML_negVec2i,             \
+    JML_Vec2f: JML_negVec2u,             \
     JML_Vec3d: JML_negVec3d,             \
     JML_Vec3f: JML_negVec3f,             \
     JML_Vec3f: JML_negVec3i,             \
+    JML_Vec3f: JML_negVec3u,             \
     JML_Vec4d: JML_negVec4d,             \
     JML_Vec4f: JML_negVec4f,             \
     JML_Vec4f: JML_negVec4i,             \
+    JML_Vec4f: JML_negVec4u,             \
     default: (void (*)(void))0           \
 )(arg)
 

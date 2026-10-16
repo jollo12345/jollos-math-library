@@ -251,6 +251,46 @@ static inline JML_Vec4i JML_mulIVec4i(
     );
 }
 
+static inline unsigned JML_mulUU(
+    const unsigned arg_0,
+    const unsigned arg_1
+) {
+    return arg_0 * arg_1;
+}
+
+static inline JML_Vec2u JML_mulUVec2u(
+    const unsigned arg_0,
+    const JML_Vec2u arg_1
+) {
+    return JML_vec2u(
+        arg_0 * arg_1.x,
+        arg_0 * arg_1.data[1]
+    );
+}
+
+static inline JML_Vec3u JML_mulUVec3u(
+    const unsigned arg_0,
+    const JML_Vec3u arg_1
+) {
+    return JML_vec3u(
+        arg_0 * arg_1.x,
+        arg_0 * arg_1.y,
+        arg_0 * arg_1.z
+    );
+}
+
+static inline JML_Vec4u JML_mulUVec4u(
+    const unsigned arg_0,
+    const JML_Vec4u arg_1
+) {
+    return JML_vec4u(
+        arg_0 * arg_1.x,
+        arg_0 * arg_1.y,
+        arg_0 * arg_1.z,
+        arg_0 * arg_1.w
+    );
+}
+
 static inline JML_Mat2x2d JML_mulMat2x2dD(
     const JML_Mat2x2d arg_0,
     const double arg_1
@@ -609,6 +649,26 @@ static inline JML_Vec2i JML_mulVec2iVec2i(
     );
 }
 
+static inline JML_Vec2u JML_mulVec2uU(
+    const JML_Vec2u arg_0,
+    const unsigned arg_1
+) {
+    return JML_vec2u(
+        arg_0.x * arg_1,
+        arg_0.y * arg_1
+    );
+}
+
+static inline JML_Vec2u JML_mulVec2uVec2u(
+    const JML_Vec2u arg_0,
+    const JML_Vec2u arg_1
+) {
+    return JML_vec2u(
+        arg_0.x * arg_1.x,
+        arg_0.y * arg_1.data[1]
+    );
+}
+
 static inline JML_Vec3d JML_mulVec3dD(
     const JML_Vec3d arg_0,
     const double arg_1
@@ -691,6 +751,28 @@ static inline JML_Vec3i JML_mulVec3iVec3i(
     const JML_Vec3i arg_1
 ) {
     return JML_vec3i(
+        arg_0.x * arg_1.x,
+        arg_0.y * arg_1.y,
+        arg_0.z * arg_1.z
+    );
+}
+
+static inline JML_Vec3u JML_mulVec3uU(
+    const JML_Vec3u arg_0,
+    const unsigned arg_1
+) {
+    return JML_vec3u(
+        arg_0.x * arg_1,
+        arg_0.y * arg_1,
+        arg_0.z * arg_1
+    );
+}
+
+static inline JML_Vec3u JML_mulVec3uVec3u(
+    const JML_Vec3u arg_0,
+    const JML_Vec3u arg_1
+) {
+    return JML_vec3u(
         arg_0.x * arg_1.x,
         arg_0.y * arg_1.y,
         arg_0.z * arg_1.z
@@ -793,6 +875,30 @@ static inline JML_Vec4i JML_mulVec4iVec4i(
     );
 }
 
+static inline JML_Vec4u JML_mulVec4uU(
+    const JML_Vec4u arg_0,
+    const int arg_1
+) {
+    return JML_vec4u(
+        arg_0.x * arg_1,
+        arg_0.y * arg_1,
+        arg_0.z * arg_1,
+        arg_0.w * arg_1
+    );
+}
+
+static inline JML_Vec4u JML_mulVec4uVec4u(
+    const JML_Vec4u arg_0,
+    const JML_Vec4u arg_1
+) {
+    return JML_vec4u(
+        arg_0.x * arg_1.x,
+        arg_0.y * arg_1.y,
+        arg_0.z * arg_1.z,
+        arg_0.w * arg_1.w
+    );
+}
+
 #define JML_mul_GENERIC_2(arg_0, arg_1) _Generic( \
     (arg_0),                                      \
     double: _Generic(                             \
@@ -820,6 +926,13 @@ static inline JML_Vec4i JML_mulVec4iVec4i(
         JML_Vec2i: JML_mulIVec2i,                 \
         JML_Vec3i: JML_mulIVec3i,                 \
         JML_Vec4i: JML_mulIVec4i,                 \
+        default: (void (*)(void))0                \
+    ),                                            \
+    unsigned: _Generic(                           \
+        (arg_1),                                  \
+        JML_Vec2i: JML_mulUVec2u,                 \
+        JML_Vec3i: JML_mulUVec3u,                 \
+        JML_Vec4i: JML_mulUVec4u,                 \
         default: (void (*)(void))0                \
     ),                                            \
     JML_Mat2x2d: _Generic(                        \
@@ -884,6 +997,12 @@ static inline JML_Vec4i JML_mulVec4iVec4i(
         JML_Vec2i: JML_mulVec2iVec2i,             \
         default: (void (*)(void))0                \
     ),                                            \
+    JML_Vec2u: _Generic(                          \
+        (arg_1),                                  \
+        int: JML_mulVec2uU,                       \
+        JML_Vec2u: JML_mulVec2uVec2u,             \
+        default: (void (*)(void))0                \
+    ),                                            \
     JML_Vec3d: _Generic(                          \
         (arg_1),                                  \
         double: JML_mulVec3dD,                    \
@@ -904,6 +1023,12 @@ static inline JML_Vec4i JML_mulVec4iVec4i(
         JML_Vec3i: JML_mulVec3iVec3i,             \
         default: (void (*)(void))0                \
     ),                                            \
+    JML_Vec3u: _Generic(                          \
+        (arg_1),                                  \
+        int: JML_mulVec3uU,                       \
+        JML_Vec3u: JML_mulVec3uVec3u,             \
+        default: (void (*)(void))0                \
+    ),                                            \
     JML_Vec4d: _Generic(                          \
         (arg_1),                                  \
         double: JML_mulVec4dD,                    \
@@ -922,6 +1047,12 @@ static inline JML_Vec4i JML_mulVec4iVec4i(
         (arg_1),                                  \
         int: JML_mulVec4iI,                       \
         JML_Vec4i: JML_mulVec4iVec4i,             \
+        default: (void (*)(void))0                \
+    ),                                            \
+    JML_Vec4u: _Generic(                          \
+        (arg_1),                                  \
+        unsigned: JML_mulVec4uU,                  \
+        JML_Vec4u: JML_mulVec4uVec4u,             \
         default: (void (*)(void))0                \
     ),                                            \
     default: (void (*)(void))0                    \

@@ -1,5 +1,5 @@
-#ifndef JML_DETAIL_ARITHMETIC_LESS_THAN_EQUAL_H
-#define JML_DETAIL_ARITHMETIC_LESS_THAN_EQUAL_H
+#ifndef JML_DETAIL_ARITHMETIC_LESS_THAN_LESS_THAN_EQUAL_H
+#define JML_DETAIL_ARITHMETIC_LESS_THAN_LESS_THAN_EQUAL_H
 
 #include "jml/detail/constructors/vec2b.h"
 #include "jml/detail/constructors/vec3b.h"
@@ -7,12 +7,18 @@
 #include "jml/detail/types/vec2b.h"
 #include "jml/detail/types/vec2d.h"
 #include "jml/detail/types/vec2f.h"
+#include "jml/detail/types/vec2i.h"
+#include "jml/detail/types/vec2u.h"
 #include "jml/detail/types/vec3b.h"
 #include "jml/detail/types/vec3d.h"
 #include "jml/detail/types/vec3f.h"
+#include "jml/detail/types/vec3i.h"
+#include "jml/detail/types/vec3u.h"
 #include "jml/detail/types/vec4b.h"
 #include "jml/detail/types/vec4d.h"
 #include "jml/detail/types/vec4f.h"
+#include "jml/detail/types/vec4i.h"
+#include "jml/detail/types/vec4u.h"
 
 static inline JML_Vec2b JML_lessThanEqualVec2dVec2d(
     const JML_Vec2d arg_0,
@@ -118,7 +124,7 @@ static inline JML_Vec4b JML_lessThanEqualVec4fVec4f(
 #define JML_lessThanEqual(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_lessThanEqual_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)
 
-#endif  // JML_DETAIL_ARITHMETIC_LESS_THAN_EQUAL_H
+#endif  // JML_DETAIL_ARITHMETIC_LESS_THAN_LESS_THAN_EQUAL_H
 
 #ifndef JML_WITHOUT_PREFIX
 
