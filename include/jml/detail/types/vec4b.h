@@ -3,10 +3,18 @@
 
 typedef union JML_Vec4b {
     struct {
-        union {bool x, r, s;};
-        union {bool y, g, t;};
-        union {bool z, b, p;};
-        union {bool w, a, q;};
+        union {
+            bool x, r, s;
+        };
+        union {
+            bool y, g, t;
+        };
+        union {
+            bool z, b, p;
+        };
+        union {
+            bool w, a, q;
+        };
     };
     bool data[4];
 } JML_Vec4b;

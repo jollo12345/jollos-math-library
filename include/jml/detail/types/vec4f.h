@@ -3,10 +3,18 @@
 
 typedef union JML_Vec4f {
     struct {
-        union {float x, r, s;};
-        union {float y, g, t;};
-        union {float z, b, p;};
-        union {float w, a, q;};
+        union {
+            float x, r, s;
+        };
+        union {
+            float y, g, t;
+        };
+        union {
+            float z, b, p;
+        };
+        union {
+            float w, a, q;
+        };
     };
     float data[4];
 } JML_Vec4f;

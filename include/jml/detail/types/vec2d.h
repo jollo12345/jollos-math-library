@@ -3,8 +3,12 @@
 
 typedef union JML_Vec2d {
     struct {
-        union {double x, r, s;};
-        union {double y, g, t;};
+        union {
+            double x, r, s;
+        };
+        union {
+            double y, g, t;
+        };
     };
     double data[2];
 } JML_Vec2d;

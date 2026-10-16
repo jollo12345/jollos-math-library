@@ -3,9 +3,15 @@
 
 typedef union JML_Vec3f {
     struct {
-        union {float x, r, s;};
-        union {float y, g, t;};
-        union {float z, b, p;};
+        union {
+            float x, r, s;
+        };
+        union {
+            float y, g, t;
+        };
+        union {
+            float z, b, p;
+        };
     };
     float data[3];
 } JML_Vec3f;

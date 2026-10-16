@@ -89,37 +89,37 @@ static inline JML_Mat4x4f JML_mat4x4fFFFFFFFFFFFFFFFF(
 
 #define JML_mat4x4f_GENERIC_16(arg_0, arg_1, arg_2, arg_3, arg_4, arg_5, arg_6, arg_7, arg_8, arg_9, arg_10, arg_11, arg_12, arg_13, arg_14, arg_15) _Generic( \
     (arg_0),                                                                                                                                                   \
-    float: _Generic(                                                                                                                                          \
+    float: _Generic(                                                                                                                                           \
         (arg_1),                                                                                                                                               \
-        float: _Generic(                                                                                                                                      \
+        float: _Generic(                                                                                                                                       \
             (arg_2),                                                                                                                                           \
-            float: _Generic(                                                                                                                                  \
+            float: _Generic(                                                                                                                                   \
                 (arg_3),                                                                                                                                       \
-                float: _Generic(                                                                                                                              \
+                float: _Generic(                                                                                                                               \
                     (arg_4),                                                                                                                                   \
-                    float: _Generic(                                                                                                                          \
+                    float: _Generic(                                                                                                                           \
                         (arg_5),                                                                                                                               \
-                        float: _Generic(                                                                                                                      \
+                        float: _Generic(                                                                                                                       \
                             (arg_6),                                                                                                                           \
-                            float: _Generic(                                                                                                                  \
+                            float: _Generic(                                                                                                                   \
                                 (arg_7),                                                                                                                       \
-                                float: _Generic(                                                                                                              \
+                                float: _Generic(                                                                                                               \
                                     (arg_8),                                                                                                                   \
-                                    float: _Generic(                                                                                                          \
+                                    float: _Generic(                                                                                                           \
                                         (arg_9),                                                                                                               \
-                                        float: _Generic(                                                                                                      \
+                                        float: _Generic(                                                                                                       \
                                             (arg_10),                                                                                                          \
-                                            float: _Generic(                                                                                                  \
+                                            float: _Generic(                                                                                                   \
                                                 (arg_11),                                                                                                      \
-                                                float: _Generic(                                                                                              \
+                                                float: _Generic(                                                                                               \
                                                     (arg_12),                                                                                                  \
-                                                    float: _Generic(                                                                                          \
+                                                    float: _Generic(                                                                                           \
                                                         (arg_13),                                                                                              \
-                                                        float: _Generic(                                                                                      \
+                                                        float: _Generic(                                                                                       \
                                                             (arg_14),                                                                                          \
-                                                            float: _Generic(                                                                                  \
+                                                            float: _Generic(                                                                                   \
                                                                 (arg_15),                                                                                      \
-                                                                float: JML_mat4x4fFFFFFFFFFFFFFFFF,                                                           \
+                                                                float: JML_mat4x4fFFFFFFFFFFFFFFFF,                                                            \
                                                                 default: (void (*)(void))0                                                                     \
                                                             ),                                                                                                 \
                                                             default: (void (*)(void))0                                                                         \

@@ -3,8 +3,12 @@
 
 typedef union JML_Vec2b {
     struct {
-        union {bool x, r, s;};
-        union {bool y, g, t;};
+        union {
+            bool x, r, s;
+        };
+        union {
+            bool y, g, t;
+        };
     };
     bool data[2];
 } JML_Vec2b;

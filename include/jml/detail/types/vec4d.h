@@ -3,10 +3,18 @@
 
 typedef union JML_Vec4d {
     struct {
-        union {double x, r, s;};
-        union {double y, g, t;};
-        union {double z, b, p;};
-        union {double w, a, q;};
+        union {
+            double x, r, s;
+        };
+        union {
+            double y, g, t;
+        };
+        union {
+            double z, b, p;
+        };
+        union {
+            double w, a, q;
+        };
     };
     double data[4];
 } JML_Vec4d;
