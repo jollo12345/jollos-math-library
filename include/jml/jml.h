@@ -7,5 +7,7 @@
 #include "jml/geometric.h"
 #include "jml/relational.h"
 #include "jml/types.h"
+#include "jml/common.h"
+#include "jml/trigonometry.h"
 
 #endif  // JML_JML_H
