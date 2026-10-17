@@ -70,3 +70,5 @@ Each type has a lowercase constructor function (`vec3f(...)`, `mat4x4d(...)`).
 - [ ] Type-cast constructors
 - [ ] Non-square matrices
 - [ ] Common math functions
+- [ ] Trigonometry functions
+- [ ] Exponential functions
