@@ -1,14 +1,14 @@
 #ifndef JML_COMMON_PI_H
 #define JML_COMMON_PI_H
 
-constexpr double JML_PI_D = 0x400921fb54442d18;
-constexpr float JML_PI_F = 0x40490fdb;
+#define JML_PI_D 0x1.921fb54442d18p+1
+#define JML_PI_F 0x1.921fb6p+1f
 
 #endif
 
 #ifndef JML_WITHOUT_PREFIX
 
-constexpr double PI_D = JML_PI_D;
-constexpr float PI_F = JML_PI_F;
+#define PI_D 0x1.921fb54442d18p+1
+#define PI_F 0x1.921fb6p+1f
 
 #endif
