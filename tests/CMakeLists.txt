@@ -11,7 +11,10 @@ FetchContent_MakeAvailable(_unity)
 
 target_compile_definitions(unity PUBLIC UNITY_INCLUDE_DOUBLE)
 
-function(jml_add_test src)
+file(GLOB_RECURSE ${PROJECT_NAME}_TEST_SOURCES CONFIGURE_DEPENDS
+     "${CMAKE_CURRENT_SOURCE_DIR}/src/*_test.c")
+
+foreach(src IN LISTS ${PROJECT_NAME}_TEST_SOURCES)
   file(RELATIVE_PATH rel ${CMAKE_CURRENT_SOURCE_DIR}/src ${src})
   get_filename_component(rel_dir ${rel} DIRECTORY)
   get_filename_component(base ${rel} NAME_WE)
@@ -36,13 +39,6 @@ function(jml_add_test src)
   endif()
 
   set_property(GLOBAL APPEND PROPERTY ${PROJECT_NAME}_TEST_TARGETS ${target})
-endfunction()
-
-file(GLOB_RECURSE ${PROJECT_NAME}_TEST_SOURCES CONFIGURE_DEPENDS
-     "${CMAKE_CURRENT_SOURCE_DIR}/src/*_test.c")
-
-foreach(src IN LISTS ${PROJECT_NAME}_TEST_SOURCES)
-  jml_add_test(${src})
 endforeach()
 
 if(${PROJECT_NAME}_ENABLE_COVERAGE)
