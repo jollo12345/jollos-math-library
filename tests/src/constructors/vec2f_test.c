@@ -6,16 +6,16 @@
 #include "util.h"
 
 const int TEST_ITERATIONS = 8;
-const int VECTOR_SIZE = 2;
+const int ARRAY_SIZE = 2;
 
 static void vec2f_test_1() {
-    float expected[VECTOR_SIZE];
+    float expected[ARRAY_SIZE];
 
     srand(0x4335);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_FLOAT_ARRAY(expected, VECTOR_SIZE);
+        INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec2f value = JML_vec2f(expected[0], expected[1]);
-        TEST_ASSERT_EQUAL_FLOAT_ARRAY(expected, value.data, VECTOR_SIZE);
+        TEST_ASSERT_EQUAL_FLOAT_ARRAY(expected, value.data, ARRAY_SIZE);
     }
 }
 

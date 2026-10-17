@@ -8,82 +8,82 @@
 #include "util.h"
 
 const int TEST_ITERATIONS = 8;
-const int VECTOR_SIZE = 4;
+const int ARRAY_SIZE = 4;
 
 static void vec4u_test_1() {
-    unsigned expected[VECTOR_SIZE];
+    unsigned expected[ARRAY_SIZE];
 
     srand(0x2338);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_UNSIGNED_ARRAY(expected, VECTOR_SIZE);
+        INIT_UNSIGNED_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4u value = JML_vec4u(expected[0], expected[1], expected[2], expected[3]);
-        TEST_ASSERT_EQUAL_UINT_ARRAY(expected, value.data, VECTOR_SIZE);
+        TEST_ASSERT_EQUAL_UINT_ARRAY(expected, value.data, ARRAY_SIZE);
     }
 }
 
 static void vec4u_test_2() {
-    unsigned expected[VECTOR_SIZE];
+    unsigned expected[ARRAY_SIZE];
 
     srand(0x46ed);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_UNSIGNED_ARRAY(expected, VECTOR_SIZE);
+        INIT_UNSIGNED_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4u value = JML_vec4u(expected[0], expected[1], JML_vec2u(expected[2], expected[3]));
-        TEST_ASSERT_EQUAL_UINT_ARRAY(expected, value.data, VECTOR_SIZE);
+        TEST_ASSERT_EQUAL_UINT_ARRAY(expected, value.data, ARRAY_SIZE);
     }
 }
 
 static void vec4u_test_3() {
-    unsigned expected[VECTOR_SIZE];
+    unsigned expected[ARRAY_SIZE];
 
     srand(0x251d);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_UNSIGNED_ARRAY(expected, VECTOR_SIZE);
+        INIT_UNSIGNED_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4u value = JML_vec4u(expected[0], JML_vec2u(expected[1], expected[2]), expected[3]);
-        TEST_ASSERT_EQUAL_UINT_ARRAY(expected, value.data, VECTOR_SIZE);
+        TEST_ASSERT_EQUAL_UINT_ARRAY(expected, value.data, ARRAY_SIZE);
     }
 }
 
 static void vec4u_test_4() {
-    unsigned expected[VECTOR_SIZE];
+    unsigned expected[ARRAY_SIZE];
 
     srand(0x7ff0);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_UNSIGNED_ARRAY(expected, VECTOR_SIZE);
+        INIT_UNSIGNED_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4u value = JML_vec4u(expected[0], JML_vec3u(expected[1], expected[2], expected[3]));
-        TEST_ASSERT_EQUAL_UINT_ARRAY(expected, value.data, VECTOR_SIZE);
+        TEST_ASSERT_EQUAL_UINT_ARRAY(expected, value.data, ARRAY_SIZE);
     }
 }
 
 static void vec4u_test_5() {
-    unsigned expected[VECTOR_SIZE];
+    unsigned expected[ARRAY_SIZE];
 
     srand(0x4564);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_UNSIGNED_ARRAY(expected, VECTOR_SIZE);
+        INIT_UNSIGNED_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4u value = JML_vec4u(JML_vec2u(expected[0], expected[1]), expected[2], expected[3]);
-        TEST_ASSERT_EQUAL_UINT_ARRAY(expected, value.data, VECTOR_SIZE);
+        TEST_ASSERT_EQUAL_UINT_ARRAY(expected, value.data, ARRAY_SIZE);
     }
 }
 
 static void vec4u_test_6() {
-    unsigned expected[VECTOR_SIZE];
+    unsigned expected[ARRAY_SIZE];
 
     srand(0xa82u);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_UNSIGNED_ARRAY(expected, VECTOR_SIZE);
+        INIT_UNSIGNED_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4u value = JML_vec4u(JML_vec2u(expected[0], expected[1]), JML_vec2u(expected[2], expected[3]));
-        TEST_ASSERT_EQUAL_UINT_ARRAY(expected, value.data, VECTOR_SIZE);
+        TEST_ASSERT_EQUAL_UINT_ARRAY(expected, value.data, ARRAY_SIZE);
     }
 }
 
 static void vec4u_test_7() {
-    unsigned expected[VECTOR_SIZE];
+    unsigned expected[ARRAY_SIZE];
 
     srand(0xb1be);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_UNSIGNED_ARRAY(expected, VECTOR_SIZE);
+        INIT_UNSIGNED_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4u value = JML_vec4u(JML_vec3u(expected[0], expected[1], expected[2]), expected[3]);
-        TEST_ASSERT_EQUAL_UINT_ARRAY(expected, value.data, VECTOR_SIZE);
+        TEST_ASSERT_EQUAL_UINT_ARRAY(expected, value.data, ARRAY_SIZE);
     }
 }
 

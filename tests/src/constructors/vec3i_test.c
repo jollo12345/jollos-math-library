@@ -7,38 +7,38 @@
 #include "util.h"
 
 const int TEST_ITERATIONS = 8;
-const int VECTOR_SIZE = 3;
+const int ARRAY_SIZE = 3;
 
 static void vec3i_test_1() {
-    int expected[VECTOR_SIZE];
+    int expected[ARRAY_SIZE];
 
     srand(0x8131);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_INT_ARRAY(expected, VECTOR_SIZE);
+        INIT_INT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec3i value = JML_vec3i(expected[0], expected[1], expected[2]);
-        TEST_ASSERT_EQUAL_INT_ARRAY(expected, value.data, VECTOR_SIZE);
+        TEST_ASSERT_EQUAL_INT_ARRAY(expected, value.data, ARRAY_SIZE);
     }
 }
 
 static void vec3i_test_2() {
-    int expected[VECTOR_SIZE];
+    int expected[ARRAY_SIZE];
 
     srand(0xc5d9);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_INT_ARRAY(expected, VECTOR_SIZE);
+        INIT_INT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec3i value = JML_vec3i(expected[0], JML_vec2i(expected[1], expected[2]));
-        TEST_ASSERT_EQUAL_INT_ARRAY(expected, value.data, VECTOR_SIZE);
+        TEST_ASSERT_EQUAL_INT_ARRAY(expected, value.data, ARRAY_SIZE);
     }
 }
 
 static void vec3i_test_3() {
-    int expected[VECTOR_SIZE];
+    int expected[ARRAY_SIZE];
 
     srand(0x0f25);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_INT_ARRAY(expected, VECTOR_SIZE);
+        INIT_INT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec3i value = JML_vec3i(JML_vec2i(expected[0], expected[1]), expected[2]);
-        TEST_ASSERT_EQUAL_INT_ARRAY(expected, value.data, VECTOR_SIZE);
+        TEST_ASSERT_EQUAL_INT_ARRAY(expected, value.data, ARRAY_SIZE);
     }
 }
 
