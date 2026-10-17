@@ -1,6 +1,3 @@
-#ifndef JML_TYPES_H
-#define JML_TYPES_H
-
 #include "jml/types/mat2x2d.h"
 #include "jml/types/mat2x2f.h"
 #include "jml/types/mat3x3d.h"
@@ -22,5 +19,3 @@
 #include "jml/types/vec4f.h"
 #include "jml/types/vec4i.h"
 #include "jml/types/vec4u.h"
-
-#endif  // JML_TYPES_H
