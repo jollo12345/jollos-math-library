@@ -1,5 +1,5 @@
-#ifndef JML_GEOMETRIC_DEGREES_H
-#define JML_GEOMETRIC_DEGREES_H
+#ifndef JML_TRIGONOMETRY_DEGREES_H
+#define JML_TRIGONOMETRY_DEGREES_H
 
 #include "jml/common/pi.h"
 #include "jml/constructors/vec2d.h"
@@ -94,7 +94,7 @@ static inline JML_Vec4f JML_degreesVec4f(
 #define JML_degrees(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_degrees_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)
 
-#endif  // JML_CONSTRUCTORS_DEGREES_H
+#endif  // JML_TRIGONOMETRY_DEGREES_H
 
 #ifndef JML_WITHOUT_PREFIX
 

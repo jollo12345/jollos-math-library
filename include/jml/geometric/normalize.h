@@ -47,7 +47,7 @@ static inline JML_Vec3f JML_normalizeVec3f(
 #define JML_normalize(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_normalize_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)
 
-#endif  // JML_CONSTRUCTORS_NORMALIZE_H
+#endif  // JML_GEOMETRIC_NORMALIZE_H
 
 #ifndef JML_WITHOUT_PREFIX
 

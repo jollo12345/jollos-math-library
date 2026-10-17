@@ -47,7 +47,7 @@ static inline JML_Vec3f JML_crossVec3fVec3f(
 #define JML_cross(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_cross_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)
 
-#endif  // JML_CONSTRUCTORS_CROSS_H
+#endif  // JML_GEOMETRIC_CROSS_H
 
 #ifndef JML_WITHOUT_PREFIX
 

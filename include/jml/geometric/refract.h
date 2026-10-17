@@ -152,7 +152,7 @@ static inline JML_Vec4f JML_refractVec4fVec4fF(
 #define JML_refract(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_refract_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)
 
-#endif  // JML_CONSTRUCTORS_REFRACT_H
+#endif  // JML_GEOMETRIC_REFRACT_H
 
 #ifndef JML_WITHOUT_PREFIX
 

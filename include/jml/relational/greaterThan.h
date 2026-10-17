@@ -1,5 +1,5 @@
-#ifndef JML_ARITHMETIC_GREATER_THAN_H
-#define JML_ARITHMETIC_GREATER_THAN_H
+#ifndef JML_RELATIONAL_GREATER_THAN_H
+#define JML_RELATIONAL_GREATER_THAN_H
 
 #include "jml/constructors/vec2b.h"
 #include "jml/constructors/vec3b.h"
@@ -215,7 +215,7 @@ static inline JML_Vec4b JML_greaterThanVec4uVec4u(
 #define JML_greaterThan(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_greaterThan_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)
 
-#endif  // JML_ARITHMETIC_GREATER_THAN_H
+#endif  // JML_RELATIONAL_GREATER_THAN_H
 
 #ifndef JML_WITHOUT_PREFIX
 

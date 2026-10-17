@@ -98,7 +98,7 @@ static inline JML_Vec4f JML_reflectVec4fVec4f(
 #define JML_reflect(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_reflect_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)
 
-#endif  // JML_CONSTRUCTORS_REFLECT_H
+#endif  // JML_GEOMETRIC_REFLECT_H
 
 #ifndef JML_WITHOUT_PREFIX
 

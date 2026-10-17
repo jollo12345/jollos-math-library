@@ -89,7 +89,7 @@ static inline float JML_dotVec4fVec4f(
 #define JML_dot(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_dot_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)
 
-#endif  // JML_CONSTRUCTORS_DOT_H
+#endif  // JML_GEOMETRIC_DOT_H
 
 #ifndef JML_WITHOUT_PREFIX
 

@@ -1,5 +1,5 @@
-#ifndef JML_ARITHMETIC_LESS_THAN_LESS_THAN_EQUAL_H
-#define JML_ARITHMETIC_LESS_THAN_LESS_THAN_EQUAL_H
+#ifndef JML_RELATIONAL_LESS_THAN_EQUAL_H
+#define JML_RELATIONAL_LESS_THAN_EQUAL_H
 
 #include "jml/constructors/vec2b.h"
 #include "jml/constructors/vec3b.h"
@@ -125,7 +125,7 @@ static inline JML_Vec4b JML_lessThanEqualVec4fVec4f(
 #define JML_lessThanEqual(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_lessThanEqual_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)
 
-#endif  // JML_ARITHMETIC_LESS_THAN_LESS_THAN_EQUAL_H
+#endif  // JML_RELATIONAL_LESS_THAN_EQUAL_H
 
 #ifndef JML_WITHOUT_PREFIX
 

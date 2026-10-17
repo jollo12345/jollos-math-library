@@ -1,5 +1,5 @@
-#ifndef JML_ARITHMETIC_ANY_H
-#define JML_ARITHMETIC_ANY_H
+#ifndef JML_RELATIONAL_ANY_H
+#define JML_RELATIONAL_ANY_H
 
 #include "jml/types/vec2b.h"
 #include "jml/types/vec3b.h"
@@ -35,7 +35,7 @@ static inline bool JML_anyVec4b(
 #define JML_any(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_any_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)
 
-#endif  // JML_ARITHMETIC_ANY_H
+#endif  // JML_RELATIONAL_ANY_H
 
 #ifndef JML_WITHOUT_PREFIX
 

@@ -1,5 +1,5 @@
-#ifndef JML_ARITHMETIC_EQUAL_H
-#define JML_ARITHMETIC_EQUAL_H
+#ifndef JML_RELATIONAL_EQUAL_H
+#define JML_RELATIONAL_EQUAL_H
 
 #include "jml/constructors/vec2b.h"
 #include "jml/constructors/vec3b.h"
@@ -221,7 +221,7 @@ static inline JML_Vec4b JML_equalVec4uVec4u(
 #define JML_equal(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_equal_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)
 
-#endif  // JML_ARITHMETIC_EQUAL_H
+#endif  // JML_RELATIONAL_EQUAL_H
 
 #ifndef JML_WITHOUT_PREFIX
 
