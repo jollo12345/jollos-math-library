@@ -1,10 +1,10 @@
 #ifndef JML_ARITHMETIC_H
 #define JML_ARITHMETIC_H
 
-#include "jml/detail/arithmetic/add.h"
-#include "jml/detail/arithmetic/div.h"
-#include "jml/detail/arithmetic/mul.h"
-#include "jml/detail/arithmetic/neg.h"
-#include "jml/detail/arithmetic/sub.h"
+#include "jml/arithmetic/add.h"
+#include "jml/arithmetic/div.h"
+#include "jml/arithmetic/mul.h"
+#include "jml/arithmetic/neg.h"
+#include "jml/arithmetic/sub.h"
 
 #endif  // JML_ARITHMETIC_H
