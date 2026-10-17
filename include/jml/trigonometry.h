@@ -1,2 +1,5 @@
-#include "jml/trigonometry/radians.h"
+#include "jml/trigonometry/cos.h"
 #include "jml/trigonometry/degrees.h"
+#include "jml/trigonometry/radians.h"
+#include "jml/trigonometry/sin.h"
+#include "jml/trigonometry/tan.h"
