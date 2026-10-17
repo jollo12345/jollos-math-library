@@ -1,6 +1,3 @@
-#ifndef JML_RELATIONAL
-#define JML_RELATIONAL
-
 #include "jml/relational/all.h"
 #include "jml/relational/any.h"
 #include "jml/relational/equal.h"
@@ -9,5 +6,3 @@
 #include "jml/relational/lessThan.h"
 #include "jml/relational/lessThanEqual.h"
 #include "jml/relational/notEqual.h"
-
-#endif  // JML_RELATIONAL

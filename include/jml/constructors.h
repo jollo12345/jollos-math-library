@@ -1,6 +1,3 @@
-#ifndef JML_CONSTRUCTORS_H
-#define JML_CONSTRUCTORS_H
-
 #include "jml/constructors/mat2x2d.h"
 #include "jml/constructors/mat2x2f.h"
 #include "jml/constructors/mat3x3d.h"
@@ -22,5 +19,3 @@
 #include "jml/constructors/vec4f.h"
 #include "jml/constructors/vec4i.h"
 #include "jml/constructors/vec4u.h"
-
-#endif  // JML_CONSTRUCTORS_H
