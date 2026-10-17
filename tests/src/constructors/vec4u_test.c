@@ -13,7 +13,7 @@ const int ARRAY_SIZE = 4;
 static void vec4u_test_1() {
     unsigned expected[ARRAY_SIZE];
 
-    srand(0x2338);
+    srand(0x2e50);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_UNSIGNED_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4u value = JML_vec4u(expected[0], expected[1], expected[2], expected[3]);
@@ -24,7 +24,7 @@ static void vec4u_test_1() {
 static void vec4u_test_2() {
     unsigned expected[ARRAY_SIZE];
 
-    srand(0x46ed);
+    srand(0xd748);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_UNSIGNED_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4u value = JML_vec4u(expected[0], expected[1], JML_vec2u(expected[2], expected[3]));
@@ -35,7 +35,7 @@ static void vec4u_test_2() {
 static void vec4u_test_3() {
     unsigned expected[ARRAY_SIZE];
 
-    srand(0x251d);
+    srand(0xd984);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_UNSIGNED_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4u value = JML_vec4u(expected[0], JML_vec2u(expected[1], expected[2]), expected[3]);
@@ -46,7 +46,7 @@ static void vec4u_test_3() {
 static void vec4u_test_4() {
     unsigned expected[ARRAY_SIZE];
 
-    srand(0x7ff0);
+    srand(0x4d5f);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_UNSIGNED_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4u value = JML_vec4u(expected[0], JML_vec3u(expected[1], expected[2], expected[3]));
@@ -57,7 +57,7 @@ static void vec4u_test_4() {
 static void vec4u_test_5() {
     unsigned expected[ARRAY_SIZE];
 
-    srand(0x4564);
+    srand(0xf40b);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_UNSIGNED_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4u value = JML_vec4u(JML_vec2u(expected[0], expected[1]), expected[2], expected[3]);
@@ -68,7 +68,7 @@ static void vec4u_test_5() {
 static void vec4u_test_6() {
     unsigned expected[ARRAY_SIZE];
 
-    srand(0xa82u);
+    srand(0x6f1c);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_UNSIGNED_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4u value = JML_vec4u(JML_vec2u(expected[0], expected[1]), JML_vec2u(expected[2], expected[3]));
@@ -79,7 +79,7 @@ static void vec4u_test_6() {
 static void vec4u_test_7() {
     unsigned expected[ARRAY_SIZE];
 
-    srand(0xb1be);
+    srand(0x6d5f);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_UNSIGNED_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4u value = JML_vec4u(JML_vec3u(expected[0], expected[1], expected[2]), expected[3]);

@@ -13,7 +13,7 @@ const int ARRAY_SIZE = 4;
 static void vec4i_test_1() {
     int expected[ARRAY_SIZE];
 
-    srand(0x2328);
+    srand(0x7c4f);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_INT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4i value = JML_vec4i(expected[0], expected[1], expected[2], expected[3]);
@@ -24,7 +24,7 @@ static void vec4i_test_1() {
 static void vec4i_test_2() {
     int expected[ARRAY_SIZE];
 
-    srand(0x46ed);
+    srand(0x1a58);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_INT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4i value = JML_vec4i(expected[0], expected[1], JML_vec2i(expected[2], expected[3]));
@@ -35,7 +35,7 @@ static void vec4i_test_2() {
 static void vec4i_test_3() {
     int expected[ARRAY_SIZE];
 
-    srand(0x251d);
+    srand(0xf001);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_INT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4i value = JML_vec4i(expected[0], JML_vec2i(expected[1], expected[2]), expected[3]);
@@ -46,7 +46,7 @@ static void vec4i_test_3() {
 static void vec4i_test_4() {
     int expected[ARRAY_SIZE];
 
-    srand(0x7ff0);
+    srand(0x0aca);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_INT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4i value = JML_vec4i(expected[0], JML_vec3i(expected[1], expected[2], expected[3]));
@@ -57,7 +57,7 @@ static void vec4i_test_4() {
 static void vec4i_test_5() {
     int expected[ARRAY_SIZE];
 
-    srand(0x4564);
+    srand(0x81e1);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_INT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4i value = JML_vec4i(JML_vec2i(expected[0], expected[1]), expected[2], expected[3]);
@@ -68,7 +68,7 @@ static void vec4i_test_5() {
 static void vec4i_test_6() {
     int expected[ARRAY_SIZE];
 
-    srand(0xa82i);
+    srand(0x18ba);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_INT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4i value = JML_vec4i(JML_vec2i(expected[0], expected[1]), JML_vec2i(expected[2], expected[3]));
@@ -79,7 +79,7 @@ static void vec4i_test_6() {
 static void vec4i_test_7() {
     int expected[ARRAY_SIZE];
 
-    srand(0xb1be);
+    srand(0x5311);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_INT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4i value = JML_vec4i(JML_vec3i(expected[0], expected[1], expected[2]), expected[3]);

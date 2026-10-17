@@ -12,7 +12,7 @@ const int ARRAY_SIZE = 2;
 static void mat2x2f_test_1() {
     float expected[ARRAY_SIZE];
 
-    srand(0x1d61);
+    srand(0x6b3b);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
         JML_Mat2x2f value = JML_mat2x2f(
@@ -26,7 +26,7 @@ static void mat2x2f_test_1() {
 static void mat2x2f_test_2() {
     float expected[ARRAY_SIZE];
 
-    srand(0x1d61);
+    srand(0x77de);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec2f vector_1 = JML_vec2f(expected[0], expected[1]);

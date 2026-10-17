@@ -11,7 +11,7 @@ const int ARRAY_SIZE = 2;
 static void vec2i_test_1() {
     int expected[ARRAY_SIZE];
 
-    srand(0x4335);
+    srand(0xe785);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_INT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec2i value = JML_vec2i(expected[0], expected[1]);

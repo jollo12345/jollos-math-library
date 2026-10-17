@@ -11,7 +11,7 @@ const int ARRAY_SIZE = 2;
 static void vec2f_test_1() {
     float expected[ARRAY_SIZE];
 
-    srand(0x4335);
+    srand(0x5562);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec2f value = JML_vec2f(expected[0], expected[1]);

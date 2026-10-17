@@ -12,7 +12,7 @@ const int ARRAY_SIZE = 3;
 static void vec3d_test_1() {
     double expected[ARRAY_SIZE];
 
-    srand(0x8131);
+    srand(0xb6bf);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
         JML_Vec3d value = JML_vec3d(expected[0], expected[1], expected[2]);
@@ -23,7 +23,7 @@ static void vec3d_test_1() {
 static void vec3d_test_2() {
     double expected[ARRAY_SIZE];
 
-    srand(0xc5d9);
+    srand(0xcabb);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
         JML_Vec3d value = JML_vec3d(expected[0], JML_vec2d(expected[1], expected[2]));
@@ -34,7 +34,7 @@ static void vec3d_test_2() {
 static void vec3d_test_3() {
     double expected[ARRAY_SIZE];
 
-    srand(0x0f25);
+    srand(0x669e);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
         JML_Vec3d value = JML_vec3d(JML_vec2d(expected[0], expected[1]), expected[2]);

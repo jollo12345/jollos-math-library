@@ -12,7 +12,7 @@ const int ARRAY_SIZE = 16;
 static void mat4x4d_test_1() {
     double expected[ARRAY_SIZE];
 
-    srand(0x1d61);
+    srand(0x0e04);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
         JML_Mat4x4d value = JML_mat4x4d(
@@ -28,7 +28,7 @@ static void mat4x4d_test_1() {
 static void mat4x4d_test_2() {
     double expected[ARRAY_SIZE];
 
-    srand(0x1d61);
+    srand(0xe963);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4d vector_1 = JML_vec4d(expected[0], expected[1], expected[2], expected[3]);

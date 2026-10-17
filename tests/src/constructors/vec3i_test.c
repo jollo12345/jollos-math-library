@@ -12,7 +12,7 @@ const int ARRAY_SIZE = 3;
 static void vec3i_test_1() {
     int expected[ARRAY_SIZE];
 
-    srand(0x8131);
+    srand(0xfd2e);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_INT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec3i value = JML_vec3i(expected[0], expected[1], expected[2]);
@@ -23,7 +23,7 @@ static void vec3i_test_1() {
 static void vec3i_test_2() {
     int expected[ARRAY_SIZE];
 
-    srand(0xc5d9);
+    srand(0xebc7);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_INT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec3i value = JML_vec3i(expected[0], JML_vec2i(expected[1], expected[2]));
@@ -34,7 +34,7 @@ static void vec3i_test_2() {
 static void vec3i_test_3() {
     int expected[ARRAY_SIZE];
 
-    srand(0x0f25);
+    srand(0xba5b);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_INT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec3i value = JML_vec3i(JML_vec2i(expected[0], expected[1]), expected[2]);

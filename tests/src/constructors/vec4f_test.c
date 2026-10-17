@@ -13,7 +13,7 @@ const int ARRAY_SIZE = 4;
 static void vec4f_test_1() {
     float expected[ARRAY_SIZE];
 
-    srand(0x23f8);
+    srand(0x21ad);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4f value = JML_vec4f(expected[0], expected[1], expected[2], expected[3]);
@@ -24,7 +24,7 @@ static void vec4f_test_1() {
 static void vec4f_test_2() {
     float expected[ARRAY_SIZE];
 
-    srand(0x46ed);
+    srand(0x6a66);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4f value = JML_vec4f(expected[0], expected[1], JML_vec2f(expected[2], expected[3]));
@@ -35,7 +35,7 @@ static void vec4f_test_2() {
 static void vec4f_test_3() {
     float expected[ARRAY_SIZE];
 
-    srand(0x251d);
+    srand(0x1217);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4f value = JML_vec4f(expected[0], JML_vec2f(expected[1], expected[2]), expected[3]);
@@ -46,7 +46,7 @@ static void vec4f_test_3() {
 static void vec4f_test_4() {
     float expected[ARRAY_SIZE];
 
-    srand(0x7ff0);
+    srand(0xa720);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4f value = JML_vec4f(expected[0], JML_vec3f(expected[1], expected[2], expected[3]));
@@ -57,7 +57,7 @@ static void vec4f_test_4() {
 static void vec4f_test_5() {
     float expected[ARRAY_SIZE];
 
-    srand(0x4564);
+    srand(0xbfaf);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4f value = JML_vec4f(JML_vec2f(expected[0], expected[1]), expected[2], expected[3]);
@@ -68,7 +68,7 @@ static void vec4f_test_5() {
 static void vec4f_test_6() {
     float expected[ARRAY_SIZE];
 
-    srand(0xa82f);
+    srand(0x7d7f);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4f value = JML_vec4f(JML_vec2f(expected[0], expected[1]), JML_vec2f(expected[2], expected[3]));
@@ -79,7 +79,7 @@ static void vec4f_test_6() {
 static void vec4f_test_7() {
     float expected[ARRAY_SIZE];
 
-    srand(0xb1be);
+    srand(0x582f);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4f value = JML_vec4f(JML_vec3f(expected[0], expected[1], expected[2]), expected[3]);

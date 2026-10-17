@@ -13,7 +13,7 @@ const int ARRAY_SIZE = 4;
 static void vec4d_test_1() {
     double expected[ARRAY_SIZE];
 
-    srand(0x23d8);
+    srand(0xa70e);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4d value = JML_vec4d(expected[0], expected[1], expected[2], expected[3]);
@@ -24,7 +24,7 @@ static void vec4d_test_1() {
 static void vec4d_test_2() {
     double expected[ARRAY_SIZE];
 
-    srand(0x46ed);
+    srand(0x94db);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4d value = JML_vec4d(expected[0], expected[1], JML_vec2d(expected[2], expected[3]));
@@ -35,7 +35,7 @@ static void vec4d_test_2() {
 static void vec4d_test_3() {
     double expected[ARRAY_SIZE];
 
-    srand(0x251d);
+    srand(0xd835);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4d value = JML_vec4d(expected[0], JML_vec2d(expected[1], expected[2]), expected[3]);
@@ -46,7 +46,7 @@ static void vec4d_test_3() {
 static void vec4d_test_4() {
     double expected[ARRAY_SIZE];
 
-    srand(0x7ff0);
+    srand(0x34a9);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4d value = JML_vec4d(expected[0], JML_vec3d(expected[1], expected[2], expected[3]));
@@ -57,7 +57,7 @@ static void vec4d_test_4() {
 static void vec4d_test_5() {
     double expected[ARRAY_SIZE];
 
-    srand(0x4564);
+    srand(0xb29a);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4d value = JML_vec4d(JML_vec2d(expected[0], expected[1]), expected[2], expected[3]);
@@ -79,7 +79,7 @@ static void vec4d_test_6() {
 static void vec4d_test_7() {
     double expected[ARRAY_SIZE];
 
-    srand(0xb1be);
+    srand(0x5f93);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
         JML_Vec4d value = JML_vec4d(JML_vec3d(expected[0], expected[1], expected[2]), expected[3]);

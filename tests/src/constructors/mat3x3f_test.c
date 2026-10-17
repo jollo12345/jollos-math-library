@@ -12,7 +12,7 @@ const int ARRAY_SIZE = 9;
 static void mat3x3f_test_1() {
     float expected[ARRAY_SIZE];
 
-    srand(0x1d61);
+    srand(0x940e);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
         JML_Mat3x3f value = JML_mat3x3f(
@@ -27,7 +27,7 @@ static void mat3x3f_test_1() {
 static void mat3x3f_test_2() {
     float expected[ARRAY_SIZE];
 
-    srand(0x1d61);
+    srand(0x3bc0);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
         JML_Vec3f vector_1 = JML_vec3f(expected[0], expected[1], expected[2]);

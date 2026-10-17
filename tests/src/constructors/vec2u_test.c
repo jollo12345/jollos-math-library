@@ -11,7 +11,7 @@ const int ARRAY_SIZE = 2;
 static void vec2u_test_1() {
     unsigned expected[ARRAY_SIZE];
 
-    srand(0x4335);
+    srand(0x614a);
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_UNSIGNED_ARRAY(expected, ARRAY_SIZE);
         JML_Vec2u value = JML_vec2u(expected[0], expected[1]);
