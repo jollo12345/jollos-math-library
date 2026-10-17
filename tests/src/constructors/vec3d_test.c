@@ -16,7 +16,6 @@ static void vec3d_test_1() {
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
         JML_Vec3d value = JML_vec3d(expected[0], expected[1], expected[2]);
-        ;
         TEST_ASSERT_EQUAL_DOUBLE_ARRAY(expected, value.data, ARRAY_SIZE);
     }
 }
@@ -28,7 +27,6 @@ static void vec3d_test_2() {
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
         JML_Vec3d value = JML_vec3d(expected[0], JML_vec2d(expected[1], expected[2]));
-        ;
         TEST_ASSERT_EQUAL_DOUBLE_ARRAY(expected, value.data, ARRAY_SIZE);
     }
 }
@@ -40,7 +38,6 @@ static void vec3d_test_3() {
     for (int index = 0; index < TEST_ITERATIONS; ++index) {
         INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
         JML_Vec3d value = JML_vec3d(JML_vec2d(expected[0], expected[1]), expected[2]);
-        ;
         TEST_ASSERT_EQUAL_DOUBLE_ARRAY(expected, value.data, ARRAY_SIZE);
     }
 }

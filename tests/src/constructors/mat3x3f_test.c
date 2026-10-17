@@ -7,7 +7,7 @@
 #include "util.h"
 
 const int TEST_ITERATIONS = 8;
-const int ARRAY_SIZE = 2;
+const int ARRAY_SIZE = 9;
 
 static void mat3x3f_test_1() {
     float expected[ARRAY_SIZE];
