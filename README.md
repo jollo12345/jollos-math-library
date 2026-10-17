@@ -6,7 +6,6 @@ A small math library for C23 with focus on vector and matrix operations.
 
 - Header-only math library
 - Generic dispatch through `_Generic` to keep code concise
-- Memory layout for vector and matrix types matches GLSL
 
 ## Examples
 
@@ -45,11 +44,13 @@ int main(void) {
 
 ## Types
 
-|   Kind |                        `Vector` |                        `Matrix` |
-|--------|---------------------------------|---------------------------------|
-|  float |       `Vec2d`, `Vec3d`, `Vec4d` |       `Vec2f`, `Vec3f`, `Vec4f` |
-| double | `Mat2x2d`, `Mat3x3d`, `Mat4x4d` | `Mat2x2f`, `Mat3x3f`, `Mat4x4f` |
-|   bool |         `<BVec2, BVec3, BVec4>` |                               - |
+|     Kind |                  `Vector` |                        `Matrix` |
+|----------|---------------------------|---------------------------------|
+|     bool |     `Vec2b, Vec3b, Vec4b` |                               - |
+|   double | `Vec2f`, `Vec3f`, `Vec4f` | `Mat2x2f`, `Mat3x3f`, `Mat4x4f` |
+|    float | `Vec2d`, `Vec3d`, `Vec4d` | `Mat2x2d`, `Mat3x3d`, `Mat4x4d` |
+|      int |     `Vec2i, Vec3i, Vec4i` |                               - |
+| unsigned |     `Vec2u, Vec3u, Vec4u` |                               - |
 
 Each type has a lowercase constructor function (`vec3f(...)`, `mat4x4d(...)`).
 
@@ -57,15 +58,15 @@ Each type has a lowercase constructor function (`vec3f(...)`, `mat4x4d(...)`).
 
 |   Category |                                                                                         Functions |
 |------------|---------------------------------------------------------------------------------------------------|
-| Arithmetic |                                                                 `add`, `sub`, `mul`, `div`, `neg` |
-|  Geometric |                                                       `cross`, `distance`, `length`, `normalized` |
-| Relational | `equal`, `notEqual`, `lessThan`, `lessThanEqual`, `greaterThan`, `greaterThanEqual`, `all`, `any` |
-| Transforms |                                                   `translation`, `rotation`, `scaling`, `frustum` |
+|     Affine |                                                   `frustum`, `rotation`, `scaling`, `translation` |
+| Arithmetic |                                                                 `add`, `div`, `mul`, `neg`, `div` |
+|  Geometric |                           `cross`, `distance`, `dot`, `length`, `normalize`, `reflect`, `refract` |
+| Relational | `all`, `any`, `equal`, `greaterThan`, `greaterThanEqual`, `lessThan`, `lessThanEqual`, `notEqual` |
 
 ## Planned Features (To Do)
 
-1. Pack/unpack functions
-2. Integer vectors
-3. Type-cast constructors
-4. Non-square matrices
-5. Common math functions
+- [ ] Pack/unpack functions
+- [x] Integer vectors
+- [ ] Type-cast constructors
+- [ ] Non-square matrices
+- [ ] Common math functions
