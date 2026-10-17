@@ -4,6 +4,7 @@
 #include "jml/types/vec2b.h"
 #include "jml/types/vec3b.h"
 #include "jml/types/vec4b.h"
+#include "jml/util.h"
 
 static inline bool JML_allVec2b(
     const JML_Vec2b arg

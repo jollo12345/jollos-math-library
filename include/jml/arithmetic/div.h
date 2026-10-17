@@ -31,6 +31,7 @@
 #include "jml/types/vec4d.h"
 #include "jml/types/vec4f.h"
 #include "jml/types/vec4i.h"
+#include "jml/util.h"
 
 static inline JML_Mat2x2d JML_divMat2x2dD(
     const JML_Mat2x2d arg_0,

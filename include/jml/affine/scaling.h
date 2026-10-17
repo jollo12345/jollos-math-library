@@ -7,6 +7,7 @@
 #include "jml/types/mat4x4f.h"
 #include "jml/types/vec4d.h"
 #include "jml/types/vec4f.h"
+#include "jml/util.h"
 
 static inline JML_Mat4x4d JML_scalingVec3d(
     const JML_Vec3d scale

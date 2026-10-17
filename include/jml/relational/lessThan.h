@@ -13,6 +13,7 @@
 #include "jml/types/vec4b.h"
 #include "jml/types/vec4d.h"
 #include "jml/types/vec4f.h"
+#include "jml/util.h"
 
 static inline JML_Vec2b JML_lessThanVec2dVec2d(
     const JML_Vec2d arg_0,

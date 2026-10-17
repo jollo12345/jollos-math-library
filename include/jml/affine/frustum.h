@@ -7,6 +7,7 @@
 #include "jml/types/mat4x4f.h"
 #include "jml/types/vec3d.h"
 #include "jml/types/vec3f.h"
+#include "jml/util.h"
 
 static inline JML_Mat4x4d JML_frustumDDDDDD(
     const double left,
