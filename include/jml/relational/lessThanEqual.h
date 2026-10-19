@@ -127,7 +127,7 @@ static inline JML_Vec4b JML_lessThanEqualVec4fVec4f(
 
 #endif  // JML_RELATIONAL_LESS_THAN_EQUAL_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define lessThanEqual(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_lessThanEqual_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

@@ -166,7 +166,7 @@ static inline JML_Vec4b JML_vec4bBBBB(
 
 #endif  // JML_CONSTRUCTORS_VEC4B_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define vec4b(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_vec4b_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

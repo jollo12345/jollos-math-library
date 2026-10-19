@@ -69,7 +69,7 @@ static inline float JML_distanceVec3fVec3f(
 
 #endif  // JML_GEOMETRIC_DISTANCE_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define distance(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_distance_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

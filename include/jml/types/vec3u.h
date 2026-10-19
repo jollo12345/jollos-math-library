@@ -20,7 +20,7 @@ static_assert(sizeof(JML_Vec3u) == 3 * sizeof(unsigned));
 
 #endif  // JML_TYPES_VEC3U_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 typedef JML_Vec3u Vec3u;
 

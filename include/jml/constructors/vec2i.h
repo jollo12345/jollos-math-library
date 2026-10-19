@@ -29,7 +29,7 @@ static inline JML_Vec2i JML_vec2iII(
 
 #endif  // JML_CONSTRUCTORS_VEC2I_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define vec2i(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_vec2i_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

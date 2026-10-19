@@ -37,7 +37,7 @@ static inline bool JML_anyVec4b(
 
 #endif  // JML_RELATIONAL_ANY_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define any(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_any_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

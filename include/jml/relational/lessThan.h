@@ -217,7 +217,7 @@ static inline JML_Vec4b JML_lessThanVec4uVec4u(
 
 #endif  // JML_RELATIONAL_LESS_THAN_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define lessThan(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_lessThan_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

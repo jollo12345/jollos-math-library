@@ -374,7 +374,7 @@ static inline JML_Vec4u JML_subVec4uVec4u(
 
 #endif  // JML_ARITHMETIC_SUB_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define sub(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_sub_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

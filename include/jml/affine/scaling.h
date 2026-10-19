@@ -43,7 +43,7 @@ static inline JML_Mat4x4f JML_scalingVec3f(
 
 #endif  // JML_AFFINE_SCALING_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define scaling(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_scaling_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

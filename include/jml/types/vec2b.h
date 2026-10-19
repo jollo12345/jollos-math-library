@@ -17,7 +17,7 @@ static_assert(sizeof(JML_Vec2b) == 2 * sizeof(bool));
 
 #endif  // JML_TYPES_VEC2B_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 typedef JML_Vec2b Vec2b;
 

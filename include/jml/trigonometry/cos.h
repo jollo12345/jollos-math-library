@@ -98,7 +98,7 @@ static inline JML_Vec4f JML_cosVec4f(
 
 #endif  // JML_TRIGONOMETRY_COS_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define cos(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_cos_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

@@ -64,7 +64,7 @@ static inline JML_Mat2x2f JML_mat2x2fFFFF(
 
 #endif  // JML_CONSTRUCTORS_MAT2X2F_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define mat2x2f(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_mat2x2f_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

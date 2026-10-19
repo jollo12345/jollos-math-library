@@ -166,7 +166,7 @@ static inline JML_Vec4d JML_vec4dDDDD(
 
 #endif  // JML_CONSTRUCTORS_VEC4D_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define vec4d(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_vec4d_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

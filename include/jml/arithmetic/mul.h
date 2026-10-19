@@ -1064,7 +1064,7 @@ static inline JML_Vec4u JML_mulVec4uVec4u(
 
 #endif  // JML_ARITHMETIC_MUL_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define mul(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_mul_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

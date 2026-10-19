@@ -281,7 +281,7 @@ static inline JML_Vec4u JML_negVec4u(
 
 #endif  // JML_ARITHMETIC_NEG_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define neg(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_neg_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

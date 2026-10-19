@@ -14,7 +14,7 @@ static_assert(sizeof(JML_Mat3x3d) == 9 * sizeof(double));
 
 #endif  // JML_TYPES_MAT3X3D_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 typedef JML_Mat3x3d Mat3x3d;
 

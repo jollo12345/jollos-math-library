@@ -13,7 +13,7 @@ static_assert(sizeof(JML_Mat2x2d) == 4 * sizeof(double));
 
 #endif  // JML_TYPES_MAT2X2D_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 typedef JML_Mat2x2d Mat2x2d;
 

@@ -371,7 +371,7 @@ static inline JML_Vec4u JML_divVec4uU(
 
 #endif  // JML_ARITHMETIC_DIV_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define div(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_div_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

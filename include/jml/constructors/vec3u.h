@@ -73,7 +73,7 @@ static inline JML_Vec3u JML_vec3uFFF(
 
 #endif  // JML_CONSTRUCTORS_VEC3U_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define vec3u(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_vec3u_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

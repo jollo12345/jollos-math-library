@@ -104,7 +104,7 @@ static inline JML_Mat3x3d JML_mat3x3dDDDDDDDDD(
 
 #endif  // JML_CONSTRUCTORS_MAT3X3D_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define mat3x3d(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_mat3x3d_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

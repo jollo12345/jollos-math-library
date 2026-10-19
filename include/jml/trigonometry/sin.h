@@ -98,7 +98,7 @@ static inline JML_Vec4f JML_sinVec4f(
 
 #endif  // JML_TRIGONOMETRY_SIN_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define sin(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_sin_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

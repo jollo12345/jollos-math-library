@@ -96,7 +96,7 @@ static inline JML_Vec4f JML_radiansVec4f(
 
 #endif  // JML_TRIGONOMETRY_RADIANS_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define radians(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_radians_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

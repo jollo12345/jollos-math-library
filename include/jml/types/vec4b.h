@@ -23,7 +23,7 @@ static_assert(sizeof(JML_Vec4b) == 4 * sizeof(bool));
 
 #endif  // JML_TYPES_VEC4B_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 typedef JML_Vec4b Vec4b;
 

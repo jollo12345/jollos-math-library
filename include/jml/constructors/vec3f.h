@@ -73,7 +73,7 @@ static inline JML_Vec3f JML_vec3fFFF(
 
 #endif  // JML_CONSTRUCTORS_VEC3F_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define vec3f(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_vec3f_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

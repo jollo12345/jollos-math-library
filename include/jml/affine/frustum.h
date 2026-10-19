@@ -101,7 +101,7 @@ static inline JML_Mat4x4f JML_frustumFFFFFF(
 
 #endif  // JML_AFFINE_FRUSTUM_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define frustum(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_frustum_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

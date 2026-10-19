@@ -73,7 +73,7 @@ static inline JML_Vec3d JML_vec3dDDD(
 
 #endif  // JML_CONSTRUCTORS_VEC3D_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define vec3d(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_vec3d_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

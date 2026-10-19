@@ -47,7 +47,7 @@ static inline float JML_lengthVec3f(
 
 #endif  // JML_GEOMETRIC_LENGTH_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define length(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_length_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

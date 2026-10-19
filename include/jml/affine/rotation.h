@@ -61,7 +61,7 @@ static inline JML_Mat4x4f JML_rotationVec3fF(
 
 #endif  // JML_AFFINE_ROTATION_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define rotation(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_rotation_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

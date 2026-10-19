@@ -98,7 +98,7 @@ static inline JML_Vec4f JML_tanVec4f(
 
 #endif  // JML_TRIGONOMETRY_TAN_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define tan(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_tan_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

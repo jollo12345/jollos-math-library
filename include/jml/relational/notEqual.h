@@ -223,7 +223,7 @@ static inline JML_Vec4b JML_notEqualVec4uVec4u(
 
 #endif  // JML_RELATIONAL_NOT_EQUAL_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define notEqual(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_notEqual_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

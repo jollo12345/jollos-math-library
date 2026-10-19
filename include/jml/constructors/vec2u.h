@@ -29,7 +29,7 @@ static inline JML_Vec2u JML_vec2uBB(
 
 #endif  // JML_FETAIL_CONSTRUCTORS_VEC2U_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define vec2u(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_vec2u_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

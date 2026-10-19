@@ -15,7 +15,7 @@ static_assert(sizeof(JML_Mat4x4d) == 16 * sizeof(double));
 
 #endif  // JML_TYPES_MAT4X4D_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 typedef JML_Mat4x4d Mat4x4d;
 

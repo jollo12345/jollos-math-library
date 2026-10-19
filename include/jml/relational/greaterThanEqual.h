@@ -217,7 +217,7 @@ static inline JML_Vec4b JML_greaterThanEqualVec4uVec4u(
 
 #endif  // JML_RELATIONAL_GREATER_THAN_EQUAL_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 #define greaterThanEqual(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_greaterThanEqual_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

@@ -20,7 +20,7 @@ static_assert(sizeof(JML_Vec3d) == 3 * sizeof(double));
 
 #endif  // JML_TYPES_VEC3D_H
 
-#ifndef JML_WITHOUT_PREFIX
+#ifdef JML_WITHOUT_PREFIX
 
 typedef JML_Vec3d Vec3d;
 
