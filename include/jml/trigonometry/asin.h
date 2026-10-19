@@ -92,15 +92,15 @@ static inline JML_Vec4f JML_asinVec4f(
 
 #define JML_asin_GENERIC_1(opposite) _Generic( \
     (opposite),                                \
-    double: JML_asinD,                    \
-    float: JML_asinF,                     \
-    JML_Vec2d: JML_asinVec2d,             \
-    JML_Vec2f: JML_asinVec2f,             \
-    JML_Vec3d: JML_asinVec3d,             \
-    JML_Vec3f: JML_asinVec3f,             \
-    JML_Vec4d: JML_asinVec4d,             \
-    JML_Vec4f: JML_asinVec4f,             \
-    default: (void (*)(void))0            \
+    double: JML_asinD,                         \
+    float: JML_asinF,                          \
+    JML_Vec2d: JML_asinVec2d,                  \
+    JML_Vec2f: JML_asinVec2f,                  \
+    JML_Vec3d: JML_asinVec3d,                  \
+    JML_Vec3f: JML_asinVec3f,                  \
+    JML_Vec4d: JML_asinVec4d,                  \
+    JML_Vec4f: JML_asinVec4f,                  \
+    default: (void (*)(void))0                 \
 )(opposite)
 
 #define JML_asin(...) \

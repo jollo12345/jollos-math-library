@@ -92,15 +92,15 @@ static inline JML_Vec4f JML_acosVec4f(
 
 #define JML_acos_GENERIC_1(adjacent) _Generic( \
     (adjacent),                                \
-    double: JML_acosD,                    \
-    float: JML_acosF,                     \
-    JML_Vec2d: JML_acosVec2d,             \
-    JML_Vec2f: JML_acosVec2f,             \
-    JML_Vec3d: JML_acosVec3d,             \
-    JML_Vec3f: JML_acosVec3f,             \
-    JML_Vec4d: JML_acosVec4d,             \
-    JML_Vec4f: JML_acosVec4f,             \
-    default: (void (*)(void))0            \
+    double: JML_acosD,                         \
+    float: JML_acosF,                          \
+    JML_Vec2d: JML_acosVec2d,                  \
+    JML_Vec2f: JML_acosVec2f,                  \
+    JML_Vec3d: JML_acosVec3d,                  \
+    JML_Vec3f: JML_acosVec3f,                  \
+    JML_Vec4d: JML_acosVec4d,                  \
+    JML_Vec4f: JML_acosVec4f,                  \
+    default: (void (*)(void))0                 \
 )(adjacent)
 
 #define JML_acos(...) \

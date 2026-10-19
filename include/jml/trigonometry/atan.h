@@ -92,15 +92,15 @@ static inline JML_Vec4f JML_atanVec4f(
 
 #define JML_atan_GENERIC_1(ratio) _Generic( \
     (ratio),                                \
-    double: JML_atanD,                    \
-    float: JML_atanF,                     \
-    JML_Vec2d: JML_atanVec2d,             \
-    JML_Vec2f: JML_atanVec2f,             \
-    JML_Vec3d: JML_atanVec3d,             \
-    JML_Vec3f: JML_atanVec3f,             \
-    JML_Vec4d: JML_atanVec4d,             \
-    JML_Vec4f: JML_atanVec4f,             \
-    default: (void (*)(void))0            \
+    double: JML_atanD,                      \
+    float: JML_atanF,                       \
+    JML_Vec2d: JML_atanVec2d,               \
+    JML_Vec2f: JML_atanVec2f,               \
+    JML_Vec3d: JML_atanVec3d,               \
+    JML_Vec3f: JML_atanVec3f,               \
+    JML_Vec4d: JML_atanVec4d,               \
+    JML_Vec4f: JML_atanVec4f,               \
+    default: (void (*)(void))0              \
 )(ratio)
 
 static inline double JML_atanDD(
@@ -184,48 +184,48 @@ static inline JML_Vec4f JML_atanVec4fVec4f(
 }
 
 #define JML_atan_GENERIC_2(adjacent, opposite) _Generic( \
-    (adjacent),                                       \
-    double: _Generic(                              \
-        (opposite),                                   \
-        double: JML_atanDD,                        \
-        default: (void (*)(void))0                 \
-    ),                                             \
-    float: _Generic(                               \
-        (opposite),                                   \
-        float: JML_atanFF,                         \
-        default: (void (*)(void))0                 \
-    ),                                             \
-    Vec2d: _Generic(                               \
-        (opposite),                                   \
-        Vec2d: JML_atanVec2dVec2d,                 \
-        default: (void (*)(void))0                 \
-    ),                                             \
-    Vec2f: _Generic(                               \
-        (opposite),                                   \
-        Vec2f: JML_atanVec2fVec2f,                 \
-        default: (void (*)(void))0                 \
-    ),                                             \
-    Vec3d: _Generic(                               \
-        (opposite),                                   \
-        Vec3d: JML_atanVec3dVec3d,                 \
-        default: (void (*)(void))0                 \
-    ),                                             \
-    Vec3f: _Generic(                               \
-        (opposite),                                   \
-        Vec3f: JML_atanVec3fVec3f,                 \
-        default: (void (*)(void))0                 \
-    ),                                             \
-    Vec4d: _Generic(                               \
-        (opposite),                                   \
-        Vec4d: JML_atanVec4dVec4d,                 \
-        default: (void (*)(void))0                 \
-    ),                                             \
-    Vec4f: _Generic(                               \
-        (opposite),                                   \
-        Vec4f: JML_atanVec4fVec4f,                 \
-        default: (void (*)(void))0                 \
-    ),                                             \
-    default: (void (*)(void))0                     \
+    (adjacent),                                          \
+    double: _Generic(                                    \
+        (opposite),                                      \
+        double: JML_atanDD,                              \
+        default: (void (*)(void))0                       \
+    ),                                                   \
+    float: _Generic(                                     \
+        (opposite),                                      \
+        float: JML_atanFF,                               \
+        default: (void (*)(void))0                       \
+    ),                                                   \
+    Vec2d: _Generic(                                     \
+        (opposite),                                      \
+        Vec2d: JML_atanVec2dVec2d,                       \
+        default: (void (*)(void))0                       \
+    ),                                                   \
+    Vec2f: _Generic(                                     \
+        (opposite),                                      \
+        Vec2f: JML_atanVec2fVec2f,                       \
+        default: (void (*)(void))0                       \
+    ),                                                   \
+    Vec3d: _Generic(                                     \
+        (opposite),                                      \
+        Vec3d: JML_atanVec3dVec3d,                       \
+        default: (void (*)(void))0                       \
+    ),                                                   \
+    Vec3f: _Generic(                                     \
+        (opposite),                                      \
+        Vec3f: JML_atanVec3fVec3f,                       \
+        default: (void (*)(void))0                       \
+    ),                                                   \
+    Vec4d: _Generic(                                     \
+        (opposite),                                      \
+        Vec4d: JML_atanVec4dVec4d,                       \
+        default: (void (*)(void))0                       \
+    ),                                                   \
+    Vec4f: _Generic(                                     \
+        (opposite),                                      \
+        Vec4f: JML_atanVec4fVec4f,                       \
+        default: (void (*)(void))0                       \
+    ),                                                   \
+    default: (void (*)(void))0                           \
 )(adjacent, opposite)
 
 #define JML_atan(...) \
