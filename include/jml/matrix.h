@@ -1,0 +1,5 @@
+#include "jml/matrix/determinant.h"
+#include "jml/matrix/identity.h"
+#include "jml/matrix/inverse.h"
+#include "jml/matrix/outerProduct.h"
+#include "jml/matrix/transpose.h"

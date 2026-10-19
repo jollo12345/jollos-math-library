@@ -3,6 +3,7 @@
 #include "jml/common.h"
 #include "jml/constructors.h"
 #include "jml/geometric.h"
+#include "jml/matrix.h"
 #include "jml/relational.h"
 #include "jml/trigonometry.h"
 #include "jml/types.h"
