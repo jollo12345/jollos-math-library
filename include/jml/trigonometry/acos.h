@@ -19,79 +19,79 @@
 #include "jml/util.h"
 
 static inline double JML_acosD(
-    const double arg
+    const double adjacent
 ) {
-    return acos(arg);
+    return acos(adjacent);
 }
 
 static inline float JML_acosF(
-    const float arg
+    const float adjacent
 ) {
-    return acosf(arg);
+    return acosf(adjacent);
 }
 
 static inline JML_Vec2d JML_acosVec2d(
-    const JML_Vec2d arg
+    const JML_Vec2d adjacent
 ) {
     return JML_vec2d(
-        acos(arg.x),
-        acos(arg.y)
+        acos(adjacent.x),
+        acos(adjacent.y)
     );
 }
 
 static inline JML_Vec2f JML_acosVec2f(
-    const JML_Vec2f arg
+    const JML_Vec2f adjacent
 ) {
     return JML_vec2f(
-        acosf(arg.x),
-        acosf(arg.y)
+        acosf(adjacent.x),
+        acosf(adjacent.y)
     );
 }
 
 static inline JML_Vec3d JML_acosVec3d(
-    const JML_Vec3d arg
+    const JML_Vec3d adjacent
 ) {
     return JML_vec3d(
-        acos(arg.x),
-        acos(arg.y),
-        acos(arg.z)
+        acos(adjacent.x),
+        acos(adjacent.y),
+        acos(adjacent.z)
     );
 }
 
 static inline JML_Vec3f JML_acosVec3f(
-    const JML_Vec3f arg
+    const JML_Vec3f adjacent
 ) {
     return JML_vec3f(
-        acosf(arg.x),
-        acosf(arg.y),
-        acosf(arg.z)
+        acosf(adjacent.x),
+        acosf(adjacent.y),
+        acosf(adjacent.z)
     );
 }
 
 static inline JML_Vec4d JML_acosVec4d(
-    const JML_Vec4d arg
+    const JML_Vec4d adjacent
 ) {
     return JML_vec4d(
-        acos(arg.x),
-        acos(arg.y),
-        acos(arg.z),
-        acos(arg.w)
+        acos(adjacent.x),
+        acos(adjacent.y),
+        acos(adjacent.z),
+        acos(adjacent.w)
     );
 }
 
 static inline JML_Vec4f JML_acosVec4f(
-    const JML_Vec4f arg
+    const JML_Vec4f adjacent
 ) {
     return JML_vec4f(
-        acosf(arg.x),
-        acosf(arg.y),
-        acosf(arg.z),
-        acosf(arg.w)
+        acosf(adjacent.x),
+        acosf(adjacent.y),
+        acosf(adjacent.z),
+        acosf(adjacent.w)
     );
 }
 
-#define JML_acos_GENERIC_1(arg) _Generic( \
-    (arg),                                \
+#define JML_acos_GENERIC_1(adjacent) _Generic( \
+    (adjacent),                                \
     double: JML_acosD,                    \
     float: JML_acosF,                     \
     JML_Vec2d: JML_acosVec2d,             \
@@ -101,7 +101,7 @@ static inline JML_Vec4f JML_acosVec4f(
     JML_Vec4d: JML_acosVec4d,             \
     JML_Vec4f: JML_acosVec4f,             \
     default: (void (*)(void))0            \
-)(arg)
+)(adjacent)
 
 #define JML_acos(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_acos_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)

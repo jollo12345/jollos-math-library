@@ -19,79 +19,79 @@
 #include "jml/util.h"
 
 static inline double JML_asinD(
-    const double arg
+    const double opposite
 ) {
-    return asin(arg);
+    return asin(opposite);
 }
 
 static inline float JML_asinF(
-    const float arg
+    const float opposite
 ) {
-    return asinf(arg);
+    return asinf(opposite);
 }
 
 static inline JML_Vec2d JML_asinVec2d(
-    const JML_Vec2d arg
+    const JML_Vec2d opposite
 ) {
     return JML_vec2d(
-        asin(arg.x),
-        asin(arg.y)
+        asin(opposite.x),
+        asin(opposite.y)
     );
 }
 
 static inline JML_Vec2f JML_asinVec2f(
-    const JML_Vec2f arg
+    const JML_Vec2f opposite
 ) {
     return JML_vec2f(
-        asinf(arg.x),
-        asinf(arg.y)
+        asinf(opposite.x),
+        asinf(opposite.y)
     );
 }
 
 static inline JML_Vec3d JML_asinVec3d(
-    const JML_Vec3d arg
+    const JML_Vec3d opposite
 ) {
     return JML_vec3d(
-        asin(arg.x),
-        asin(arg.y),
-        asin(arg.z)
+        asin(opposite.x),
+        asin(opposite.y),
+        asin(opposite.z)
     );
 }
 
 static inline JML_Vec3f JML_asinVec3f(
-    const JML_Vec3f arg
+    const JML_Vec3f opposite
 ) {
     return JML_vec3f(
-        asinf(arg.x),
-        asinf(arg.y),
-        asinf(arg.z)
+        asinf(opposite.x),
+        asinf(opposite.y),
+        asinf(opposite.z)
     );
 }
 
 static inline JML_Vec4d JML_asinVec4d(
-    const JML_Vec4d arg
+    const JML_Vec4d opposite
 ) {
     return JML_vec4d(
-        asin(arg.x),
-        asin(arg.y),
-        asin(arg.z),
-        asin(arg.w)
+        asin(opposite.x),
+        asin(opposite.y),
+        asin(opposite.z),
+        asin(opposite.w)
     );
 }
 
 static inline JML_Vec4f JML_asinVec4f(
-    const JML_Vec4f arg
+    const JML_Vec4f opposite
 ) {
     return JML_vec4f(
-        asinf(arg.x),
-        asinf(arg.y),
-        asinf(arg.z),
-        asinf(arg.w)
+        asinf(opposite.x),
+        asinf(opposite.y),
+        asinf(opposite.z),
+        asinf(opposite.w)
     );
 }
 
-#define JML_asin_GENERIC_1(arg) _Generic( \
-    (arg),                                \
+#define JML_asin_GENERIC_1(opposite) _Generic( \
+    (opposite),                                \
     double: JML_asinD,                    \
     float: JML_asinF,                     \
     JML_Vec2d: JML_asinVec2d,             \
@@ -101,7 +101,7 @@ static inline JML_Vec4f JML_asinVec4f(
     JML_Vec4d: JML_asinVec4d,             \
     JML_Vec4f: JML_asinVec4f,             \
     default: (void (*)(void))0            \
-)(arg)
+)(opposite)
 
 #define JML_asin(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_asin_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)
