@@ -1,3 +1,6 @@
+#include "jml/trigonometry/acos.h"
+#include "jml/trigonometry/asin.h"
+#include "jml/trigonometry/atan.h"
 #include "jml/trigonometry/cos.h"
 #include "jml/trigonometry/degrees.h"
 #include "jml/trigonometry/radians.h"
