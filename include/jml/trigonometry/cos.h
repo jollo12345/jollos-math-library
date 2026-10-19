@@ -5,7 +5,17 @@
 
 #include "jml/common/pi.h"
 #include "jml/constructors/vec2d.h"
+#include "jml/constructors/vec2f.h"
+#include "jml/constructors/vec3d.h"
+#include "jml/constructors/vec3f.h"
+#include "jml/constructors/vec4d.h"
+#include "jml/constructors/vec4f.h"
 #include "jml/types/vec2d.h"
+#include "jml/types/vec2f.h"
+#include "jml/types/vec3d.h"
+#include "jml/types/vec3f.h"
+#include "jml/types/vec4d.h"
+#include "jml/types/vec4f.h"
 #include "jml/util.h"
 
 static inline double JML_cosD(

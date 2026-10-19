@@ -5,7 +5,17 @@
 
 #include "jml/common/pi.h"
 #include "jml/constructors/vec2d.h"
+#include "jml/constructors/vec2f.h"
+#include "jml/constructors/vec3d.h"
+#include "jml/constructors/vec3f.h"
+#include "jml/constructors/vec4d.h"
+#include "jml/constructors/vec4f.h"
 #include "jml/types/vec2d.h"
+#include "jml/types/vec2f.h"
+#include "jml/types/vec3d.h"
+#include "jml/types/vec3f.h"
+#include "jml/types/vec4d.h"
+#include "jml/types/vec4f.h"
 #include "jml/util.h"
 
 static inline double JML_acosD(
@@ -82,15 +92,15 @@ static inline JML_Vec4f JML_acosVec4f(
 
 #define JML_acos_GENERIC_1(arg) _Generic( \
     (arg),                                \
-    double: JML_acosD,                      \
-    float: JML_acosF,                       \
-    JML_Vec2d: JML_acosVec2d,               \
-    JML_Vec2f: JML_acosVec2f,               \
-    JML_Vec3d: JML_acosVec3d,               \
-    JML_Vec3f: JML_acosVec3f,               \
-    JML_Vec4d: JML_acosVec4d,               \
-    JML_Vec4f: JML_acosVec4f,               \
-    default: (void (*)(void))0              \
+    double: JML_acosD,                    \
+    float: JML_acosF,                     \
+    JML_Vec2d: JML_acosVec2d,             \
+    JML_Vec2f: JML_acosVec2f,             \
+    JML_Vec3d: JML_acosVec3d,             \
+    JML_Vec3f: JML_acosVec3f,             \
+    JML_Vec4d: JML_acosVec4d,             \
+    JML_Vec4f: JML_acosVec4f,             \
+    default: (void (*)(void))0            \
 )(arg)
 
 #define JML_acos(...) \

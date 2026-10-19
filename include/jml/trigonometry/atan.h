@@ -5,7 +5,17 @@
 
 #include "jml/common/pi.h"
 #include "jml/constructors/vec2d.h"
+#include "jml/constructors/vec2f.h"
+#include "jml/constructors/vec3d.h"
+#include "jml/constructors/vec3f.h"
+#include "jml/constructors/vec4d.h"
+#include "jml/constructors/vec4f.h"
 #include "jml/types/vec2d.h"
+#include "jml/types/vec2f.h"
+#include "jml/types/vec3d.h"
+#include "jml/types/vec3f.h"
+#include "jml/types/vec4d.h"
+#include "jml/types/vec4f.h"
 #include "jml/util.h"
 
 static inline double JML_atanD(
@@ -14,24 +24,10 @@ static inline double JML_atanD(
     return atan(arg);
 }
 
-static inline double JML_atanDD(
-    const double arg_1,
-    const double arg_2
-) {
-    return atan(arg_2 / arg_1);
-}
-
 static inline float JML_atanF(
     const float arg
 ) {
     return atanf(arg);
-}
-
-static inline float JML_atanFF(
-    const float arg_1,
-    const float arg_2
-) {
-    return atanf(arg_2 / arg_1);
 }
 
 static inline JML_Vec2d JML_atanVec2d(
@@ -43,32 +39,12 @@ static inline JML_Vec2d JML_atanVec2d(
     );
 }
 
-static inline JML_Vec2d JML_atanVec2dVec2d(
-    const JML_Vec2d arg_1,
-    const JML_Vec2d arg_2
-) {
-    return JML_vec2d(
-        atan(arg_2.x / arg_1.x),
-        atan(arg_2.y / arg_1.y)
-    );
-}
-
 static inline JML_Vec2f JML_atanVec2f(
     const JML_Vec2f arg
 ) {
     return JML_vec2f(
-        atan(arg.x),
-        atan(arg.y)
-    );
-}
-
-static inline JML_Vec2f JML_atanVec2fVec2f(
-    const JML_Vec2f arg_1,
-    const JML_Vec2f arg_2
-) {
-    return JML_vec2f(
-        atan(arg_2.x / arg_1.x),
-        atan(arg_2.y / arg_1.y)
+        atanf(arg.x),
+        atanf(arg.y)
     );
 }
 
@@ -126,6 +102,86 @@ static inline JML_Vec4f JML_atanVec4f(
     JML_Vec4f: JML_atanVec4f,             \
     default: (void (*)(void))0            \
 )(arg)
+
+static inline double JML_atanDD(
+    const double arg_1,
+    const double arg_2
+) {
+    return atan(arg_2 / arg_1);
+}
+
+static inline float JML_atanFF(
+    const float arg_1,
+    const float arg_2
+) {
+    return atanf(arg_2 / arg_1);
+}
+
+static inline JML_Vec2d JML_atanVec2dVec2d(
+    const JML_Vec2d arg_1,
+    const JML_Vec2d arg_2
+) {
+    return JML_vec2d(
+        atan(arg_2.x / arg_1.x),
+        atan(arg_2.y / arg_1.y)
+    );
+}
+
+static inline JML_Vec2f JML_atanVec2fVec2f(
+    const JML_Vec2f arg_1,
+    const JML_Vec2f arg_2
+) {
+    return JML_vec2f(
+        atanf(arg_2.x / arg_1.x),
+        atanf(arg_2.y / arg_1.y)
+    );
+}
+
+static inline JML_Vec3d JML_atanVec3dVec3d(
+    const JML_Vec3d arg_1,
+    const JML_Vec3d arg_2
+) {
+    return JML_vec3d(
+        atan(arg_2.x / arg_1.x),
+        atan(arg_2.y / arg_1.y),
+        atan(arg_2.z / arg_1.z)
+    );
+}
+
+static inline JML_Vec3f JML_atanVec3fVec3f(
+    const JML_Vec3f arg_1,
+    const JML_Vec3f arg_2
+) {
+    return JML_vec3f(
+        atanf(arg_2.x / arg_1.x),
+        atanf(arg_2.y / arg_1.y),
+        atanf(arg_2.z / arg_1.z)
+    );
+}
+
+static inline JML_Vec4d JML_atanVec4dVec4d(
+    const JML_Vec4d arg_1,
+    const JML_Vec4d arg_2
+) {
+    return JML_vec4d(
+        atan(arg_2.x / arg_1.x),
+        atan(arg_2.y / arg_1.y),
+        atan(arg_2.z / arg_1.z),
+        atan(arg_2.w / arg_1.w)
+    );
+}
+
+static inline JML_Vec4f JML_atanVec4fVec4f(
+    const JML_Vec4f arg_1,
+    const JML_Vec4f arg_2
+) {
+    return JML_vec4f(
+        atanf(arg_2.x / arg_1.x),
+        atanf(arg_2.y / arg_1.y),
+        atanf(arg_2.z / arg_1.z),
+        atanf(arg_2.w / arg_1.w)
+    );
+}
 
 #define JML_atan_GENERIC_2(arg_1, arg_2) _Generic( \
     (arg_1),                                       \
