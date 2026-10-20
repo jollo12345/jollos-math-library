@@ -1,5 +1,5 @@
-#ifndef JML_RELATIONAL_OUTER_PRODUCT_H
-#define JML_RELATIONAL_OUTER_PRODUCT_H
+#ifndef JML_MATRIX_OUTER_PRODUCT_H
+#define JML_MATRIX_OUTER_PRODUCT_H
 
 #include "jml/constructors/mat2x2d.h"
 #include "jml/constructors/mat2x2f.h"
@@ -125,7 +125,7 @@ static inline JML_Mat4x4f JML_outerProductVec4fVec4f(
 #define JML_outerProduct(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_outerProduct_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)
 
-#endif  // JML_RELATIONAL_OUTER_PRODUCT_H
+#endif  // JML_MATRIX_OUTER_PRODUCT_H
 
 #ifdef JML_WITHOUT_PREFIX
 
