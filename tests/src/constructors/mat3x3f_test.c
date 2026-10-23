@@ -1,45 +1,43 @@
-#include "jml/constructors/mat3x3f.h"
-
-#include <stdlib.h>
 #include <unity.h>
 
+#define JML_WITHOUT_PREFIX
+#include "jml/constructors/mat3x3f.h"
 #include "jml/constructors/vec3f.h"
-#include "util.h"
-
-const int TEST_ITERATIONS = 8;
-const int ARRAY_SIZE = 9;
 
 static void mat3x3f_test_1() {
-    float expected[ARRAY_SIZE];
+    const JML_Mat3x3f value = mat3x3f(
+        0.f, 1.f, 2.f,
+        3.f, 4.f, 5.f,
+        6.f, 7.f, 8.f
+    );
 
-    srand(0x940e);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
-        JML_Mat3x3f value = JML_mat3x3f(
-            expected[0], expected[1], expected[2],
-            expected[3], expected[4], expected[5],
-            expected[6], expected[7], expected[8]
-        );
-        TEST_ASSERT_EQUAL_FLOAT_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_FLOAT(0.f, value.m00);
+    TEST_ASSERT_EQUAL_FLOAT(1.f, value.m01);
+    TEST_ASSERT_EQUAL_FLOAT(2.f, value.m02);
+    TEST_ASSERT_EQUAL_FLOAT(3.f, value.m10);
+    TEST_ASSERT_EQUAL_FLOAT(4.f, value.m11);
+    TEST_ASSERT_EQUAL_FLOAT(5.f, value.m12);
+    TEST_ASSERT_EQUAL_FLOAT(6.f, value.m20);
+    TEST_ASSERT_EQUAL_FLOAT(7.f, value.m21);
+    TEST_ASSERT_EQUAL_FLOAT(8.f, value.m22);
 }
 
 static void mat3x3f_test_2() {
-    float expected[ARRAY_SIZE];
+    const JML_Mat3x3f value = mat3x3f(
+        vec3f(0.f, 1.f, 2.f),
+        vec3f(3.f, 4.f, 5.f),
+        vec3f(6.f, 7.f, 8.f)
+    );
 
-    srand(0x3bc0);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec3f vector_1 = JML_vec3f(expected[0], expected[1], expected[2]);
-        JML_Vec3f vector_2 = JML_vec3f(expected[3], expected[4], expected[5]);
-        JML_Vec3f vector_3 = JML_vec3f(expected[6], expected[7], expected[8]);
-        JML_Mat3x3f value = JML_mat3x3f(
-            vector_1,
-            vector_2,
-            vector_3
-        );
-        TEST_ASSERT_EQUAL_FLOAT_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_FLOAT(0.f, value.m00);
+    TEST_ASSERT_EQUAL_FLOAT(1.f, value.m01);
+    TEST_ASSERT_EQUAL_FLOAT(2.f, value.m02);
+    TEST_ASSERT_EQUAL_FLOAT(3.f, value.m10);
+    TEST_ASSERT_EQUAL_FLOAT(4.f, value.m11);
+    TEST_ASSERT_EQUAL_FLOAT(5.f, value.m12);
+    TEST_ASSERT_EQUAL_FLOAT(6.f, value.m20);
+    TEST_ASSERT_EQUAL_FLOAT(7.f, value.m21);
+    TEST_ASSERT_EQUAL_FLOAT(8.f, value.m22);
 }
 
 void setUp() {}

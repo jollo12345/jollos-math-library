@@ -1,45 +1,31 @@
-#include "jml/constructors/vec3d.h"
-
-#include <stdlib.h>
 #include <unity.h>
 
+#define JML_WITHOUT_PREFIX
 #include "jml/constructors/vec2d.h"
-#include "util.h"
-
-const int TEST_ITERATIONS = 8;
-const int ARRAY_SIZE = 3;
+#include "jml/constructors/vec3d.h"
 
 static void vec3d_test_1() {
-    double expected[ARRAY_SIZE];
+    Vec3d value = vec3d(0.0, 1.0, 2.0);
 
-    srand(0xb6bf);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec3d value = JML_vec3d(expected[0], expected[1], expected[2]);
-        TEST_ASSERT_EQUAL_DOUBLE_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
+    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
 }
 
 static void vec3d_test_2() {
-    double expected[ARRAY_SIZE];
+    Vec3d value = vec3d(0.0, vec2d(1.0, 2.0));
 
-    srand(0xcabb);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec3d value = JML_vec3d(expected[0], JML_vec2d(expected[1], expected[2]));
-        TEST_ASSERT_EQUAL_DOUBLE_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
+    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
 }
 
 static void vec3d_test_3() {
-    double expected[ARRAY_SIZE];
+    Vec3d value = vec3d(vec2d(0.0, 1.0), 2.0);
 
-    srand(0x669e);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec3d value = JML_vec3d(JML_vec2d(expected[0], expected[1]), expected[2]);
-        TEST_ASSERT_EQUAL_DOUBLE_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
+    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
 }
 
 void setUp() {}

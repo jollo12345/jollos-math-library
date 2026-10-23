@@ -1,22 +1,13 @@
-#include "jml/constructors/vec2i.h"
-
-#include <stdlib.h>
 #include <unity.h>
 
-#include "util.h"
-
-const int TEST_ITERATIONS = 8;
-const int ARRAY_SIZE = 2;
+#define JML_WITHOUT_PREFIX
+#include "jml/constructors/vec2i.h"
 
 static void vec2i_test_1() {
-    int expected[ARRAY_SIZE];
+    Vec2i value = vec2i(0, 1);
 
-    srand(0xe785);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_INT_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec2i value = JML_vec2i(expected[0], expected[1]);
-        TEST_ASSERT_EQUAL_INT_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_INT(0, value.x);
+    TEST_ASSERT_EQUAL_INT(1, value.y);
 }
 
 void setUp() {}

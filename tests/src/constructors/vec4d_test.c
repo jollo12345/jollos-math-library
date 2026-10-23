@@ -1,90 +1,71 @@
-#include "jml/constructors/vec4d.h"
-
-#include <stdlib.h>
 #include <unity.h>
 
+#define JML_WITHOUT_PREFIX
 #include "jml/constructors/vec2d.h"
 #include "jml/constructors/vec3d.h"
-#include "util.h"
-
-const int TEST_ITERATIONS = 8;
-const int ARRAY_SIZE = 4;
+#include "jml/constructors/vec4d.h"
 
 static void vec4d_test_1() {
-    double expected[ARRAY_SIZE];
+    const JML_Vec4d value = vec4d(0.0, 1.0, 2.0, 3.0);
 
-    srand(0xa70e);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec4d value = JML_vec4d(expected[0], expected[1], expected[2], expected[3]);
-        TEST_ASSERT_EQUAL_DOUBLE_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
+    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
+    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.w);
 }
 
 static void vec4d_test_2() {
-    double expected[ARRAY_SIZE];
+    const JML_Vec4d value = vec4d(0.0, 1.0, vec2d(2.0, 3.0));
 
-    srand(0x94db);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec4d value = JML_vec4d(expected[0], expected[1], JML_vec2d(expected[2], expected[3]));
-        TEST_ASSERT_EQUAL_DOUBLE_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
+    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
+    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.w);
 }
 
 static void vec4d_test_3() {
-    double expected[ARRAY_SIZE];
+    const JML_Vec4d value = vec4d(0.0, vec2d(1.0, 2.0), 3.0);
 
-    srand(0xd835);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec4d value = JML_vec4d(expected[0], JML_vec2d(expected[1], expected[2]), expected[3]);
-        TEST_ASSERT_EQUAL_DOUBLE_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
+    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
+    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.w);
 }
 
 static void vec4d_test_4() {
-    double expected[ARRAY_SIZE];
+    const JML_Vec4d value = vec4d(0.0, vec3d(1.0, 2.0, 3.0));
 
-    srand(0x34a9);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec4d value = JML_vec4d(expected[0], JML_vec3d(expected[1], expected[2], expected[3]));
-        TEST_ASSERT_EQUAL_DOUBLE_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
+    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
+    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.w);
 }
 
 static void vec4d_test_5() {
-    double expected[ARRAY_SIZE];
+    const JML_Vec4d value = vec4d(vec2d(0.0, 1.0), 2.0, 3.0);
 
-    srand(0xb29a);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec4d value = JML_vec4d(JML_vec2d(expected[0], expected[1]), expected[2], expected[3]);
-        TEST_ASSERT_EQUAL_DOUBLE_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
+    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
+    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.w);
 }
 
 static void vec4d_test_6() {
-    double expected[ARRAY_SIZE];
+    const JML_Vec4d value = vec4d(vec2d(0.0, 1.0), vec2d(2.0, 3.0));
 
-    srand(0xa82d);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec4d value = JML_vec4d(JML_vec2d(expected[0], expected[1]), JML_vec2d(expected[2], expected[3]));
-        TEST_ASSERT_EQUAL_DOUBLE_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
+    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
+    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.w);
 }
 
 static void vec4d_test_7() {
-    double expected[ARRAY_SIZE];
+    const JML_Vec4d value = vec4d(vec3d(0.0, 1.0, 2.0), 3.0);
 
-    srand(0x5f93);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec4d value = JML_vec4d(JML_vec3d(expected[0], expected[1], expected[2]), expected[3]);
-        TEST_ASSERT_EQUAL_DOUBLE_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
+    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
+    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.w);
 }
 
 void setUp() {}

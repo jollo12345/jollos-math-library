@@ -1,48 +1,59 @@
-#include "jml/constructors/mat4x4d.h"
-
-#include <stdlib.h>
 #include <unity.h>
 
+#define JML_WITHOUT_PREFIX
+#include "jml/constructors/mat4x4d.h"
 #include "jml/constructors/vec4d.h"
-#include "util.h"
-
-const int TEST_ITERATIONS = 8;
-const int ARRAY_SIZE = 16;
 
 static void mat4x4d_test_1() {
-    double expected[ARRAY_SIZE];
+    const JML_Mat4x4d value = mat4x4d(
+        0.0, 1.0, 2.0, 3.0,
+        4.0, 5.0, 6.0, 7.0,
+        8.0, 9.0, 10.0, 11.0,
+        12.0, 13.0, 14.0, 15.0
+    );
 
-    srand(0x0e04);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
-        JML_Mat4x4d value = JML_mat4x4d(
-            expected[0], expected[1], expected[2], expected[3],
-            expected[4], expected[5], expected[6], expected[7],
-            expected[8], expected[9], expected[10], expected[11],
-            expected[12], expected[13], expected[14], expected[15]
-        );
-        TEST_ASSERT_EQUAL_DOUBLE_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.m00);
+    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.m01);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.m02);
+    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.m03);
+    TEST_ASSERT_EQUAL_DOUBLE(4.0, value.m10);
+    TEST_ASSERT_EQUAL_DOUBLE(5.0, value.m11);
+    TEST_ASSERT_EQUAL_DOUBLE(6.0, value.m12);
+    TEST_ASSERT_EQUAL_DOUBLE(7.0, value.m13);
+    TEST_ASSERT_EQUAL_DOUBLE(8.0, value.m20);
+    TEST_ASSERT_EQUAL_DOUBLE(9.0, value.m21);
+    TEST_ASSERT_EQUAL_DOUBLE(10.0, value.m22);
+    TEST_ASSERT_EQUAL_DOUBLE(11.0, value.m23);
+    TEST_ASSERT_EQUAL_DOUBLE(12.0, value.m30);
+    TEST_ASSERT_EQUAL_DOUBLE(13.0, value.m31);
+    TEST_ASSERT_EQUAL_DOUBLE(14.0, value.m32);
+    TEST_ASSERT_EQUAL_DOUBLE(15.0, value.m33);
 }
 
 static void mat4x4d_test_2() {
-    double expected[ARRAY_SIZE];
+    const JML_Mat4x4d value = mat4x4d(
+        vec4d(0.0, 1.0, 2.0, 3.0),
+        vec4d(4.0, 5.0, 6.0, 7.0),
+        vec4d(8.0, 9.0, 10.0, 11.0),
+        vec4d(12.0, 13.0, 14.0, 15.0)
+    );
 
-    srand(0xe963);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_DOUBLE_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec4d vector_1 = JML_vec4d(expected[0], expected[1], expected[2], expected[3]);
-        JML_Vec4d vector_2 = JML_vec4d(expected[4], expected[5], expected[6], expected[7]);
-        JML_Vec4d vector_3 = JML_vec4d(expected[8], expected[9], expected[10], expected[11]);
-        JML_Vec4d vector_4 = JML_vec4d(expected[12], expected[13], expected[14], expected[15]);
-        JML_Mat4x4d value = JML_mat4x4d(
-            vector_1,
-            vector_2,
-            vector_3,
-            vector_4
-        );
-        TEST_ASSERT_EQUAL_DOUBLE_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.m00);
+    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.m01);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.m02);
+    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.m03);
+    TEST_ASSERT_EQUAL_DOUBLE(4.0, value.m10);
+    TEST_ASSERT_EQUAL_DOUBLE(5.0, value.m11);
+    TEST_ASSERT_EQUAL_DOUBLE(6.0, value.m12);
+    TEST_ASSERT_EQUAL_DOUBLE(7.0, value.m13);
+    TEST_ASSERT_EQUAL_DOUBLE(8.0, value.m20);
+    TEST_ASSERT_EQUAL_DOUBLE(9.0, value.m21);
+    TEST_ASSERT_EQUAL_DOUBLE(10.0, value.m22);
+    TEST_ASSERT_EQUAL_DOUBLE(11.0, value.m23);
+    TEST_ASSERT_EQUAL_DOUBLE(12.0, value.m30);
+    TEST_ASSERT_EQUAL_DOUBLE(13.0, value.m31);
+    TEST_ASSERT_EQUAL_DOUBLE(14.0, value.m32);
+    TEST_ASSERT_EQUAL_DOUBLE(15.0, value.m33);
 }
 
 void setUp() {}

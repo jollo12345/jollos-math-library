@@ -1,22 +1,13 @@
-#include "jml/constructors/vec2f.h"
-
-#include <stdlib.h>
 #include <unity.h>
 
-#include "util.h"
-
-const int TEST_ITERATIONS = 8;
-const int ARRAY_SIZE = 2;
+#define JML_WITHOUT_PREFIX
+#include "jml/constructors/vec2f.h"
 
 static void vec2f_test_1() {
-    float expected[ARRAY_SIZE];
+    Vec2f value = vec2f(0.f, 1.f);
 
-    srand(0x5562);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec2f value = JML_vec2f(expected[0], expected[1]);
-        TEST_ASSERT_EQUAL_FLOAT_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_FLOAT(0.f, value.x);
+    TEST_ASSERT_EQUAL_FLOAT(1.f, value.y);
 }
 
 void setUp() {}

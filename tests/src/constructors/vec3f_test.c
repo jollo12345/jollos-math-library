@@ -1,45 +1,31 @@
-#include "jml/constructors/vec3f.h"
-
-#include <stdlib.h>
 #include <unity.h>
 
+#define JML_WITHOUT_PREFIX
 #include "jml/constructors/vec2f.h"
-#include "util.h"
-
-const int TEST_ITERATIONS = 8;
-const int ARRAY_SIZE = 3;
+#include "jml/constructors/vec3f.h"
 
 static void vec3f_test_1() {
-    float expected[ARRAY_SIZE];
+    Vec3f value = vec3f(0.f, 1.f, 2.f);
 
-    srand(0x5bf2);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec3f value = JML_vec3f(expected[0], expected[1], expected[2]);
-        TEST_ASSERT_EQUAL_FLOAT_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_FLOAT(0.f, value.x);
+    TEST_ASSERT_EQUAL_FLOAT(1.f, value.y);
+    TEST_ASSERT_EQUAL_FLOAT(2.f, value.z);
 }
 
 static void vec3f_test_2() {
-    float expected[ARRAY_SIZE];
+    Vec3f value = vec3f(0.f, vec2f(1.f, 2.f));
 
-    srand(0x2d0a);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec3f value = JML_vec3f(expected[0], JML_vec2f(expected[1], expected[2]));
-        TEST_ASSERT_EQUAL_FLOAT_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_FLOAT(0.f, value.x);
+    TEST_ASSERT_EQUAL_FLOAT(1.f, value.y);
+    TEST_ASSERT_EQUAL_FLOAT(2.f, value.z);
 }
 
 static void vec3f_test_3() {
-    float expected[ARRAY_SIZE];
+    Vec3f value = vec3f(vec2f(0.f, 1.f), 2.f);
 
-    srand(0x6b5b);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_FLOAT_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec3f value = JML_vec3f(JML_vec2f(expected[0], expected[1]), expected[2]);
-        TEST_ASSERT_EQUAL_FLOAT_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_FLOAT(0.f, value.x);
+    TEST_ASSERT_EQUAL_FLOAT(1.f, value.y);
+    TEST_ASSERT_EQUAL_FLOAT(2.f, value.z);
 }
 
 void setUp() {}

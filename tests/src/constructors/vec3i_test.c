@@ -1,45 +1,31 @@
-#include "jml/constructors/vec3i.h"
-
-#include <stdlib.h>
 #include <unity.h>
 
+#define JML_WITHOUT_PREFIX
 #include "jml/constructors/vec2i.h"
-#include "util.h"
-
-const int TEST_ITERATIONS = 8;
-const int ARRAY_SIZE = 3;
+#include "jml/constructors/vec3i.h"
 
 static void vec3i_test_1() {
-    int expected[ARRAY_SIZE];
+    Vec3i value = vec3i(0, 1, 2);
 
-    srand(0xfd2e);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_INT_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec3i value = JML_vec3i(expected[0], expected[1], expected[2]);
-        TEST_ASSERT_EQUAL_INT_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_INT(0, value.x);
+    TEST_ASSERT_EQUAL_INT(1, value.y);
+    TEST_ASSERT_EQUAL_INT(2, value.z);
 }
 
 static void vec3i_test_2() {
-    int expected[ARRAY_SIZE];
+    Vec3i value = vec3i(0, vec2i(1, 2));
 
-    srand(0xebc7);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_INT_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec3i value = JML_vec3i(expected[0], JML_vec2i(expected[1], expected[2]));
-        TEST_ASSERT_EQUAL_INT_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_INT(0, value.x);
+    TEST_ASSERT_EQUAL_INT(1, value.y);
+    TEST_ASSERT_EQUAL_INT(2, value.z);
 }
 
 static void vec3i_test_3() {
-    int expected[ARRAY_SIZE];
+    Vec3i value = vec3i(vec2i(0, 1), 2);
 
-    srand(0xba5b);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_INT_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec3i value = JML_vec3i(JML_vec2i(expected[0], expected[1]), expected[2]);
-        TEST_ASSERT_EQUAL_INT_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_INT(0, value.x);
+    TEST_ASSERT_EQUAL_INT(1, value.y);
+    TEST_ASSERT_EQUAL_INT(2, value.z);
 }
 
 void setUp() {}

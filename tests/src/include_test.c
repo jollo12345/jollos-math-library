@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <unity.h>
 
+#define JML_WITHOUT_PREFIX
 #include "jml/jml.h"
 
 /* Checks if including all files in the library creates any compiler errors to

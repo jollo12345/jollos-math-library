@@ -1,90 +1,71 @@
-#include "jml/constructors/vec4b.h"
-
-#include <stdlib.h>
 #include <unity.h>
 
+#define JML_WITHOUT_PREFIX
 #include "jml/constructors/vec2b.h"
 #include "jml/constructors/vec3b.h"
-#include "util.h"
-
-const int TEST_ITERATIONS = 8;
-const int ARRAY_SIZE = 4;
+#include "jml/constructors/vec4b.h"
 
 static void vec4b_test_1() {
-    bool expected[ARRAY_SIZE];
+    const JML_Vec4b value = vec4b(true, false, true, false);
 
-    srand(0x2f52);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_BOOL_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec4b value = JML_vec4b(expected[0], expected[1], expected[2], expected[3]);
-        TEST_ASSERT_EQUAL_CHAR_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_CHAR(true, value.x);
+    TEST_ASSERT_EQUAL_CHAR(false, value.y);
+    TEST_ASSERT_EQUAL_CHAR(true, value.z);
+    TEST_ASSERT_EQUAL_CHAR(false, value.w);
 }
 
 static void vec4b_test_2() {
-    bool expected[ARRAY_SIZE];
+    const JML_Vec4b value = vec4b(true, false, vec2b(true, false));
 
-    srand(0x3f13);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_BOOL_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec4b value = JML_vec4b(expected[0], expected[1], JML_vec2b(expected[2], expected[3]));
-        TEST_ASSERT_EQUAL_CHAR_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_CHAR(true, value.x);
+    TEST_ASSERT_EQUAL_CHAR(false, value.y);
+    TEST_ASSERT_EQUAL_CHAR(true, value.z);
+    TEST_ASSERT_EQUAL_CHAR(false, value.w);
 }
 
 static void vec4b_test_3() {
-    bool expected[ARRAY_SIZE];
+    const JML_Vec4b value = vec4b(true, vec2b(false, true), false);
 
-    srand(0x1f3d);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_BOOL_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec4b value = JML_vec4b(expected[0], JML_vec2b(expected[1], expected[2]), expected[3]);
-        TEST_ASSERT_EQUAL_CHAR_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_CHAR(true, value.x);
+    TEST_ASSERT_EQUAL_CHAR(false, value.y);
+    TEST_ASSERT_EQUAL_CHAR(true, value.z);
+    TEST_ASSERT_EQUAL_CHAR(false, value.w);
 }
 
 static void vec4b_test_4() {
-    bool expected[ARRAY_SIZE];
+    const JML_Vec4b value = vec4b(true, vec3b(false, true, false));
 
-    srand(0xca2c);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_BOOL_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec4b value = JML_vec4b(expected[0], JML_vec3b(expected[1], expected[2], expected[3]));
-        TEST_ASSERT_EQUAL_CHAR_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_CHAR(true, value.x);
+    TEST_ASSERT_EQUAL_CHAR(false, value.y);
+    TEST_ASSERT_EQUAL_CHAR(true, value.z);
+    TEST_ASSERT_EQUAL_CHAR(false, value.w);
 }
 
 static void vec4b_test_5() {
-    bool expected[ARRAY_SIZE];
+    const JML_Vec4b value = vec4b(vec2b(true, false), true, false);
 
-    srand(0x4dba);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_BOOL_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec4b value = JML_vec4b(JML_vec2b(expected[0], expected[1]), expected[2], expected[3]);
-        TEST_ASSERT_EQUAL_CHAR_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_CHAR(true, value.x);
+    TEST_ASSERT_EQUAL_CHAR(false, value.y);
+    TEST_ASSERT_EQUAL_CHAR(true, value.z);
+    TEST_ASSERT_EQUAL_CHAR(false, value.w);
 }
 
 static void vec4b_test_6() {
-    bool expected[ARRAY_SIZE];
+    const JML_Vec4b value = vec4b(vec2b(true, false), vec2b(true, false));
 
-    srand(0x1792);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_BOOL_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec4b value = JML_vec4b(JML_vec2b(expected[0], expected[1]), JML_vec2b(expected[2], expected[3]));
-        TEST_ASSERT_EQUAL_CHAR_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_CHAR(true, value.x);
+    TEST_ASSERT_EQUAL_CHAR(false, value.y);
+    TEST_ASSERT_EQUAL_CHAR(true, value.z);
+    TEST_ASSERT_EQUAL_CHAR(false, value.w);
 }
 
 static void vec4b_test_7() {
-    bool expected[ARRAY_SIZE];
+    const JML_Vec4b value = vec4b(vec3b(true, false, true), false);
 
-    srand(0x3223);
-    for (int index = 0; index < TEST_ITERATIONS; ++index) {
-        INIT_BOOL_ARRAY(expected, ARRAY_SIZE);
-        JML_Vec4b value = JML_vec4b(JML_vec3b(expected[0], expected[1], expected[2]), expected[3]);
-        TEST_ASSERT_EQUAL_CHAR_ARRAY(expected, value.data, ARRAY_SIZE);
-    }
+    TEST_ASSERT_EQUAL_CHAR(true, value.x);
+    TEST_ASSERT_EQUAL_CHAR(false, value.y);
+    TEST_ASSERT_EQUAL_CHAR(true, value.z);
+    TEST_ASSERT_EQUAL_CHAR(false, value.w);
 }
 
 void setUp() {}
