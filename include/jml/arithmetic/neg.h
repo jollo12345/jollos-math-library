@@ -10,12 +10,15 @@
 #include "jml/constructors/vec2d.h"
 #include "jml/constructors/vec2f.h"
 #include "jml/constructors/vec2i.h"
+#include "jml/constructors/vec2u.h"
 #include "jml/constructors/vec3d.h"
 #include "jml/constructors/vec3f.h"
 #include "jml/constructors/vec3i.h"
+#include "jml/constructors/vec3u.h"
 #include "jml/constructors/vec4d.h"
 #include "jml/constructors/vec4f.h"
 #include "jml/constructors/vec4i.h"
+#include "jml/constructors/vec4u.h"
 #include "jml/types/mat2x2d.h"
 #include "jml/types/mat2x2f.h"
 #include "jml/types/mat3x3d.h"
@@ -25,12 +28,15 @@
 #include "jml/types/vec2d.h"
 #include "jml/types/vec2f.h"
 #include "jml/types/vec2i.h"
+#include "jml/types/vec2u.h"
 #include "jml/types/vec3d.h"
 #include "jml/types/vec3f.h"
 #include "jml/types/vec3i.h"
+#include "jml/types/vec3u.h"
 #include "jml/types/vec4d.h"
 #include "jml/types/vec4f.h"
 #include "jml/types/vec4i.h"
+#include "jml/types/vec4u.h"
 #include "jml/util.h"
 
 static inline JML_Mat2x2d JML_negMat2x2d(
@@ -263,16 +269,16 @@ static inline JML_Vec4u JML_negVec4u(
     JML_Mat4x4f: JML_negMat4x4f,         \
     JML_Vec2d: JML_negVec2d,             \
     JML_Vec2f: JML_negVec2f,             \
-    JML_Vec2f: JML_negVec2i,             \
-    JML_Vec2f: JML_negVec2u,             \
+    JML_Vec2i: JML_negVec2i,             \
+    JML_Vec2u: JML_negVec2u,             \
     JML_Vec3d: JML_negVec3d,             \
     JML_Vec3f: JML_negVec3f,             \
-    JML_Vec3f: JML_negVec3i,             \
-    JML_Vec3f: JML_negVec3u,             \
+    JML_Vec3i: JML_negVec3i,             \
+    JML_Vec3u: JML_negVec3u,             \
     JML_Vec4d: JML_negVec4d,             \
     JML_Vec4f: JML_negVec4f,             \
-    JML_Vec4f: JML_negVec4i,             \
-    JML_Vec4f: JML_negVec4u,             \
+    JML_Vec4i: JML_negVec4i,             \
+    JML_Vec4u: JML_negVec4u,             \
     default: (void (*)(void))0           \
 )(arg)
 
