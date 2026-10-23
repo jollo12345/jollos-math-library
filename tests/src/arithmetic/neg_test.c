@@ -1,0 +1,270 @@
+#include <unity.h>
+
+#define JML_WITHOUT_PREFIX
+#include "jml/arithmetic/neg.h"
+#include "jml/constructors/mat2x2d.h"
+#include "jml/constructors/mat2x2f.h"
+#include "jml/constructors/mat3x3d.h"
+#include "jml/constructors/mat3x3f.h"
+#include "jml/constructors/mat4x4d.h"
+#include "jml/constructors/mat4x4f.h"
+#include "jml/constructors/vec2d.h"
+#include "jml/constructors/vec2f.h"
+#include "jml/constructors/vec2i.h"
+#include "jml/constructors/vec2u.h"
+#include "jml/constructors/vec3d.h"
+#include "jml/constructors/vec3f.h"
+#include "jml/constructors/vec3i.h"
+#include "jml/constructors/vec3u.h"
+#include "jml/constructors/vec4d.h"
+#include "jml/constructors/vec4f.h"
+#include "jml/constructors/vec4i.h"
+#include "jml/constructors/vec4u.h"
+
+static void neg_test_mat2x2d() {
+    const JML_Mat2x2d value = neg(
+        mat2x2d(
+            1.0, -2.0,
+            3.0, -4.0
+        )
+    );
+
+    TEST_ASSERT_EQUAL_DOUBLE(-1.0, value.m00);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.m01);
+    TEST_ASSERT_EQUAL_DOUBLE(-3.0, value.m10);
+    TEST_ASSERT_EQUAL_DOUBLE(4.0, value.m11);
+}
+
+static void neg_test_mat2x2f() {
+    const JML_Mat2x2f value = neg(
+        mat2x2f(
+            1.f, -2.f,
+            3.f, -4.f
+        )
+    );
+
+    TEST_ASSERT_EQUAL_FLOAT(-1.f, value.m00);
+    TEST_ASSERT_EQUAL_FLOAT(2.f, value.m01);
+    TEST_ASSERT_EQUAL_FLOAT(-3.f, value.m10);
+    TEST_ASSERT_EQUAL_FLOAT(4.f, value.m11);
+}
+
+static void neg_test_mat3x3d() {
+    const JML_Mat3x3d value = neg(
+        mat3x3d(
+            1.0, -2.0, 3.0,
+            -4.0, 5.0, -6.0,
+            7.0, -8.0, 9.0
+        )
+    );
+
+    TEST_ASSERT_EQUAL_DOUBLE(-1.0, value.m00);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.m01);
+    TEST_ASSERT_EQUAL_DOUBLE(-3.0, value.m02);
+    TEST_ASSERT_EQUAL_DOUBLE(4.0, value.m10);
+    TEST_ASSERT_EQUAL_DOUBLE(-5.0, value.m11);
+    TEST_ASSERT_EQUAL_DOUBLE(6.0, value.m12);
+    TEST_ASSERT_EQUAL_DOUBLE(-7.0, value.m20);
+    TEST_ASSERT_EQUAL_DOUBLE(8.0, value.m21);
+    TEST_ASSERT_EQUAL_DOUBLE(-9.0, value.m22);
+}
+
+static void neg_test_mat3x3f() {
+    const JML_Mat3x3f value = neg(
+        mat3x3f(
+            1.f, -2.f, 3.f,
+            -4.f, 5.f, -6.f,
+            7.f, -8.f, 9.f
+        )
+    );
+
+    TEST_ASSERT_EQUAL_FLOAT(-1.f, value.m00);
+    TEST_ASSERT_EQUAL_FLOAT(2.f, value.m01);
+    TEST_ASSERT_EQUAL_FLOAT(-3.f, value.m02);
+    TEST_ASSERT_EQUAL_FLOAT(4.f, value.m10);
+    TEST_ASSERT_EQUAL_FLOAT(-5.f, value.m11);
+    TEST_ASSERT_EQUAL_FLOAT(6.f, value.m12);
+    TEST_ASSERT_EQUAL_FLOAT(-7.f, value.m20);
+    TEST_ASSERT_EQUAL_FLOAT(8.f, value.m21);
+    TEST_ASSERT_EQUAL_FLOAT(-9.f, value.m22);
+}
+
+static void neg_test_mat4x4d() {
+    const JML_Mat4x4d value = neg(
+        mat4x4d(
+            1.0, -2.0, 3.0, -4.0,
+            5.0, -6.0, 7.0, -8.0,
+            9.0, -10.0, 11.0, -12.0,
+            13.0, -14.0, 15.0, -16.0
+        )
+    );
+
+    TEST_ASSERT_EQUAL_DOUBLE(-1.0, value.m00);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.m01);
+    TEST_ASSERT_EQUAL_DOUBLE(-3.0, value.m02);
+    TEST_ASSERT_EQUAL_DOUBLE(4.0, value.m03);
+    TEST_ASSERT_EQUAL_DOUBLE(-5.0, value.m10);
+    TEST_ASSERT_EQUAL_DOUBLE(6.0, value.m11);
+    TEST_ASSERT_EQUAL_DOUBLE(-7.0, value.m12);
+    TEST_ASSERT_EQUAL_DOUBLE(8.0, value.m13);
+    TEST_ASSERT_EQUAL_DOUBLE(-9.0, value.m20);
+    TEST_ASSERT_EQUAL_DOUBLE(10.0, value.m21);
+    TEST_ASSERT_EQUAL_DOUBLE(-11.0, value.m22);
+    TEST_ASSERT_EQUAL_DOUBLE(12.0, value.m23);
+    TEST_ASSERT_EQUAL_DOUBLE(-13.0, value.m30);
+    TEST_ASSERT_EQUAL_DOUBLE(14.0, value.m31);
+    TEST_ASSERT_EQUAL_DOUBLE(-15.0, value.m32);
+    TEST_ASSERT_EQUAL_DOUBLE(16.0, value.m33);
+}
+
+static void neg_test_mat4x4f() {
+    const JML_Mat4x4f value = neg(
+        mat4x4f(
+            1.f, -2.f, 3.f, -4.f,
+            5.f, -6.f, 7.f, -8.f,
+            9.f, -10.f, 11.f, -12.f,
+            13.f, -14.f, 15.f, -16.f
+        )
+    );
+
+    TEST_ASSERT_EQUAL_FLOAT(-1.f, value.m00);
+    TEST_ASSERT_EQUAL_FLOAT(2.f, value.m01);
+    TEST_ASSERT_EQUAL_FLOAT(-3.f, value.m02);
+    TEST_ASSERT_EQUAL_FLOAT(4.f, value.m03);
+    TEST_ASSERT_EQUAL_FLOAT(-5.f, value.m10);
+    TEST_ASSERT_EQUAL_FLOAT(6.f, value.m11);
+    TEST_ASSERT_EQUAL_FLOAT(-7.f, value.m12);
+    TEST_ASSERT_EQUAL_FLOAT(8.f, value.m13);
+    TEST_ASSERT_EQUAL_FLOAT(-9.f, value.m20);
+    TEST_ASSERT_EQUAL_FLOAT(10.f, value.m21);
+    TEST_ASSERT_EQUAL_FLOAT(-11.f, value.m22);
+    TEST_ASSERT_EQUAL_FLOAT(12.f, value.m23);
+    TEST_ASSERT_EQUAL_FLOAT(-13.f, value.m30);
+    TEST_ASSERT_EQUAL_FLOAT(14.f, value.m31);
+    TEST_ASSERT_EQUAL_FLOAT(-15.f, value.m32);
+    TEST_ASSERT_EQUAL_FLOAT(16.f, value.m33);
+}
+
+static void neg_test_vec2d() {
+    const JML_Vec2d value = neg(vec2d(1.0, -2.0));
+
+    TEST_ASSERT_EQUAL_DOUBLE(-1.0, value.x);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.y);
+}
+
+static void neg_test_vec2f() {
+    const JML_Vec2f value = neg(vec2f(1.f, -2.f));
+
+    TEST_ASSERT_EQUAL_FLOAT(-1.f, value.x);
+    TEST_ASSERT_EQUAL_FLOAT(2.f, value.y);
+}
+
+static void neg_test_vec2i() {
+    const JML_Vec2i value = neg(vec2i(1, -2));
+
+    TEST_ASSERT_EQUAL_INT(-1, value.x);
+    TEST_ASSERT_EQUAL_INT(2, value.y);
+}
+
+static void neg_test_vec2u() {
+    const JML_Vec2u value = neg(vec2u(1u, 2u));
+
+    // unsigned negation wraps modulo 2^N
+    TEST_ASSERT_EQUAL_UINT(0u - 1u, value.x);
+    TEST_ASSERT_EQUAL_UINT(0u - 2u, value.y);
+}
+
+static void neg_test_vec3d() {
+    const JML_Vec3d value = neg(vec3d(1.0, -2.0, 3.0));
+
+    TEST_ASSERT_EQUAL_DOUBLE(-1.0, value.x);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.y);
+    TEST_ASSERT_EQUAL_DOUBLE(-3.0, value.z);
+}
+
+static void neg_test_vec3f() {
+    const JML_Vec3f value = neg(vec3f(1.f, -2.f, 3.f));
+
+    TEST_ASSERT_EQUAL_FLOAT(-1.f, value.x);
+    TEST_ASSERT_EQUAL_FLOAT(2.f, value.y);
+    TEST_ASSERT_EQUAL_FLOAT(-3.f, value.z);
+}
+
+static void neg_test_vec3i() {
+    const JML_Vec3i value = neg(vec3i(1, -2, 3));
+
+    TEST_ASSERT_EQUAL_INT(-1, value.x);
+    TEST_ASSERT_EQUAL_INT(2, value.y);
+    TEST_ASSERT_EQUAL_INT(-3, value.z);
+}
+
+static void neg_test_vec3u() {
+    const JML_Vec3u value = neg(vec3u(1u, 2u, 3u));
+
+    TEST_ASSERT_EQUAL_UINT(0u - 1u, value.x);
+    TEST_ASSERT_EQUAL_UINT(0u - 2u, value.y);
+    TEST_ASSERT_EQUAL_UINT(0u - 3u, value.z);
+}
+
+static void neg_test_vec4d() {
+    const JML_Vec4d value = neg(vec4d(1.0, -2.0, 3.0, -4.0));
+
+    TEST_ASSERT_EQUAL_DOUBLE(-1.0, value.x);
+    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.y);
+    TEST_ASSERT_EQUAL_DOUBLE(-3.0, value.z);
+    TEST_ASSERT_EQUAL_DOUBLE(4.0, value.w);
+}
+
+static void neg_test_vec4f() {
+    const JML_Vec4f value = neg(vec4f(1.f, -2.f, 3.f, -4.f));
+
+    TEST_ASSERT_EQUAL_FLOAT(-1.f, value.x);
+    TEST_ASSERT_EQUAL_FLOAT(2.f, value.y);
+    TEST_ASSERT_EQUAL_FLOAT(-3.f, value.z);
+    TEST_ASSERT_EQUAL_FLOAT(4.f, value.w);
+}
+
+static void neg_test_vec4i() {
+    const JML_Vec4i value = neg(vec4i(1, -2, 3, -4));
+
+    TEST_ASSERT_EQUAL_INT(-1, value.x);
+    TEST_ASSERT_EQUAL_INT(2, value.y);
+    TEST_ASSERT_EQUAL_INT(-3, value.z);
+    TEST_ASSERT_EQUAL_INT(4, value.w);
+}
+
+static void neg_test_vec4u() {
+    const JML_Vec4u value = neg(vec4u(1u, 2u, 3u, 4u));
+
+    TEST_ASSERT_EQUAL_UINT(0u - 1u, value.x);
+    TEST_ASSERT_EQUAL_UINT(0u - 2u, value.y);
+    TEST_ASSERT_EQUAL_UINT(0u - 3u, value.z);
+    TEST_ASSERT_EQUAL_UINT(0u - 4u, value.w);
+}
+
+void setUp() {}
+
+void tearDown() {}
+
+int main(int argc, char* argv[]) {
+    UNITY_BEGIN();
+    RUN_TEST(neg_test_mat2x2d);
+    RUN_TEST(neg_test_mat2x2f);
+    RUN_TEST(neg_test_mat3x3d);
+    RUN_TEST(neg_test_mat3x3f);
+    RUN_TEST(neg_test_mat4x4d);
+    RUN_TEST(neg_test_mat4x4f);
+    RUN_TEST(neg_test_vec2d);
+    RUN_TEST(neg_test_vec2f);
+    RUN_TEST(neg_test_vec2i);
+    RUN_TEST(neg_test_vec2u);
+    RUN_TEST(neg_test_vec3d);
+    RUN_TEST(neg_test_vec3f);
+    RUN_TEST(neg_test_vec3i);
+    RUN_TEST(neg_test_vec3u);
+    RUN_TEST(neg_test_vec4d);
+    RUN_TEST(neg_test_vec4f);
+    RUN_TEST(neg_test_vec4i);
+    RUN_TEST(neg_test_vec4u);
+    return UNITY_END();
+}
