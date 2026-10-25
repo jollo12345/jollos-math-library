@@ -22,7 +22,7 @@
 #include "jml/constructors/vec4u.h"
 
 static void sub_test_mat2x2d() {
-    const JML_Mat2x2d value = sub(
+    const Mat2x2d value = sub(
         mat2x2d(
             10.0, 20.0,
             30.0, 40.0
@@ -40,7 +40,7 @@ static void sub_test_mat2x2d() {
 }
 
 static void sub_test_mat2x2f() {
-    const JML_Mat2x2f value = sub(
+    const Mat2x2f value = sub(
         mat2x2f(
             10.f, 20.f,
             30.f, 40.f
@@ -58,7 +58,7 @@ static void sub_test_mat2x2f() {
 }
 
 static void sub_test_mat3x3d() {
-    const JML_Mat3x3d value = sub(
+    const Mat3x3d value = sub(
         mat3x3d(
             10.0, 20.0, 30.0,
             40.0, 50.0, 60.0,
@@ -83,7 +83,7 @@ static void sub_test_mat3x3d() {
 }
 
 static void sub_test_mat3x3f() {
-    const JML_Mat3x3f value = sub(
+    const Mat3x3f value = sub(
         mat3x3f(
             10.f, 20.f, 30.f,
             40.f, 50.f, 60.f,
@@ -108,7 +108,7 @@ static void sub_test_mat3x3f() {
 }
 
 static void sub_test_mat4x4d() {
-    const JML_Mat4x4d value = sub(
+    const Mat4x4d value = sub(
         mat4x4d(
             10.0, 20.0, 30.0, 40.0,
             50.0, 60.0, 70.0, 80.0,
@@ -142,7 +142,7 @@ static void sub_test_mat4x4d() {
 }
 
 static void sub_test_mat4x4f() {
-    const JML_Mat4x4f value = sub(
+    const Mat4x4f value = sub(
         mat4x4f(
             10.f, 20.f, 30.f, 40.f,
             50.f, 60.f, 70.f, 80.f,
@@ -176,35 +176,50 @@ static void sub_test_mat4x4f() {
 }
 
 static void sub_test_vec2d() {
-    const JML_Vec2d value = sub(vec2d(10.0, 20.0), vec2d(1.0, 2.0));
+    const Vec2d value = sub(
+        vec2d(10.0, 20.0),
+        vec2d(1.0, 2.0)
+    );
 
     TEST_ASSERT_EQUAL_DOUBLE(9.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(18.0, value.y);
 }
 
 static void sub_test_vec2f() {
-    const JML_Vec2f value = sub(vec2f(10.f, 20.f), vec2f(1.f, 2.f));
+    const Vec2f value = sub(
+        vec2f(10.f, 20.f),
+        vec2f(1.f, 2.f)
+    );
 
     TEST_ASSERT_EQUAL_FLOAT(9.f, value.x);
     TEST_ASSERT_EQUAL_FLOAT(18.f, value.y);
 }
 
 static void sub_test_vec2i() {
-    const JML_Vec2i value = sub(vec2i(10, -20), vec2i(1, 2));
+    const Vec2i value = sub(
+        vec2i(10, -20),
+        vec2i(1, 2)
+    );
 
     TEST_ASSERT_EQUAL_INT(9, value.x);
     TEST_ASSERT_EQUAL_INT(-22, value.y);
 }
 
 static void sub_test_vec2u() {
-    const JML_Vec2u value = sub(vec2u(10u, 20u), vec2u(1u, 2u));
+    const Vec2u value = sub(
+        vec2u(10u, 20u),
+        vec2u(1u, 2u)
+    );
 
     TEST_ASSERT_EQUAL_UINT(9u, value.x);
     TEST_ASSERT_EQUAL_UINT(18u, value.y);
 }
 
 static void sub_test_vec3d() {
-    const JML_Vec3d value = sub(vec3d(10.0, 20.0, 30.0), vec3d(1.0, 2.0, 3.0));
+    const Vec3d value = sub(
+        vec3d(10.0, 20.0, 30.0),
+        vec3d(1.0, 2.0, 3.0)
+    );
 
     TEST_ASSERT_EQUAL_DOUBLE(9.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(18.0, value.y);
@@ -212,7 +227,10 @@ static void sub_test_vec3d() {
 }
 
 static void sub_test_vec3f() {
-    const JML_Vec3f value = sub(vec3f(10.f, 20.f, 30.f), vec3f(1.f, 2.f, 3.f));
+    const Vec3f value = sub(
+        vec3f(10.f, 20.f, 30.f),
+        vec3f(1.f, 2.f, 3.f)
+    );
 
     TEST_ASSERT_EQUAL_FLOAT(9.f, value.x);
     TEST_ASSERT_EQUAL_FLOAT(18.f, value.y);
@@ -220,7 +238,10 @@ static void sub_test_vec3f() {
 }
 
 static void sub_test_vec3i() {
-    const JML_Vec3i value = sub(vec3i(10, -20, 30), vec3i(1, 2, 3));
+    const Vec3i value = sub(
+        vec3i(10, -20, 30),
+        vec3i(1, 2, 3)
+    );
 
     TEST_ASSERT_EQUAL_INT(9, value.x);
     TEST_ASSERT_EQUAL_INT(-22, value.y);
@@ -228,7 +249,10 @@ static void sub_test_vec3i() {
 }
 
 static void sub_test_vec3u() {
-    const JML_Vec3u value = sub(vec3u(10u, 20u, 30u), vec3u(1u, 2u, 3u));
+    const Vec3u value = sub(
+        vec3u(10u, 20u, 30u),
+        vec3u(1u, 2u, 3u)
+    );
 
     TEST_ASSERT_EQUAL_UINT(9u, value.x);
     TEST_ASSERT_EQUAL_UINT(18u, value.y);
@@ -236,7 +260,7 @@ static void sub_test_vec3u() {
 }
 
 static void sub_test_vec4d() {
-    const JML_Vec4d value = sub(
+    const Vec4d value = sub(
         vec4d(10.0, 20.0, 30.0, 40.0),
         vec4d(1.0, 2.0, 3.0, 4.0)
     );
@@ -248,7 +272,7 @@ static void sub_test_vec4d() {
 }
 
 static void sub_test_vec4f() {
-    const JML_Vec4f value = sub(
+    const Vec4f value = sub(
         vec4f(10.f, 20.f, 30.f, 40.f),
         vec4f(1.f, 2.f, 3.f, 4.f)
     );
@@ -260,7 +284,10 @@ static void sub_test_vec4f() {
 }
 
 static void sub_test_vec4i() {
-    const JML_Vec4i value = sub(vec4i(10, -20, 30, -40), vec4i(1, 2, 3, 4));
+    const Vec4i value = sub(
+        vec4i(10, -20, 30, -40),
+        vec4i(1, 2, 3, 4)
+    );
 
     TEST_ASSERT_EQUAL_INT(9, value.x);
     TEST_ASSERT_EQUAL_INT(-22, value.y);
@@ -269,7 +296,7 @@ static void sub_test_vec4i() {
 }
 
 static void sub_test_vec4u() {
-    const JML_Vec4u value = sub(
+    const Vec4u value = sub(
         vec4u(10u, 20u, 30u, 40u),
         vec4u(1u, 2u, 3u, 4u)
     );

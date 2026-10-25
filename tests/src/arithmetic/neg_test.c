@@ -22,7 +22,7 @@
 #include "jml/constructors/vec4u.h"
 
 static void neg_test_mat2x2d() {
-    const JML_Mat2x2d value = neg(
+    const Mat2x2d value = neg(
         mat2x2d(
             1.0, -2.0,
             3.0, -4.0
@@ -36,7 +36,7 @@ static void neg_test_mat2x2d() {
 }
 
 static void neg_test_mat2x2f() {
-    const JML_Mat2x2f value = neg(
+    const Mat2x2f value = neg(
         mat2x2f(
             1.f, -2.f,
             3.f, -4.f
@@ -50,7 +50,7 @@ static void neg_test_mat2x2f() {
 }
 
 static void neg_test_mat3x3d() {
-    const JML_Mat3x3d value = neg(
+    const Mat3x3d value = neg(
         mat3x3d(
             1.0, -2.0, 3.0,
             -4.0, 5.0, -6.0,
@@ -70,7 +70,7 @@ static void neg_test_mat3x3d() {
 }
 
 static void neg_test_mat3x3f() {
-    const JML_Mat3x3f value = neg(
+    const Mat3x3f value = neg(
         mat3x3f(
             1.f, -2.f, 3.f,
             -4.f, 5.f, -6.f,
@@ -90,7 +90,7 @@ static void neg_test_mat3x3f() {
 }
 
 static void neg_test_mat4x4d() {
-    const JML_Mat4x4d value = neg(
+    const Mat4x4d value = neg(
         mat4x4d(
             1.0, -2.0, 3.0, -4.0,
             5.0, -6.0, 7.0, -8.0,
@@ -118,7 +118,7 @@ static void neg_test_mat4x4d() {
 }
 
 static void neg_test_mat4x4f() {
-    const JML_Mat4x4f value = neg(
+    const Mat4x4f value = neg(
         mat4x4f(
             1.f, -2.f, 3.f, -4.f,
             5.f, -6.f, 7.f, -8.f,
@@ -146,36 +146,45 @@ static void neg_test_mat4x4f() {
 }
 
 static void neg_test_vec2d() {
-    const JML_Vec2d value = neg(vec2d(1.0, -2.0));
+    const Vec2d value = neg(
+        vec2d(1.0, -2.0)
+    );
 
     TEST_ASSERT_EQUAL_DOUBLE(-1.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(2.0, value.y);
 }
 
 static void neg_test_vec2f() {
-    const JML_Vec2f value = neg(vec2f(1.f, -2.f));
+    const Vec2f value = neg(
+        vec2f(1.f, -2.f)
+    );
 
     TEST_ASSERT_EQUAL_FLOAT(-1.f, value.x);
     TEST_ASSERT_EQUAL_FLOAT(2.f, value.y);
 }
 
 static void neg_test_vec2i() {
-    const JML_Vec2i value = neg(vec2i(1, -2));
+    const Vec2i value = neg(
+        vec2i(1, -2)
+    );
 
     TEST_ASSERT_EQUAL_INT(-1, value.x);
     TEST_ASSERT_EQUAL_INT(2, value.y);
 }
 
 static void neg_test_vec2u() {
-    const JML_Vec2u value = neg(vec2u(1u, 2u));
+    const Vec2u value = neg(
+        vec2u(1u, 2u)
+    );
 
-    // unsigned negation wraps modulo 2^N
     TEST_ASSERT_EQUAL_UINT(0u - 1u, value.x);
     TEST_ASSERT_EQUAL_UINT(0u - 2u, value.y);
 }
 
 static void neg_test_vec3d() {
-    const JML_Vec3d value = neg(vec3d(1.0, -2.0, 3.0));
+    const Vec3d value = neg(
+        vec3d(1.0, -2.0, 3.0)
+    );
 
     TEST_ASSERT_EQUAL_DOUBLE(-1.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(2.0, value.y);
@@ -183,7 +192,9 @@ static void neg_test_vec3d() {
 }
 
 static void neg_test_vec3f() {
-    const JML_Vec3f value = neg(vec3f(1.f, -2.f, 3.f));
+    const Vec3f value = neg(
+        vec3f(1.f, -2.f, 3.f)
+    );
 
     TEST_ASSERT_EQUAL_FLOAT(-1.f, value.x);
     TEST_ASSERT_EQUAL_FLOAT(2.f, value.y);
@@ -191,7 +202,9 @@ static void neg_test_vec3f() {
 }
 
 static void neg_test_vec3i() {
-    const JML_Vec3i value = neg(vec3i(1, -2, 3));
+    const Vec3i value = neg(
+        vec3i(1, -2, 3)
+    );
 
     TEST_ASSERT_EQUAL_INT(-1, value.x);
     TEST_ASSERT_EQUAL_INT(2, value.y);
@@ -199,7 +212,9 @@ static void neg_test_vec3i() {
 }
 
 static void neg_test_vec3u() {
-    const JML_Vec3u value = neg(vec3u(1u, 2u, 3u));
+    const Vec3u value = neg(
+        vec3u(1u, 2u, 3u)
+    );
 
     TEST_ASSERT_EQUAL_UINT(0u - 1u, value.x);
     TEST_ASSERT_EQUAL_UINT(0u - 2u, value.y);
@@ -207,7 +222,9 @@ static void neg_test_vec3u() {
 }
 
 static void neg_test_vec4d() {
-    const JML_Vec4d value = neg(vec4d(1.0, -2.0, 3.0, -4.0));
+    const Vec4d value = neg(
+        vec4d(1.0, -2.0, 3.0, -4.0)
+    );
 
     TEST_ASSERT_EQUAL_DOUBLE(-1.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(2.0, value.y);
@@ -216,7 +233,9 @@ static void neg_test_vec4d() {
 }
 
 static void neg_test_vec4f() {
-    const JML_Vec4f value = neg(vec4f(1.f, -2.f, 3.f, -4.f));
+    const Vec4f value = neg(
+        vec4f(1.f, -2.f, 3.f, -4.f)
+    );
 
     TEST_ASSERT_EQUAL_FLOAT(-1.f, value.x);
     TEST_ASSERT_EQUAL_FLOAT(2.f, value.y);
@@ -225,7 +244,9 @@ static void neg_test_vec4f() {
 }
 
 static void neg_test_vec4i() {
-    const JML_Vec4i value = neg(vec4i(1, -2, 3, -4));
+    const Vec4i value = neg(
+        vec4i(1, -2, 3, -4)
+    );
 
     TEST_ASSERT_EQUAL_INT(-1, value.x);
     TEST_ASSERT_EQUAL_INT(2, value.y);
@@ -234,7 +255,9 @@ static void neg_test_vec4i() {
 }
 
 static void neg_test_vec4u() {
-    const JML_Vec4u value = neg(vec4u(1u, 2u, 3u, 4u));
+    const Vec4u value = neg(
+        vec4u(1u, 2u, 3u, 4u)
+    );
 
     TEST_ASSERT_EQUAL_UINT(0u - 1u, value.x);
     TEST_ASSERT_EQUAL_UINT(0u - 2u, value.y);
