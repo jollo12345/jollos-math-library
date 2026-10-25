@@ -3,6 +3,8 @@
 
 #include "jml/constructors/mat4x4d.h"
 #include "jml/constructors/mat4x4f.h"
+#include "jml/trigonometry/cos.h"
+#include "jml/trigonometry/sin.h"
 #include "jml/types/mat4x4d.h"
 #include "jml/types/mat4x4f.h"
 #include "jml/types/vec3d.h"
@@ -13,8 +15,8 @@ static inline JML_Mat4x4d JML_rotationVec3dD(
     const JML_Vec3d axis,
     const double angle
 ) {
-    const double c = JML_COS_D(angle);
-    const double s = JML_SIN_D(angle);
+    const double c = JML_cos(angle);
+    const double s = JML_sin(angle);
     const double t = 1. - c;
 
     return JML_mat4x4d(
@@ -29,8 +31,8 @@ static inline JML_Mat4x4f JML_rotationVec3fF(
     const JML_Vec3f axis,
     const float angle
 ) {
-    const float c = JML_COS_D(angle);
-    const float s = JML_SIN_D(angle);
+    const float c = JML_cos(angle);
+    const float s = JML_sin(angle);
     const float t = 1.f - c;
 
     return JML_mat4x4f(
