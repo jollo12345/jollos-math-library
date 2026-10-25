@@ -4,7 +4,7 @@
 #include "jml/constructors/vec2f.h"
 
 static void vec2f_test_1() {
-    Vec2f value = vec2f(0.f, 1.f);
+    const Vec2f value = vec2f(0.f, 1.f);
 
     TEST_ASSERT_EQUAL_FLOAT(0.f, value.x);
     TEST_ASSERT_EQUAL_FLOAT(1.f, value.y);

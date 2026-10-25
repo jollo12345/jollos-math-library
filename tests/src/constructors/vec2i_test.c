@@ -4,7 +4,7 @@
 #include "jml/constructors/vec2i.h"
 
 static void vec2i_test_1() {
-    Vec2i value = vec2i(0, 1);
+    const Vec2i value = vec2i(0, 1);
 
     TEST_ASSERT_EQUAL_INT(0, value.x);
     TEST_ASSERT_EQUAL_INT(1, value.y);

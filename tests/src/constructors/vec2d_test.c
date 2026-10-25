@@ -4,7 +4,7 @@
 #include "jml/constructors/vec2d.h"
 
 static void vec2d_test_1() {
-    Vec2d value = vec2d(0.0, 1.0);
+    const Vec2d value = vec2d(0.0, 1.0);
 
     TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);

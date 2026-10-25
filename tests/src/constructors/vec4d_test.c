@@ -6,7 +6,7 @@
 #include "jml/constructors/vec4d.h"
 
 static void vec4d_test_1() {
-    const JML_Vec4d value = vec4d(0.0, 1.0, 2.0, 3.0);
+    const Vec4d value = vec4d(0.0, 1.0, 2.0, 3.0);
 
     TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
@@ -15,7 +15,7 @@ static void vec4d_test_1() {
 }
 
 static void vec4d_test_2() {
-    const JML_Vec4d value = vec4d(0.0, 1.0, vec2d(2.0, 3.0));
+    const Vec4d value = vec4d(0.0, 1.0, vec2d(2.0, 3.0));
 
     TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
@@ -24,7 +24,7 @@ static void vec4d_test_2() {
 }
 
 static void vec4d_test_3() {
-    const JML_Vec4d value = vec4d(0.0, vec2d(1.0, 2.0), 3.0);
+    const Vec4d value = vec4d(0.0, vec2d(1.0, 2.0), 3.0);
 
     TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
@@ -33,7 +33,7 @@ static void vec4d_test_3() {
 }
 
 static void vec4d_test_4() {
-    const JML_Vec4d value = vec4d(0.0, vec3d(1.0, 2.0, 3.0));
+    const Vec4d value = vec4d(0.0, vec3d(1.0, 2.0, 3.0));
 
     TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
@@ -42,7 +42,7 @@ static void vec4d_test_4() {
 }
 
 static void vec4d_test_5() {
-    const JML_Vec4d value = vec4d(vec2d(0.0, 1.0), 2.0, 3.0);
+    const Vec4d value = vec4d(vec2d(0.0, 1.0), 2.0, 3.0);
 
     TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
@@ -51,7 +51,7 @@ static void vec4d_test_5() {
 }
 
 static void vec4d_test_6() {
-    const JML_Vec4d value = vec4d(vec2d(0.0, 1.0), vec2d(2.0, 3.0));
+    const Vec4d value = vec4d(vec2d(0.0, 1.0), vec2d(2.0, 3.0));
 
     TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
@@ -60,7 +60,7 @@ static void vec4d_test_6() {
 }
 
 static void vec4d_test_7() {
-    const JML_Vec4d value = vec4d(vec3d(0.0, 1.0, 2.0), 3.0);
+    const Vec4d value = vec4d(vec3d(0.0, 1.0, 2.0), 3.0);
 
     TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);

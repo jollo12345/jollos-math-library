@@ -5,7 +5,7 @@
 #include "jml/constructors/vec4d.h"
 
 static void mat4x4d_test_1() {
-    const JML_Mat4x4d value = mat4x4d(
+    const Mat4x4d value = mat4x4d(
         0.0, 1.0, 2.0, 3.0,
         4.0, 5.0, 6.0, 7.0,
         8.0, 9.0, 10.0, 11.0,
@@ -31,7 +31,7 @@ static void mat4x4d_test_1() {
 }
 
 static void mat4x4d_test_2() {
-    const JML_Mat4x4d value = mat4x4d(
+    const Mat4x4d value = mat4x4d(
         vec4d(0.0, 1.0, 2.0, 3.0),
         vec4d(4.0, 5.0, 6.0, 7.0),
         vec4d(8.0, 9.0, 10.0, 11.0),

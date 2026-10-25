@@ -5,7 +5,7 @@
 #include "jml/constructors/vec4f.h"
 
 static void mat4x4f_test_1() {
-    const JML_Mat4x4f value = mat4x4f(
+    const Mat4x4f value = mat4x4f(
         0.f, 1.f, 2.f, 3.f,
         4.f, 5.f, 6.f, 7.f,
         8.f, 9.f, 10.f, 11.f,
@@ -31,7 +31,7 @@ static void mat4x4f_test_1() {
 }
 
 static void mat4x4f_test_2() {
-    const JML_Mat4x4f value = mat4x4f(
+    const Mat4x4f value = mat4x4f(
         vec4f(0.f, 1.f, 2.f, 3.f),
         vec4f(4.f, 5.f, 6.f, 7.f),
         vec4f(8.f, 9.f, 10.f, 11.f),

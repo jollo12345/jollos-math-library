@@ -5,7 +5,7 @@
 #include "jml/constructors/vec3d.h"
 
 static void mat3x3d_test_1() {
-    const JML_Mat3x3d value = mat3x3d(
+    const Mat3x3d value = mat3x3d(
         0.0, 1.0, 2.0,
         3.0, 4.0, 5.0,
         6.0, 7.0, 8.0
@@ -23,7 +23,7 @@ static void mat3x3d_test_1() {
 }
 
 static void mat3x3d_test_2() {
-    const JML_Mat3x3d value = mat3x3d(
+    const Mat3x3d value = mat3x3d(
         vec3d(0.0, 1.0, 2.0),
         vec3d(3.0, 4.0, 5.0),
         vec3d(6.0, 7.0, 8.0)

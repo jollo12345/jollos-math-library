@@ -5,7 +5,7 @@
 #include "jml/constructors/vec3d.h"
 
 static void vec3d_test_1() {
-    Vec3d value = vec3d(0.0, 1.0, 2.0);
+    const Vec3d value = vec3d(0.0, 1.0, 2.0);
 
     TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
@@ -13,7 +13,7 @@ static void vec3d_test_1() {
 }
 
 static void vec3d_test_2() {
-    Vec3d value = vec3d(0.0, vec2d(1.0, 2.0));
+    const Vec3d value = vec3d(0.0, vec2d(1.0, 2.0));
 
     TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
@@ -21,7 +21,7 @@ static void vec3d_test_2() {
 }
 
 static void vec3d_test_3() {
-    Vec3d value = vec3d(vec2d(0.0, 1.0), 2.0);
+    const Vec3d value = vec3d(vec2d(0.0, 1.0), 2.0);
 
     TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
     TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);

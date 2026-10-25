@@ -6,7 +6,7 @@
 #include "jml/constructors/vec4u.h"
 
 static void vec4u_test_1() {
-    const JML_Vec4u value = vec4u(0u, 1u, 2u, 3u);
+    const Vec4u value = vec4u(0u, 1u, 2u, 3u);
 
     TEST_ASSERT_EQUAL_UINT(0u, value.x);
     TEST_ASSERT_EQUAL_UINT(1u, value.y);
@@ -15,7 +15,7 @@ static void vec4u_test_1() {
 }
 
 static void vec4u_test_2() {
-    const JML_Vec4u value = vec4u(0u, 1u, vec2u(2u, 3u));
+    const Vec4u value = vec4u(0u, 1u, vec2u(2u, 3u));
 
     TEST_ASSERT_EQUAL_UINT(0u, value.x);
     TEST_ASSERT_EQUAL_UINT(1u, value.y);
@@ -24,7 +24,7 @@ static void vec4u_test_2() {
 }
 
 static void vec4u_test_3() {
-    const JML_Vec4u value = vec4u(0u, vec2u(1u, 2u), 3u);
+    const Vec4u value = vec4u(0u, vec2u(1u, 2u), 3u);
 
     TEST_ASSERT_EQUAL_UINT(0u, value.x);
     TEST_ASSERT_EQUAL_UINT(1u, value.y);
@@ -33,7 +33,7 @@ static void vec4u_test_3() {
 }
 
 static void vec4u_test_4() {
-    const JML_Vec4u value = vec4u(0u, vec3u(1u, 2u, 3u));
+    const Vec4u value = vec4u(0u, vec3u(1u, 2u, 3u));
 
     TEST_ASSERT_EQUAL_UINT(0u, value.x);
     TEST_ASSERT_EQUAL_UINT(1u, value.y);
@@ -42,7 +42,7 @@ static void vec4u_test_4() {
 }
 
 static void vec4u_test_5() {
-    const JML_Vec4u value = vec4u(vec2u(0u, 1u), 2u, 3u);
+    const Vec4u value = vec4u(vec2u(0u, 1u), 2u, 3u);
 
     TEST_ASSERT_EQUAL_UINT(0u, value.x);
     TEST_ASSERT_EQUAL_UINT(1u, value.y);
@@ -51,7 +51,7 @@ static void vec4u_test_5() {
 }
 
 static void vec4u_test_6() {
-    const JML_Vec4u value = vec4u(vec2u(0u, 1u), vec2u(2u, 3u));
+    const Vec4u value = vec4u(vec2u(0u, 1u), vec2u(2u, 3u));
 
     TEST_ASSERT_EQUAL_UINT(0u, value.x);
     TEST_ASSERT_EQUAL_UINT(1u, value.y);
@@ -60,7 +60,7 @@ static void vec4u_test_6() {
 }
 
 static void vec4u_test_7() {
-    const JML_Vec4u value = vec4u(vec3u(0u, 1u, 2u), 3u);
+    const Vec4u value = vec4u(vec3u(0u, 1u, 2u), 3u);
 
     TEST_ASSERT_EQUAL_UINT(0u, value.x);
     TEST_ASSERT_EQUAL_UINT(1u, value.y);

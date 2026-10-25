@@ -5,7 +5,7 @@
 #include "jml/constructors/vec3i.h"
 
 static void vec3i_test_1() {
-    Vec3i value = vec3i(0, 1, 2);
+    const Vec3i value = vec3i(0, 1, 2);
 
     TEST_ASSERT_EQUAL_INT(0, value.x);
     TEST_ASSERT_EQUAL_INT(1, value.y);
@@ -13,7 +13,7 @@ static void vec3i_test_1() {
 }
 
 static void vec3i_test_2() {
-    Vec3i value = vec3i(0, vec2i(1, 2));
+    const Vec3i value = vec3i(0, vec2i(1, 2));
 
     TEST_ASSERT_EQUAL_INT(0, value.x);
     TEST_ASSERT_EQUAL_INT(1, value.y);
@@ -21,7 +21,7 @@ static void vec3i_test_2() {
 }
 
 static void vec3i_test_3() {
-    Vec3i value = vec3i(vec2i(0, 1), 2);
+    const Vec3i value = vec3i(vec2i(0, 1), 2);
 
     TEST_ASSERT_EQUAL_INT(0, value.x);
     TEST_ASSERT_EQUAL_INT(1, value.y);

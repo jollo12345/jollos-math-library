@@ -6,7 +6,7 @@
 #include "jml/constructors/vec4i.h"
 
 static void vec4i_test_1() {
-    const JML_Vec4i value = vec4i(0, 1, 2, 3);
+    const Vec4i value = vec4i(0, 1, 2, 3);
 
     TEST_ASSERT_EQUAL_INT(0, value.x);
     TEST_ASSERT_EQUAL_INT(1, value.y);
@@ -15,7 +15,7 @@ static void vec4i_test_1() {
 }
 
 static void vec4i_test_2() {
-    const JML_Vec4i value = vec4i(0, 1, vec2i(2, 3));
+    const Vec4i value = vec4i(0, 1, vec2i(2, 3));
 
     TEST_ASSERT_EQUAL_INT(0, value.x);
     TEST_ASSERT_EQUAL_INT(1, value.y);
@@ -24,7 +24,7 @@ static void vec4i_test_2() {
 }
 
 static void vec4i_test_3() {
-    const JML_Vec4i value = vec4i(0, vec2i(1, 2), 3);
+    const Vec4i value = vec4i(0, vec2i(1, 2), 3);
 
     TEST_ASSERT_EQUAL_INT(0, value.x);
     TEST_ASSERT_EQUAL_INT(1, value.y);
@@ -33,7 +33,7 @@ static void vec4i_test_3() {
 }
 
 static void vec4i_test_4() {
-    const JML_Vec4i value = vec4i(0, vec3i(1, 2, 3));
+    const Vec4i value = vec4i(0, vec3i(1, 2, 3));
 
     TEST_ASSERT_EQUAL_INT(0, value.x);
     TEST_ASSERT_EQUAL_INT(1, value.y);
@@ -42,7 +42,7 @@ static void vec4i_test_4() {
 }
 
 static void vec4i_test_5() {
-    const JML_Vec4i value = vec4i(vec2i(0, 1), 2, 3);
+    const Vec4i value = vec4i(vec2i(0, 1), 2, 3);
 
     TEST_ASSERT_EQUAL_INT(0, value.x);
     TEST_ASSERT_EQUAL_INT(1, value.y);
@@ -51,7 +51,7 @@ static void vec4i_test_5() {
 }
 
 static void vec4i_test_6() {
-    const JML_Vec4i value = vec4i(vec2i(0, 1), vec2i(2, 3));
+    const Vec4i value = vec4i(vec2i(0, 1), vec2i(2, 3));
 
     TEST_ASSERT_EQUAL_INT(0, value.x);
     TEST_ASSERT_EQUAL_INT(1, value.y);
@@ -60,7 +60,7 @@ static void vec4i_test_6() {
 }
 
 static void vec4i_test_7() {
-    const JML_Vec4i value = vec4i(vec3i(0, 1, 2), 3);
+    const Vec4i value = vec4i(vec3i(0, 1, 2), 3);
 
     TEST_ASSERT_EQUAL_INT(0, value.x);
     TEST_ASSERT_EQUAL_INT(1, value.y);

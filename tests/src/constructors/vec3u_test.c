@@ -5,7 +5,7 @@
 #include "jml/constructors/vec3u.h"
 
 static void vec3u_test_1() {
-    Vec3u value = vec3u(0u, 1u, 2u);
+    const Vec3u value = vec3u(0u, 1u, 2u);
 
     TEST_ASSERT_EQUAL_UINT(0u, value.x);
     TEST_ASSERT_EQUAL_UINT(1u, value.y);
@@ -13,7 +13,7 @@ static void vec3u_test_1() {
 }
 
 static void vec3u_test_2() {
-    Vec3u value = vec3u(0u, vec2u(1u, 2u));
+    const Vec3u value = vec3u(0u, vec2u(1u, 2u));
 
     TEST_ASSERT_EQUAL_UINT(0u, value.x);
     TEST_ASSERT_EQUAL_UINT(1u, value.y);
@@ -21,7 +21,7 @@ static void vec3u_test_2() {
 }
 
 static void vec3u_test_3() {
-    Vec3u value = vec3u(vec2u(0u, 1u), 2u);
+    const Vec3u value = vec3u(vec2u(0u, 1u), 2u);
 
     TEST_ASSERT_EQUAL_UINT(0u, value.x);
     TEST_ASSERT_EQUAL_UINT(1u, value.y);

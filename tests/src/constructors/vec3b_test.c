@@ -5,27 +5,27 @@
 #include "jml/constructors/vec3b.h"
 
 static void vec3b_test_1() {
-    Vec3b value = vec3b(true, false, true);
+    const Vec3b value = vec3b(true, false, true);
 
-    TEST_ASSERT_EQUAL_CHAR(true, value.x);
-    TEST_ASSERT_EQUAL_CHAR(false, value.y);
-    TEST_ASSERT_EQUAL_CHAR(true, value.z);
+    TEST_ASSERT_TRUE(value.x);
+    TEST_ASSERT_FALSE(value.y);
+    TEST_ASSERT_TRUE(value.z);
 }
 
 static void vec3b_test_2() {
-    Vec3b value = vec3b(true, vec2b(false, true));
+    const Vec3b value = vec3b(true, vec2b(false, true));
 
-    TEST_ASSERT_EQUAL_CHAR(true, value.x);
-    TEST_ASSERT_EQUAL_CHAR(false, value.y);
-    TEST_ASSERT_EQUAL_CHAR(true, value.z);
+    TEST_ASSERT_TRUE(value.x);
+    TEST_ASSERT_FALSE(value.y);
+    TEST_ASSERT_TRUE(value.z);
 }
 
 static void vec3b_test_3() {
-    Vec3b value = vec3b(vec2b(true, false), true);
+    const Vec3b value = vec3b(vec2b(true, false), true);
 
-    TEST_ASSERT_EQUAL_CHAR(true, value.x);
-    TEST_ASSERT_EQUAL_CHAR(false, value.y);
-    TEST_ASSERT_EQUAL_CHAR(true, value.z);
+    TEST_ASSERT_TRUE(value.x);
+    TEST_ASSERT_FALSE(value.y);
+    TEST_ASSERT_TRUE(value.z);
 }
 
 void setUp() {}

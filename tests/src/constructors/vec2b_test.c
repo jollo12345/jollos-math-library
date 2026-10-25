@@ -4,10 +4,10 @@
 #include "jml/constructors/vec2b.h"
 
 static void vec2b_test_1() {
-    Vec2b value = vec2b(true, false);
+    const Vec2b value = vec2b(true, false);
 
-    TEST_ASSERT_EQUAL_CHAR(true, value.x);
-    TEST_ASSERT_EQUAL_CHAR(false, value.y);
+    TEST_ASSERT_TRUE(value.x);
+    TEST_ASSERT_FALSE(value.y);
 }
 
 void setUp() {}

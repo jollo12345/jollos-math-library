@@ -5,7 +5,7 @@
 #include "jml/constructors/vec2f.h"
 
 static void mat2x2f_test_1() {
-    const JML_Mat2x2f value = mat2x2f(
+    const Mat2x2f value = mat2x2f(
         0.f, 1.f,
         2.f, 3.f
     );
@@ -17,7 +17,7 @@ static void mat2x2f_test_1() {
 }
 
 static void mat2x2f_test_2() {
-    const JML_Mat2x2f value = mat2x2f(
+    const Mat2x2f value = mat2x2f(
         vec2f(0.f, 1.f),
         vec2f(2.f, 3.f)
     );
