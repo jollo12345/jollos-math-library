@@ -19,7 +19,7 @@
 static inline JML_Mat2x2d JML_inverseMat2x2d(
     const JML_Mat2x2d arg
 ) {
-    const double inv_det = 1.0 / JML_determinantMat2x2d(arg);
+    const double inv_det = 1.0 / JML_determinant(arg);
 
     const double r00 = arg.m11 * inv_det;
     const double r01 = -arg.m01 * inv_det;
@@ -27,15 +27,15 @@ static inline JML_Mat2x2d JML_inverseMat2x2d(
     const double r11 = arg.m00 * inv_det;
 
     return JML_mat2x2d(
-        r00, r10,
-        r01, r11
+        r00, r01,
+        r10, r11
     );
 }
 
 static inline JML_Mat2x2f JML_inverseMat2x2f(
     const JML_Mat2x2f arg
 ) {
-    const float inv_det = 1.0f / JML_determinantMat2x2f(arg);
+    const float inv_det = 1.0f / JML_determinant(arg);
 
     const float r00 = arg.m11 * inv_det;
     const float r01 = -arg.m01 * inv_det;
@@ -43,8 +43,8 @@ static inline JML_Mat2x2f JML_inverseMat2x2f(
     const float r11 = arg.m00 * inv_det;
 
     return JML_mat2x2f(
-        r00, r10,
-        r01, r11
+        r00, r01,
+        r10, r11
     );
 }
 
@@ -68,9 +68,9 @@ static inline JML_Mat3x3d JML_inverseMat3x3d(
     const double r20 = c02 * inv_det, r21 = c12 * inv_det, r22 = c22 * inv_det;
 
     return JML_mat3x3d(
-        r00, r10, r20,
-        r01, r11, r21,
-        r02, r12, r22
+        r00, r01, r02,
+        r10, r11, r12,
+        r20, r21, r22
     );
 }
 
@@ -94,9 +94,9 @@ static inline JML_Mat3x3f JML_inverseMat3x3f(
     const float r20 = c02 * inv_det, r21 = c12 * inv_det, r22 = c22 * inv_det;
 
     return JML_mat3x3f(
-        r00, r10, r20,
-        r01, r11, r21,
-        r02, r12, r22
+        r00, r01, r02,
+        r10, r11, r12,
+        r20, r21, r22
     );
 }
 
@@ -140,10 +140,10 @@ static inline JML_Mat4x4d JML_inverseMat4x4d(
     const double r33 = (arg.m20 * s3 - arg.m21 * s1 + arg.m22 * s0) * inv_det;
 
     return JML_mat4x4d(
-        r00, r10, r20, r30,
-        r01, r11, r21, r31,
-        r02, r12, r22, r32,
-        r03, r13, r23, r33
+        r00, r01, r02, r03,
+        r10, r11, r12, r13,
+        r20, r21, r22, r23,
+        r30, r31, r32, r33
     );
 }
 
@@ -187,10 +187,10 @@ static inline JML_Mat4x4f JML_inverseMat4x4f(
     const float r33 = (arg.m20 * s3 - arg.m21 * s1 + arg.m22 * s0) * inv_det;
 
     return JML_mat4x4f(
-        r00, r10, r20, r30,
-        r01, r11, r21, r31,
-        r02, r12, r22, r32,
-        r03, r13, r23, r33
+        r00, r01, r02, r03,
+        r10, r11, r12, r13,
+        r20, r21, r22, r23,
+        r30, r31, r32, r33
     );
 }
 

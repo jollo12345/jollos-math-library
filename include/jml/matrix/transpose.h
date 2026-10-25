@@ -19,8 +19,8 @@ static inline JML_Mat2x2d JML_transposeMat2x2d(
     const JML_Mat2x2d arg
 ) {
     return JML_mat2x2d(
-        arg.m00, arg.m01,
-        arg.m10, arg.m11
+        arg.m00, arg.m10,
+        arg.m01, arg.m11
     );
 }
 
@@ -28,8 +28,8 @@ static inline JML_Mat2x2f JML_transposeMat2x2f(
     const JML_Mat2x2f arg
 ) {
     return JML_mat2x2f(
-        arg.m00, arg.m01,
-        arg.m10, arg.m11
+        arg.m00, arg.m10,
+        arg.m01, arg.m11
     );
 }
 
@@ -37,9 +37,9 @@ static inline JML_Mat3x3d JML_transposeMat3x3d(
     const JML_Mat3x3d arg
 ) {
     return JML_mat3x3d(
-        arg.m00, arg.m01, arg.m02,
-        arg.m10, arg.m11, arg.m12,
-        arg.m20, arg.m21, arg.m22
+        arg.m00, arg.m10, arg.m20,
+        arg.m01, arg.m11, arg.m21,
+        arg.m02, arg.m12, arg.m22
     );
 }
 
@@ -47,9 +47,9 @@ static inline JML_Mat3x3f JML_transposeMat3x3f(
     const JML_Mat3x3f arg
 ) {
     return JML_mat3x3f(
-        arg.m00, arg.m01, arg.m02,
-        arg.m10, arg.m11, arg.m12,
-        arg.m20, arg.m21, arg.m22
+        arg.m00, arg.m10, arg.m20,
+        arg.m01, arg.m11, arg.m21,
+        arg.m02, arg.m12, arg.m22
     );
 }
 
@@ -57,10 +57,10 @@ static inline JML_Mat4x4d JML_transposeMat4x4d(
     const JML_Mat4x4d arg
 ) {
     return JML_mat4x4d(
-        arg.m00, arg.m01, arg.m02, arg.m03,
-        arg.m10, arg.m11, arg.m12, arg.m13,
-        arg.m20, arg.m21, arg.m22, arg.m23,
-        arg.m30, arg.m31, arg.m32, arg.m33
+        arg.m00, arg.m10, arg.m20, arg.m30,
+        arg.m01, arg.m11, arg.m21, arg.m31,
+        arg.m02, arg.m12, arg.m22, arg.m32,
+        arg.m03, arg.m13, arg.m23, arg.m33
     );
 }
 
@@ -68,10 +68,10 @@ static inline JML_Mat4x4f JML_transposeMat4x4f(
     const JML_Mat4x4f arg
 ) {
     return JML_mat4x4f(
-        arg.m00, arg.m01, arg.m02, arg.m03,
-        arg.m10, arg.m11, arg.m12, arg.m13,
-        arg.m20, arg.m21, arg.m22, arg.m23,
-        arg.m30, arg.m31, arg.m32, arg.m33
+        arg.m00, arg.m10, arg.m20, arg.m30,
+        arg.m01, arg.m11, arg.m21, arg.m31,
+        arg.m02, arg.m12, arg.m22, arg.m32,
+        arg.m03, arg.m13, arg.m23, arg.m33
     );
 }
 

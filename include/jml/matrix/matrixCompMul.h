@@ -26,8 +26,8 @@ static inline JML_Mat2x2d JML_matrixCompMulMat2x2dMat2x2d(
     const JML_Mat2x2d arg_2
 ) {
     return JML_mat2x2d(
-        arg_1.m00 * arg_2.m00, arg_1.m10 * arg_2.m10,
-        arg_1.m01 * arg_2.m01, arg_1.m11 * arg_2.m11
+        arg_1.m00 * arg_2.m00, arg_1.m01 * arg_2.m01,
+        arg_1.m10 * arg_2.m10, arg_1.m11 * arg_2.m11
     );
 }
 
@@ -36,8 +36,8 @@ static inline JML_Mat2x2f JML_matrixCompMulMat2x2fMat2x2f(
     const JML_Mat2x2f arg_2
 ) {
     return JML_mat2x2f(
-        arg_1.m00 * arg_2.m00, arg_1.m10 * arg_2.m10,
-        arg_1.m01 * arg_2.m01, arg_1.m11 * arg_2.m11
+        arg_1.m00 * arg_2.m00, arg_1.m01 * arg_2.m01,
+        arg_1.m10 * arg_2.m10, arg_1.m11 * arg_2.m11
     );
 }
 
@@ -46,9 +46,9 @@ static inline JML_Mat3x3d JML_matrixCompMulMat3x3dMat3x3d(
     const JML_Mat3x3d arg_2
 ) {
     return JML_mat3x3d(
-        arg_1.m00 * arg_2.m00, arg_1.m10 * arg_2.m10, arg_1.m20 * arg_2.m20,
-        arg_1.m01 * arg_2.m01, arg_1.m11 * arg_2.m11, arg_1.m21 * arg_2.m21,
-        arg_1.m02 * arg_2.m02, arg_1.m12 * arg_2.m12, arg_1.m22 * arg_2.m22
+        arg_1.m00 * arg_2.m00, arg_1.m01 * arg_2.m01, arg_1.m02 * arg_2.m02,
+        arg_1.m10 * arg_2.m10, arg_1.m11 * arg_2.m11, arg_1.m12 * arg_2.m12,
+        arg_1.m20 * arg_2.m20, arg_1.m21 * arg_2.m21, arg_1.m22 * arg_2.m22
     );
 }
 
@@ -57,9 +57,9 @@ static inline JML_Mat3x3f JML_matrixCompMulMat3x3fMat3x3f(
     const JML_Mat3x3f arg_2
 ) {
     return JML_mat3x3f(
-        arg_1.m00 * arg_2.m00, arg_1.m10 * arg_2.m10, arg_1.m20 * arg_2.m20,
-        arg_1.m01 * arg_2.m01, arg_1.m11 * arg_2.m11, arg_1.m21 * arg_2.m21,
-        arg_1.m02 * arg_2.m02, arg_1.m12 * arg_2.m12, arg_1.m22 * arg_2.m22
+        arg_1.m00 * arg_2.m00, arg_1.m01 * arg_2.m01, arg_1.m02 * arg_2.m02,
+        arg_1.m10 * arg_2.m10, arg_1.m11 * arg_2.m11, arg_1.m12 * arg_2.m12,
+        arg_1.m20 * arg_2.m20, arg_1.m21 * arg_2.m21, arg_1.m22 * arg_2.m22
     );
 }
 
@@ -68,10 +68,10 @@ static inline JML_Mat4x4d JML_matrixCompMulMat4x4dMat4x4d(
     const JML_Mat4x4d arg_2
 ) {
     return JML_mat4x4d(
-        arg_1.m00 * arg_2.m00, arg_1.m10 * arg_2.m10, arg_1.m20 * arg_2.m20, arg_1.m30 * arg_2.m30,
-        arg_1.m01 * arg_2.m01, arg_1.m11 * arg_2.m11, arg_1.m21 * arg_2.m21, arg_1.m31 * arg_2.m31,
-        arg_1.m02 * arg_2.m02, arg_1.m12 * arg_2.m12, arg_1.m22 * arg_2.m22, arg_1.m32 * arg_2.m32,
-        arg_1.m03 * arg_2.m03, arg_1.m13 * arg_2.m13, arg_1.m23 * arg_2.m23, arg_1.m33 * arg_2.m33
+        arg_1.m00 * arg_2.m00, arg_1.m01 * arg_2.m01, arg_1.m02 * arg_2.m02, arg_1.m03 * arg_2.m03,
+        arg_1.m10 * arg_2.m10, arg_1.m11 * arg_2.m11, arg_1.m12 * arg_2.m12, arg_1.m13 * arg_2.m13,
+        arg_1.m20 * arg_2.m20, arg_1.m21 * arg_2.m21, arg_1.m22 * arg_2.m22, arg_1.m23 * arg_2.m23,
+        arg_1.m30 * arg_2.m30, arg_1.m31 * arg_2.m31, arg_1.m32 * arg_2.m32, arg_1.m33 * arg_2.m33
     );
 }
 
@@ -80,10 +80,10 @@ static inline JML_Mat4x4f JML_matrixCompMulMat4x4fMat4x4f(
     const JML_Mat4x4f arg_2
 ) {
     return JML_mat4x4f(
-        arg_1.m00 * arg_2.m00, arg_1.m10 * arg_2.m10, arg_1.m20 * arg_2.m20, arg_1.m30 * arg_2.m30,
-        arg_1.m01 * arg_2.m01, arg_1.m11 * arg_2.m11, arg_1.m21 * arg_2.m21, arg_1.m31 * arg_2.m31,
-        arg_1.m02 * arg_2.m02, arg_1.m12 * arg_2.m12, arg_1.m22 * arg_2.m22, arg_1.m32 * arg_2.m32,
-        arg_1.m03 * arg_2.m03, arg_1.m13 * arg_2.m13, arg_1.m23 * arg_2.m23, arg_1.m33 * arg_2.m33
+        arg_1.m00 * arg_2.m00, arg_1.m01 * arg_2.m01, arg_1.m02 * arg_2.m02, arg_1.m03 * arg_2.m03,
+        arg_1.m10 * arg_2.m10, arg_1.m11 * arg_2.m11, arg_1.m12 * arg_2.m12, arg_1.m13 * arg_2.m13,
+        arg_1.m20 * arg_2.m20, arg_1.m21 * arg_2.m21, arg_1.m22 * arg_2.m22, arg_1.m23 * arg_2.m23,
+        arg_1.m30 * arg_2.m30, arg_1.m31 * arg_2.m31, arg_1.m32 * arg_2.m32, arg_1.m33 * arg_2.m33
     );
 }
 
