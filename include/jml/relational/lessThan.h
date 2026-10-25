@@ -7,12 +7,18 @@
 #include "jml/types/vec2b.h"
 #include "jml/types/vec2d.h"
 #include "jml/types/vec2f.h"
+#include "jml/types/vec2i.h"
+#include "jml/types/vec2u.h"
 #include "jml/types/vec3b.h"
 #include "jml/types/vec3d.h"
 #include "jml/types/vec3f.h"
+#include "jml/types/vec3i.h"
+#include "jml/types/vec3u.h"
 #include "jml/types/vec4b.h"
 #include "jml/types/vec4d.h"
 #include "jml/types/vec4f.h"
+#include "jml/types/vec4i.h"
+#include "jml/types/vec4u.h"
 #include "jml/util.h"
 
 [[nodiscard]]
