@@ -1,5 +1,7 @@
 #include <unity.h>
 
+#include "jml/tests/common.h"
+
 #define JML_WITHOUT_PREFIX
 #include "jml/constructors/vec2u.h"
 #include "jml/constructors/vec3u.h"

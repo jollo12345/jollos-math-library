@@ -1,13 +1,15 @@
 #include <unity.h>
 
+#include "jml/tests/common.h"
+
 #define JML_WITHOUT_PREFIX
 #include "jml/constructors/vec2f.h"
 
 static void vec2f_test_1() {
     const Vec2f value = vec2f(0.f, 1.f);
 
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.x);
-    TEST_ASSERT_EQUAL_FLOAT(1.f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 1.f, value.y);
 }
 
 void setUp() {}

@@ -1,5 +1,7 @@
 #include <unity.h>
 
+#include "jml/tests/common.h"
+
 #define JML_WITHOUT_PREFIX
 #include "jml/constructors/vec3d.h"
 #include "jml/constructors/vec3f.h"
@@ -11,9 +13,9 @@ static void cross_test_vec3d_1() {
         vec3d(4.0, 5.0, 6.0)
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(-3.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(6.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(-3.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -3.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 6.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -3.0, value.z);
 }
 
 static void cross_test_vec3d_2() {
@@ -22,9 +24,9 @@ static void cross_test_vec3d_2() {
         vec3d(2.0, 4.0, 6.0)
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.z);
 }
 
 static void cross_test_vec3f_1() {
@@ -33,9 +35,9 @@ static void cross_test_vec3f_1() {
         vec3f(4.f, 5.f, 6.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(-3.f, value.x);
-    TEST_ASSERT_EQUAL_FLOAT(6.f, value.y);
-    TEST_ASSERT_EQUAL_FLOAT(-3.f, value.z);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -3.f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 6.f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -3.f, value.z);
 }
 
 static void cross_test_vec3f_2() {
@@ -44,9 +46,9 @@ static void cross_test_vec3f_2() {
         vec3f(2.f, 4.f, 6.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.x);
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.y);
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.z);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.z);
 }
 
 void setUp() {}

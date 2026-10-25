@@ -1,5 +1,7 @@
 #include <unity.h>
 
+#include "jml/tests/common.h"
+
 #define JML_WITHOUT_PREFIX
 #include "jml/constructors/mat2x2d.h"
 #include "jml/constructors/mat2x2f.h"
@@ -17,7 +19,7 @@ static void determinant_test_mat2x2d_1() {
         )
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(10.0, value);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 10.0, value);
 }
 
 static void determinant_test_mat2x2d_2() {
@@ -28,7 +30,7 @@ static void determinant_test_mat2x2d_2() {
         )
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(-2.0, value);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -2.0, value);
 }
 
 static void determinant_test_mat2x2d_3() {
@@ -39,7 +41,7 @@ static void determinant_test_mat2x2d_3() {
         )
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value);
 }
 
 static void determinant_test_mat2x2f_1() {
@@ -50,7 +52,7 @@ static void determinant_test_mat2x2f_1() {
         )
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(10.f, value);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 10.f, value);
 }
 
 static void determinant_test_mat2x2f_2() {
@@ -61,7 +63,7 @@ static void determinant_test_mat2x2f_2() {
         )
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(-2.f, value);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -2.f, value);
 }
 
 static void determinant_test_mat2x2f_3() {
@@ -72,7 +74,7 @@ static void determinant_test_mat2x2f_3() {
         )
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value);
 }
 
 static void determinant_test_mat3x3d_1() {
@@ -84,7 +86,7 @@ static void determinant_test_mat3x3d_1() {
         )
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(23.0, value);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 23.0, value);
 }
 
 static void determinant_test_mat3x3d_2() {
@@ -96,7 +98,7 @@ static void determinant_test_mat3x3d_2() {
         )
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(-23.0, value);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -23.0, value);
 }
 
 static void determinant_test_mat3x3d_3() {
@@ -108,7 +110,7 @@ static void determinant_test_mat3x3d_3() {
         )
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value);
 }
 
 static void determinant_test_mat3x3f_1() {
@@ -120,7 +122,7 @@ static void determinant_test_mat3x3f_1() {
         )
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(23.f, value);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 23.f, value);
 }
 
 static void determinant_test_mat3x3f_2() {
@@ -132,7 +134,7 @@ static void determinant_test_mat3x3f_2() {
         )
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(-23.f, value);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -23.f, value);
 }
 
 static void determinant_test_mat3x3f_3() {
@@ -144,7 +146,7 @@ static void determinant_test_mat3x3f_3() {
         )
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value);
 }
 
 static void determinant_test_mat4x4d_1() {
@@ -157,7 +159,7 @@ static void determinant_test_mat4x4d_1() {
         )
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(18.0, value);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 18.0, value);
 }
 
 static void determinant_test_mat4x4d_2() {
@@ -170,7 +172,7 @@ static void determinant_test_mat4x4d_2() {
         )
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(-18.0, value);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -18.0, value);
 }
 
 static void determinant_test_mat4x4d_3() {
@@ -183,7 +185,7 @@ static void determinant_test_mat4x4d_3() {
         )
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value);
 }
 
 static void determinant_test_mat4x4f_1() {
@@ -196,7 +198,7 @@ static void determinant_test_mat4x4f_1() {
         )
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(18.f, value);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 18.f, value);
 }
 
 static void determinant_test_mat4x4f_2() {
@@ -209,7 +211,7 @@ static void determinant_test_mat4x4f_2() {
         )
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(-18.f, value);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -18.f, value);
 }
 
 static void determinant_test_mat4x4f_3() {
@@ -222,7 +224,7 @@ static void determinant_test_mat4x4f_3() {
         )
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value);
 }
 
 void setUp() {}

@@ -1,5 +1,7 @@
 #include <unity.h>
 
+#include "jml/tests/common.h"
+
 #define JML_WITHOUT_PREFIX
 #include "jml/constructors/vec2d.h"
 #include "jml/constructors/vec3d.h"
@@ -8,64 +10,64 @@
 static void vec4d_test_1() {
     const Vec4d value = vec4d(0.0, 1.0, 2.0, 3.0);
 
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
-    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.w);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 1.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 2.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 3.0, value.w);
 }
 
 static void vec4d_test_2() {
     const Vec4d value = vec4d(0.0, 1.0, vec2d(2.0, 3.0));
 
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
-    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.w);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 1.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 2.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 3.0, value.w);
 }
 
 static void vec4d_test_3() {
     const Vec4d value = vec4d(0.0, vec2d(1.0, 2.0), 3.0);
 
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
-    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.w);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 1.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 2.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 3.0, value.w);
 }
 
 static void vec4d_test_4() {
     const Vec4d value = vec4d(0.0, vec3d(1.0, 2.0, 3.0));
 
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
-    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.w);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 1.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 2.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 3.0, value.w);
 }
 
 static void vec4d_test_5() {
     const Vec4d value = vec4d(vec2d(0.0, 1.0), 2.0, 3.0);
 
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
-    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.w);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 1.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 2.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 3.0, value.w);
 }
 
 static void vec4d_test_6() {
     const Vec4d value = vec4d(vec2d(0.0, 1.0), vec2d(2.0, 3.0));
 
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
-    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.w);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 1.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 2.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 3.0, value.w);
 }
 
 static void vec4d_test_7() {
     const Vec4d value = vec4d(vec3d(0.0, 1.0, 2.0), 3.0);
 
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.z);
-    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.w);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 1.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 2.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 3.0, value.w);
 }
 
 void setUp() {}

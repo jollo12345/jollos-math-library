@@ -1,5 +1,7 @@
 #include <unity.h>
 
+#include "jml/tests/common.h"
+
 #define JML_WITHOUT_PREFIX
 #include "jml/constructors/vec2d.h"
 #include "jml/constructors/vec2f.h"
@@ -16,8 +18,8 @@ static void refract_test_vec2d_1() {
         0.5
     );
 
-    TEST_ASSERT_DOUBLE_WITHIN(1e-12, 0.3, value.x);
-    TEST_ASSERT_DOUBLE_WITHIN(1e-12, -0.9539392014169457, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.3, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -0.9539392014169457, value.y);
 }
 
 static void refract_test_vec2d_2() {
@@ -27,8 +29,8 @@ static void refract_test_vec2d_2() {
         2.0
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.y);
 }
 
 static void refract_test_vec2f_1() {
@@ -38,8 +40,8 @@ static void refract_test_vec2f_1() {
         0.5f
     );
 
-    TEST_ASSERT_FLOAT_WITHIN(1e-5f, 0.3f, value.x);
-    TEST_ASSERT_FLOAT_WITHIN(1e-5f, -0.9539392f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.3f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -0.9539392f, value.y);
 }
 
 static void refract_test_vec2f_2() {
@@ -49,8 +51,8 @@ static void refract_test_vec2f_2() {
         2.f
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.x);
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.y);
 }
 
 static void refract_test_vec3d_1() {
@@ -60,9 +62,9 @@ static void refract_test_vec3d_1() {
         0.5
     );
 
-    TEST_ASSERT_DOUBLE_WITHIN(1e-12, 0.18, value.x);
-    TEST_ASSERT_DOUBLE_WITHIN(1e-12, 0.24, value.y);
-    TEST_ASSERT_DOUBLE_WITHIN(1e-12, -0.9539392014169457, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.18, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.24, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -0.9539392014169457, value.z);
 }
 
 static void refract_test_vec3d_2() {
@@ -72,9 +74,9 @@ static void refract_test_vec3d_2() {
         2.0
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.z);
 }
 
 static void refract_test_vec3f_1() {
@@ -84,9 +86,9 @@ static void refract_test_vec3f_1() {
         0.5f
     );
 
-    TEST_ASSERT_FLOAT_WITHIN(1e-5f, 0.18f, value.x);
-    TEST_ASSERT_FLOAT_WITHIN(1e-5f, 0.24f, value.y);
-    TEST_ASSERT_FLOAT_WITHIN(1e-5f, -0.9539392f, value.z);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.18f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.24f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -0.9539392f, value.z);
 }
 
 static void refract_test_vec3f_2() {
@@ -96,9 +98,9 @@ static void refract_test_vec3f_2() {
         2.f
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.x);
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.y);
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.z);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.z);
 }
 
 static void refract_test_vec4d_1() {
@@ -108,10 +110,10 @@ static void refract_test_vec4d_1() {
         0.5
     );
 
-    TEST_ASSERT_DOUBLE_WITHIN(1e-12, 0.1, value.x);
-    TEST_ASSERT_DOUBLE_WITHIN(1e-12, 0.2, value.y);
-    TEST_ASSERT_DOUBLE_WITHIN(1e-12, 0.2, value.z);
-    TEST_ASSERT_DOUBLE_WITHIN(1e-12, -0.9539392014169457, value.w);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.1, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.2, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.2, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -0.9539392014169457, value.w);
 }
 
 static void refract_test_vec4d_2() {
@@ -121,10 +123,10 @@ static void refract_test_vec4d_2() {
         2.0
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.z);
-    TEST_ASSERT_EQUAL_DOUBLE(0.0, value.w);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 0.0, value.w);
 }
 
 static void refract_test_vec4f_1() {
@@ -134,10 +136,10 @@ static void refract_test_vec4f_1() {
         0.5f
     );
 
-    TEST_ASSERT_FLOAT_WITHIN(1e-5f, 0.1f, value.x);
-    TEST_ASSERT_FLOAT_WITHIN(1e-5f, 0.2f, value.y);
-    TEST_ASSERT_FLOAT_WITHIN(1e-5f, 0.2f, value.z);
-    TEST_ASSERT_FLOAT_WITHIN(1e-5f, -0.9539392f, value.w);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.1f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.2f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.2f, value.z);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -0.9539392f, value.w);
 }
 
 static void refract_test_vec4f_2() {
@@ -147,10 +149,10 @@ static void refract_test_vec4f_2() {
         2.f
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.x);
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.y);
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.z);
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.w);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.z);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.w);
 }
 
 void setUp() {}

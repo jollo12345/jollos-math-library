@@ -1,6 +1,10 @@
 #ifndef JML_GEOMETRIC_LENGTH_H
 #define JML_GEOMETRIC_LENGTH_H
 
+#include <math.h>
+
+#include "jml/exponential/sqrt.h"
+#include "jml/geometric/dot.h"
 #include "jml/types/vec2d.h"
 #include "jml/types/vec2f.h"
 #include "jml/types/vec3d.h"
@@ -12,37 +16,37 @@
 static inline double JML_lengthVec2d(
     const JML_Vec2d arg
 ) {
-    return JML_SQRT_D((arg.x * arg.x) + (arg.y * arg.y));
+    return JML_sqrt(JML_dot(arg, arg));
 }
 
 static inline float JML_lengthVec2f(
     const JML_Vec2f arg
 ) {
-    return JML_SQRT_F((arg.x * arg.x) + (arg.y * arg.y));
+    return JML_sqrt(JML_dot(arg, arg));
 }
 
 static inline double JML_lengthVec3d(
     const JML_Vec3d arg
 ) {
-    return JML_SQRT_D((arg.x * arg.x) + (arg.y * arg.y) + (arg.z * arg.z));
+    return JML_sqrt(JML_dot(arg, arg));
 }
 
 static inline float JML_lengthVec3f(
     const JML_Vec3f arg
 ) {
-    return JML_SQRT_F((arg.x * arg.x) + (arg.y * arg.y) + (arg.z * arg.z));
+    return JML_sqrt(JML_dot(arg, arg));
 }
 
 static inline double JML_lengthVec4d(
     const JML_Vec4d arg
 ) {
-    return JML_SQRT_D((arg.x * arg.x) + (arg.y * arg.y) + (arg.z * arg.z) + (arg.w * arg.w));
+    return JML_sqrt(JML_dot(arg, arg));
 }
 
 static inline float JML_lengthVec4f(
     const JML_Vec4f arg
 ) {
-    return JML_SQRT_F((arg.x * arg.x) + (arg.y * arg.y) + (arg.z * arg.z) + (arg.w * arg.w));
+    return JML_sqrt(JML_dot(arg, arg));
 }
 
 #define JML_length_GENERIC_1(arg) _Generic( \

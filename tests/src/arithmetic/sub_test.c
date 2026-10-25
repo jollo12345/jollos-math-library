@@ -1,5 +1,7 @@
 #include <unity.h>
 
+#include "jml/tests/common.h"
+
 #define JML_WITHOUT_PREFIX
 #include "jml/arithmetic/sub.h"
 #include "jml/constructors/mat2x2d.h"
@@ -33,10 +35,10 @@ static void sub_test_mat2x2d() {
         )
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(9.0, value.m00);
-    TEST_ASSERT_EQUAL_DOUBLE(18.0, value.m01);
-    TEST_ASSERT_EQUAL_DOUBLE(27.0, value.m10);
-    TEST_ASSERT_EQUAL_DOUBLE(36.0, value.m11);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 9.0, value.m00);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 18.0, value.m01);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 27.0, value.m10);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 36.0, value.m11);
 }
 
 static void sub_test_mat2x2f() {
@@ -51,10 +53,10 @@ static void sub_test_mat2x2f() {
         )
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(9.f, value.m00);
-    TEST_ASSERT_EQUAL_FLOAT(18.f, value.m01);
-    TEST_ASSERT_EQUAL_FLOAT(27.f, value.m10);
-    TEST_ASSERT_EQUAL_FLOAT(36.f, value.m11);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 9.f, value.m00);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 18.f, value.m01);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 27.f, value.m10);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 36.f, value.m11);
 }
 
 static void sub_test_mat3x3d() {
@@ -71,15 +73,15 @@ static void sub_test_mat3x3d() {
         )
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(9.0, value.m00);
-    TEST_ASSERT_EQUAL_DOUBLE(18.0, value.m01);
-    TEST_ASSERT_EQUAL_DOUBLE(27.0, value.m02);
-    TEST_ASSERT_EQUAL_DOUBLE(36.0, value.m10);
-    TEST_ASSERT_EQUAL_DOUBLE(45.0, value.m11);
-    TEST_ASSERT_EQUAL_DOUBLE(54.0, value.m12);
-    TEST_ASSERT_EQUAL_DOUBLE(63.0, value.m20);
-    TEST_ASSERT_EQUAL_DOUBLE(72.0, value.m21);
-    TEST_ASSERT_EQUAL_DOUBLE(81.0, value.m22);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 9.0, value.m00);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 18.0, value.m01);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 27.0, value.m02);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 36.0, value.m10);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 45.0, value.m11);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 54.0, value.m12);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 63.0, value.m20);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 72.0, value.m21);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 81.0, value.m22);
 }
 
 static void sub_test_mat3x3f() {
@@ -96,15 +98,15 @@ static void sub_test_mat3x3f() {
         )
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(9.f, value.m00);
-    TEST_ASSERT_EQUAL_FLOAT(18.f, value.m01);
-    TEST_ASSERT_EQUAL_FLOAT(27.f, value.m02);
-    TEST_ASSERT_EQUAL_FLOAT(36.f, value.m10);
-    TEST_ASSERT_EQUAL_FLOAT(45.f, value.m11);
-    TEST_ASSERT_EQUAL_FLOAT(54.f, value.m12);
-    TEST_ASSERT_EQUAL_FLOAT(63.f, value.m20);
-    TEST_ASSERT_EQUAL_FLOAT(72.f, value.m21);
-    TEST_ASSERT_EQUAL_FLOAT(81.f, value.m22);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 9.f, value.m00);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 18.f, value.m01);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 27.f, value.m02);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 36.f, value.m10);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 45.f, value.m11);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 54.f, value.m12);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 63.f, value.m20);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 72.f, value.m21);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 81.f, value.m22);
 }
 
 static void sub_test_mat4x4d() {
@@ -123,22 +125,22 @@ static void sub_test_mat4x4d() {
         )
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(9.0, value.m00);
-    TEST_ASSERT_EQUAL_DOUBLE(18.0, value.m01);
-    TEST_ASSERT_EQUAL_DOUBLE(27.0, value.m02);
-    TEST_ASSERT_EQUAL_DOUBLE(36.0, value.m03);
-    TEST_ASSERT_EQUAL_DOUBLE(45.0, value.m10);
-    TEST_ASSERT_EQUAL_DOUBLE(54.0, value.m11);
-    TEST_ASSERT_EQUAL_DOUBLE(63.0, value.m12);
-    TEST_ASSERT_EQUAL_DOUBLE(72.0, value.m13);
-    TEST_ASSERT_EQUAL_DOUBLE(81.0, value.m20);
-    TEST_ASSERT_EQUAL_DOUBLE(90.0, value.m21);
-    TEST_ASSERT_EQUAL_DOUBLE(99.0, value.m22);
-    TEST_ASSERT_EQUAL_DOUBLE(108.0, value.m23);
-    TEST_ASSERT_EQUAL_DOUBLE(117.0, value.m30);
-    TEST_ASSERT_EQUAL_DOUBLE(126.0, value.m31);
-    TEST_ASSERT_EQUAL_DOUBLE(135.0, value.m32);
-    TEST_ASSERT_EQUAL_DOUBLE(144.0, value.m33);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 9.0, value.m00);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 18.0, value.m01);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 27.0, value.m02);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 36.0, value.m03);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 45.0, value.m10);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 54.0, value.m11);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 63.0, value.m12);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 72.0, value.m13);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 81.0, value.m20);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 90.0, value.m21);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 99.0, value.m22);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 108.0, value.m23);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 117.0, value.m30);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 126.0, value.m31);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 135.0, value.m32);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 144.0, value.m33);
 }
 
 static void sub_test_mat4x4f() {
@@ -157,22 +159,22 @@ static void sub_test_mat4x4f() {
         )
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(9.f, value.m00);
-    TEST_ASSERT_EQUAL_FLOAT(18.f, value.m01);
-    TEST_ASSERT_EQUAL_FLOAT(27.f, value.m02);
-    TEST_ASSERT_EQUAL_FLOAT(36.f, value.m03);
-    TEST_ASSERT_EQUAL_FLOAT(45.f, value.m10);
-    TEST_ASSERT_EQUAL_FLOAT(54.f, value.m11);
-    TEST_ASSERT_EQUAL_FLOAT(63.f, value.m12);
-    TEST_ASSERT_EQUAL_FLOAT(72.f, value.m13);
-    TEST_ASSERT_EQUAL_FLOAT(81.f, value.m20);
-    TEST_ASSERT_EQUAL_FLOAT(90.f, value.m21);
-    TEST_ASSERT_EQUAL_FLOAT(99.f, value.m22);
-    TEST_ASSERT_EQUAL_FLOAT(108.f, value.m23);
-    TEST_ASSERT_EQUAL_FLOAT(117.f, value.m30);
-    TEST_ASSERT_EQUAL_FLOAT(126.f, value.m31);
-    TEST_ASSERT_EQUAL_FLOAT(135.f, value.m32);
-    TEST_ASSERT_EQUAL_FLOAT(144.f, value.m33);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 9.f, value.m00);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 18.f, value.m01);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 27.f, value.m02);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 36.f, value.m03);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 45.f, value.m10);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 54.f, value.m11);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 63.f, value.m12);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 72.f, value.m13);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 81.f, value.m20);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 90.f, value.m21);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 99.f, value.m22);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 108.f, value.m23);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 117.f, value.m30);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 126.f, value.m31);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 135.f, value.m32);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 144.f, value.m33);
 }
 
 static void sub_test_vec2d() {
@@ -181,8 +183,8 @@ static void sub_test_vec2d() {
         vec2d(1.0, 2.0)
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(9.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(18.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 9.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 18.0, value.y);
 }
 
 static void sub_test_vec2f() {
@@ -191,8 +193,8 @@ static void sub_test_vec2f() {
         vec2f(1.f, 2.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(9.f, value.x);
-    TEST_ASSERT_EQUAL_FLOAT(18.f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 9.f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 18.f, value.y);
 }
 
 static void sub_test_vec2i() {
@@ -221,9 +223,9 @@ static void sub_test_vec3d() {
         vec3d(1.0, 2.0, 3.0)
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(9.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(18.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(27.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 9.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 18.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 27.0, value.z);
 }
 
 static void sub_test_vec3f() {
@@ -232,9 +234,9 @@ static void sub_test_vec3f() {
         vec3f(1.f, 2.f, 3.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(9.f, value.x);
-    TEST_ASSERT_EQUAL_FLOAT(18.f, value.y);
-    TEST_ASSERT_EQUAL_FLOAT(27.f, value.z);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 9.f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 18.f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 27.f, value.z);
 }
 
 static void sub_test_vec3i() {
@@ -265,10 +267,10 @@ static void sub_test_vec4d() {
         vec4d(1.0, 2.0, 3.0, 4.0)
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(9.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(18.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(27.0, value.z);
-    TEST_ASSERT_EQUAL_DOUBLE(36.0, value.w);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 9.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 18.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 27.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 36.0, value.w);
 }
 
 static void sub_test_vec4f() {
@@ -277,10 +279,10 @@ static void sub_test_vec4f() {
         vec4f(1.f, 2.f, 3.f, 4.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(9.f, value.x);
-    TEST_ASSERT_EQUAL_FLOAT(18.f, value.y);
-    TEST_ASSERT_EQUAL_FLOAT(27.f, value.z);
-    TEST_ASSERT_EQUAL_FLOAT(36.f, value.w);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 9.f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 18.f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 27.f, value.z);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 36.f, value.w);
 }
 
 static void sub_test_vec4i() {

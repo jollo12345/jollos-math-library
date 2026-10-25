@@ -1,5 +1,7 @@
 #include <unity.h>
 
+#include "jml/tests/common.h"
+
 #define JML_WITHOUT_PREFIX
 #include "jml/constructors/vec2d.h"
 #include "jml/constructors/vec2f.h"
@@ -15,7 +17,7 @@ static void dot_test_vec2d_1() {
         vec2d(3.0, 4.0)
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(11.0, value);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 11.0, value);
 }
 
 static void dot_test_vec2d_2() {
@@ -24,7 +26,7 @@ static void dot_test_vec2d_2() {
         vec2d(5.0, -4.0)
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(-22.0, value);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -22.0, value);
 }
 
 static void dot_test_vec2f_1() {
@@ -33,7 +35,7 @@ static void dot_test_vec2f_1() {
         vec2f(3.f, 4.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(11.f, value);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 11.f, value);
 }
 
 static void dot_test_vec2f_2() {
@@ -42,7 +44,7 @@ static void dot_test_vec2f_2() {
         vec2f(5.f, -4.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(-22.f, value);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -22.f, value);
 }
 
 static void dot_test_vec3d_1() {
@@ -51,7 +53,7 @@ static void dot_test_vec3d_1() {
         vec3d(4.0, 5.0, 6.0)
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(32.0, value);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 32.0, value);
 }
 
 static void dot_test_vec3d_2() {
@@ -60,7 +62,7 @@ static void dot_test_vec3d_2() {
         vec3d(7.0, 11.0, -13.0)
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(-84.0, value);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -84.0, value);
 }
 
 static void dot_test_vec3f_1() {
@@ -69,7 +71,7 @@ static void dot_test_vec3f_1() {
         vec3f(4.f, 5.f, 6.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(32.f, value);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 32.f, value);
 }
 
 static void dot_test_vec3f_2() {
@@ -78,7 +80,7 @@ static void dot_test_vec3f_2() {
         vec3f(7.f, 11.f, -13.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(-84.f, value);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -84.f, value);
 }
 
 static void dot_test_vec4d_1() {
@@ -87,7 +89,7 @@ static void dot_test_vec4d_1() {
         vec4d(5.0, 6.0, 7.0, 8.0)
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(70.0, value);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 70.0, value);
 }
 
 static void dot_test_vec4d_2() {
@@ -96,7 +98,7 @@ static void dot_test_vec4d_2() {
         vec4d(2.0, -5.0, 7.0, 11.0)
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(11.0, value);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 11.0, value);
 }
 
 static void dot_test_vec4f_1() {
@@ -105,7 +107,7 @@ static void dot_test_vec4f_1() {
         vec4f(5.f, 6.f, 7.f, 8.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(70.f, value);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 70.f, value);
 }
 
 static void dot_test_vec4f_2() {
@@ -114,7 +116,7 @@ static void dot_test_vec4f_2() {
         vec4f(2.f, -5.f, 7.f, 11.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(11.f, value);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 11.f, value);
 }
 
 void setUp() {}

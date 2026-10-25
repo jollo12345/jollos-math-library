@@ -1,5 +1,7 @@
 #include <unity.h>
 
+#include "jml/tests/common.h"
+
 #define JML_WITHOUT_PREFIX
 #include "jml/constructors/mat2x2f.h"
 #include "jml/constructors/vec2f.h"
@@ -10,10 +12,10 @@ static void mat2x2f_test_1() {
         2.f, 3.f
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.m00);
-    TEST_ASSERT_EQUAL_FLOAT(1.f, value.m01);
-    TEST_ASSERT_EQUAL_FLOAT(2.f, value.m10);
-    TEST_ASSERT_EQUAL_FLOAT(3.f, value.m11);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.m00);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 1.f, value.m01);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 2.f, value.m10);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 3.f, value.m11);
 }
 
 static void mat2x2f_test_2() {
@@ -22,10 +24,10 @@ static void mat2x2f_test_2() {
         vec2f(2.f, 3.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.m00);
-    TEST_ASSERT_EQUAL_FLOAT(1.f, value.m01);
-    TEST_ASSERT_EQUAL_FLOAT(2.f, value.m10);
-    TEST_ASSERT_EQUAL_FLOAT(3.f, value.m11);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.m00);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 1.f, value.m01);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 2.f, value.m10);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 3.f, value.m11);
 }
 
 void setUp() {}

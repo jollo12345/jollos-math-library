@@ -9,6 +9,7 @@
 #include "jml/constructors/vec3f.h"
 #include "jml/constructors/vec4d.h"
 #include "jml/constructors/vec4f.h"
+#include "jml/exponential/sqrt.h"
 #include "jml/geometric/dot.h"
 #include "jml/types/vec2d.h"
 #include "jml/types/vec2f.h"
@@ -27,7 +28,7 @@ static inline JML_Vec2d JML_refractVec2dVec2dD(
     if (k < 0.0) {
         return JML_vec2d(0.0, 0.0);
     }
-    return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_SQRT_D(k), arg_1));
+    return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_sqrt(k), arg_1));
 }
 
 static inline JML_Vec2f JML_refractVec2fVec2fF(
@@ -39,7 +40,7 @@ static inline JML_Vec2f JML_refractVec2fVec2fF(
     if (k < 0.f) {
         return JML_vec2f(0.f, 0.f);
     }
-    return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_SQRT_F(k), arg_1));
+    return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_sqrt(k), arg_1));
 }
 
 static inline JML_Vec3d JML_refractVec3dVec3dD(
@@ -51,7 +52,7 @@ static inline JML_Vec3d JML_refractVec3dVec3dD(
     if (k < 0.0) {
         return JML_vec3d(0.0, 0.0, 0.0);
     }
-    return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_SQRT_D(k), arg_1));
+    return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_sqrt(k), arg_1));
 }
 
 static inline JML_Vec3f JML_refractVec3fVec3fF(
@@ -63,7 +64,7 @@ static inline JML_Vec3f JML_refractVec3fVec3fF(
     if (k < 0.f) {
         return JML_vec3f(0.f, 0.f, 0.f);
     }
-    return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_SQRT_F(k), arg_1));
+    return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_sqrt(k), arg_1));
 }
 
 static inline JML_Vec4d JML_refractVec4dVec4dD(
@@ -75,7 +76,7 @@ static inline JML_Vec4d JML_refractVec4dVec4dD(
     if (k < 0.0) {
         return JML_vec4d(0.0, 0.0, 0.0, 0.0);
     }
-    return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_SQRT_D(k), arg_1));
+    return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_sqrt(k), arg_1));
 }
 
 static inline JML_Vec4f JML_refractVec4fVec4fF(
@@ -87,7 +88,7 @@ static inline JML_Vec4f JML_refractVec4fVec4fF(
     if (k < 0.f) {
         return JML_vec4f(0.f, 0.f, 0.f, 0.f);
     }
-    return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_SQRT_F(k), arg_1));
+    return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_sqrt(k), arg_1));
 }
 
 #define JML_refract_GENERIC_3(arg_0, arg_1, arg_2) _Generic( \

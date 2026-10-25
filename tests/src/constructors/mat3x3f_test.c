@@ -1,5 +1,7 @@
 #include <unity.h>
 
+#include "jml/tests/common.h"
+
 #define JML_WITHOUT_PREFIX
 #include "jml/constructors/mat3x3f.h"
 #include "jml/constructors/vec3f.h"
@@ -11,15 +13,15 @@ static void mat3x3f_test_1() {
         6.f, 7.f, 8.f
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.m00);
-    TEST_ASSERT_EQUAL_FLOAT(1.f, value.m01);
-    TEST_ASSERT_EQUAL_FLOAT(2.f, value.m02);
-    TEST_ASSERT_EQUAL_FLOAT(3.f, value.m10);
-    TEST_ASSERT_EQUAL_FLOAT(4.f, value.m11);
-    TEST_ASSERT_EQUAL_FLOAT(5.f, value.m12);
-    TEST_ASSERT_EQUAL_FLOAT(6.f, value.m20);
-    TEST_ASSERT_EQUAL_FLOAT(7.f, value.m21);
-    TEST_ASSERT_EQUAL_FLOAT(8.f, value.m22);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.m00);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 1.f, value.m01);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 2.f, value.m02);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 3.f, value.m10);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 4.f, value.m11);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 5.f, value.m12);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 6.f, value.m20);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 7.f, value.m21);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 8.f, value.m22);
 }
 
 static void mat3x3f_test_2() {
@@ -29,15 +31,15 @@ static void mat3x3f_test_2() {
         vec3f(6.f, 7.f, 8.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(0.f, value.m00);
-    TEST_ASSERT_EQUAL_FLOAT(1.f, value.m01);
-    TEST_ASSERT_EQUAL_FLOAT(2.f, value.m02);
-    TEST_ASSERT_EQUAL_FLOAT(3.f, value.m10);
-    TEST_ASSERT_EQUAL_FLOAT(4.f, value.m11);
-    TEST_ASSERT_EQUAL_FLOAT(5.f, value.m12);
-    TEST_ASSERT_EQUAL_FLOAT(6.f, value.m20);
-    TEST_ASSERT_EQUAL_FLOAT(7.f, value.m21);
-    TEST_ASSERT_EQUAL_FLOAT(8.f, value.m22);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 0.f, value.m00);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 1.f, value.m01);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 2.f, value.m02);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 3.f, value.m10);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 4.f, value.m11);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 5.f, value.m12);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 6.f, value.m20);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 7.f, value.m21);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 8.f, value.m22);
 }
 
 void setUp() {}

@@ -1,5 +1,7 @@
 #include <unity.h>
 
+#include "jml/tests/common.h"
+
 #define JML_WITHOUT_PREFIX
 #include "jml/constructors/vec2d.h"
 #include "jml/constructors/vec2f.h"
@@ -15,8 +17,8 @@ static void reflect_test_vec2d_1() {
         vec2d(0.0, 1.0)
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 1.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 1.0, value.y);
 }
 
 static void reflect_test_vec2d_2() {
@@ -25,8 +27,8 @@ static void reflect_test_vec2d_2() {
         vec2d(0.6, 0.8)
     );
 
-    TEST_ASSERT_DOUBLE_WITHIN(1e-12, -1.64, value.x);
-    TEST_ASSERT_DOUBLE_WITHIN(1e-12, -1.52, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -1.64, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -1.52, value.y);
 }
 
 static void reflect_test_vec2f_1() {
@@ -35,8 +37,8 @@ static void reflect_test_vec2f_1() {
         vec2f(0.f, 1.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(1.f, value.x);
-    TEST_ASSERT_EQUAL_FLOAT(1.f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 1.f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 1.f, value.y);
 }
 
 static void reflect_test_vec2f_2() {
@@ -45,8 +47,8 @@ static void reflect_test_vec2f_2() {
         vec2f(0.6f, 0.8f)
     );
 
-    TEST_ASSERT_FLOAT_WITHIN(1e-5f, -1.64f, value.x);
-    TEST_ASSERT_FLOAT_WITHIN(1e-5f, -1.52f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -1.64f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -1.52f, value.y);
 }
 
 static void reflect_test_vec3d_1() {
@@ -55,9 +57,9 @@ static void reflect_test_vec3d_1() {
         vec3d(0.0, 1.0, 0.0)
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 1.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 2.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 3.0, value.z);
 }
 
 static void reflect_test_vec3d_2() {
@@ -66,9 +68,9 @@ static void reflect_test_vec3d_2() {
         vec3d(2.0 / 3.0, 2.0 / 3.0, 1.0 / 3.0)
     );
 
-    TEST_ASSERT_DOUBLE_WITHIN(1e-12, -3.0, value.x);
-    TEST_ASSERT_DOUBLE_WITHIN(1e-12, -2.0, value.y);
-    TEST_ASSERT_DOUBLE_WITHIN(1e-12, 1.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -3.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -2.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 1.0, value.z);
 }
 
 static void reflect_test_vec3f_1() {
@@ -77,9 +79,9 @@ static void reflect_test_vec3f_1() {
         vec3f(0.f, 1.f, 0.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(1.f, value.x);
-    TEST_ASSERT_EQUAL_FLOAT(2.f, value.y);
-    TEST_ASSERT_EQUAL_FLOAT(3.f, value.z);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 1.f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 2.f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 3.f, value.z);
 }
 
 static void reflect_test_vec3f_2() {
@@ -88,9 +90,9 @@ static void reflect_test_vec3f_2() {
         vec3f(2.f / 3.f, 2.f / 3.f, 1.f / 3.f)
     );
 
-    TEST_ASSERT_FLOAT_WITHIN(1e-5f, -3.f, value.x);
-    TEST_ASSERT_FLOAT_WITHIN(1e-5f, -2.f, value.y);
-    TEST_ASSERT_FLOAT_WITHIN(1e-5f, 1.f, value.z);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -3.f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -2.f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 1.f, value.z);
 }
 
 static void reflect_test_vec4d_1() {
@@ -99,10 +101,10 @@ static void reflect_test_vec4d_1() {
         vec4d(0.0, 0.0, 1.0, 0.0)
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(1.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(2.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(3.0, value.z);
-    TEST_ASSERT_EQUAL_DOUBLE(4.0, value.w);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 1.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 2.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 3.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 4.0, value.w);
 }
 
 static void reflect_test_vec4d_2() {
@@ -111,10 +113,10 @@ static void reflect_test_vec4d_2() {
         vec4d(0.5, 0.5, 0.5, 0.5)
     );
 
-    TEST_ASSERT_EQUAL_DOUBLE(-4.0, value.x);
-    TEST_ASSERT_EQUAL_DOUBLE(-3.0, value.y);
-    TEST_ASSERT_EQUAL_DOUBLE(-2.0, value.z);
-    TEST_ASSERT_EQUAL_DOUBLE(-1.0, value.w);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -4.0, value.x);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -3.0, value.y);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -2.0, value.z);
+    TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -1.0, value.w);
 }
 
 static void reflect_test_vec4f_1() {
@@ -123,10 +125,10 @@ static void reflect_test_vec4f_1() {
         vec4f(0.f, 0.f, 1.f, 0.f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(1.f, value.x);
-    TEST_ASSERT_EQUAL_FLOAT(2.f, value.y);
-    TEST_ASSERT_EQUAL_FLOAT(3.f, value.z);
-    TEST_ASSERT_EQUAL_FLOAT(4.f, value.w);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 1.f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 2.f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 3.f, value.z);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 4.f, value.w);
 }
 
 static void reflect_test_vec4f_2() {
@@ -135,10 +137,10 @@ static void reflect_test_vec4f_2() {
         vec4f(0.5f, 0.5f, 0.5f, 0.5f)
     );
 
-    TEST_ASSERT_EQUAL_FLOAT(-4.f, value.x);
-    TEST_ASSERT_EQUAL_FLOAT(-3.f, value.y);
-    TEST_ASSERT_EQUAL_FLOAT(-2.f, value.z);
-    TEST_ASSERT_EQUAL_FLOAT(-1.f, value.w);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -4.f, value.x);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -3.f, value.y);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -2.f, value.z);
+    TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -1.f, value.w);
 }
 
 void setUp() {}
