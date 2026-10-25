@@ -1,4 +1,5 @@
 #include "jml/affine/frustum.h"
 #include "jml/affine/rotation.h"
 #include "jml/affine/scaling.h"
+#include "jml/affine/shearing.h"
 #include "jml/affine/translation.h"

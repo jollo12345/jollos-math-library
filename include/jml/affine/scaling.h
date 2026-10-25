@@ -9,34 +9,54 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
-static inline JML_Mat4x4d JML_scalingVec3d(
-    const JML_Vec3d scale
+static inline JML_Mat4x4d JML_scalingDDD(
+    const double x,
+    const double y,
+    const double z
 ) {
     return JML_mat4x4d(
-        scale.x, 0.0, 0.0, 0.0,
-        0.0, scale.y, 0.0, 0.0,
-        0.0, 0.0, scale.z, 0.0,
+        x, 0.0, 0.0, 0.0,
+        0.0, y, 0.0, 0.0,
+        0.0, 0.0, z, 0.0,
         0.0, 0.0, 0.0, 1.0
     );
 }
 
-static inline JML_Mat4x4f JML_scalingVec3f(
-    const JML_Vec3f scale
+static inline JML_Mat4x4f JML_scalingFFF(
+    const float x,
+    const float y,
+    const float z
 ) {
     return JML_mat4x4f(
-        scale.x, 0.f, 0.f, 0.f,
-        0.f, scale.y, 0.f, 0.f,
-        0.f, 0.f, scale.z, 0.f,
+        x, 0.f, 0.f, 0.f,
+        0.f, y, 0.f, 0.f,
+        0.f, 0.f, z, 0.f,
         0.f, 0.f, 0.f, 1.f
     );
 }
 
-#define JML_scaling_GENERIC_1(scale) _Generic( \
-    (scale),                                   \
-    JML_Vec3d: JML_scalingVec3d,               \
-    JML_Vec3f: JML_scalingVec3f,               \
-    default: (void (*)(void))0                 \
-)(scale)
+#define JML_scaling_GENERIC_3(x, y, z) _Generic( \
+    (x),                                         \
+    double: _Generic(                            \
+        (y),                                     \
+        double: _Generic(                        \
+            (z),                                 \
+            double: JML_scalingDDD,              \
+            default: (void (*)(void))0           \
+        ),                                       \
+        default: (void (*)(void))0               \
+    ),                                           \
+    float: _Generic(                             \
+        (y),                                     \
+        float: _Generic(                         \
+            (z),                                 \
+            float: JML_scalingFFF,               \
+            default: (void (*)(void))0           \
+        ),                                       \
+        default: (void (*)(void))0               \
+    ),                                           \
+    default: (void (*)(void))0                   \
+)(x, y, z)
 
 #define JML_scaling(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_scaling_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)
