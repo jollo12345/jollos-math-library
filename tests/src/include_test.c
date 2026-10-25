@@ -1,6 +1,3 @@
-#include <stdlib.h>
-#include <unity.h>
-
 #define JML_WITHOUT_PREFIX
 #include "jml/jml.h"
 
