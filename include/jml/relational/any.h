@@ -30,7 +30,7 @@ static inline bool JML_anyVec4b(
     JML_Vec3b: JML_anyVec3b,             \
     JML_Vec4b: JML_anyVec4b,             \
     default: (void (*)(void))0           \
-)(arg_0, arg_1)
+)(arg)
 
 #define JML_any(...) \
     JML_DISPATCH(JML_CONCAT_EXPAND(JML_any_GENERIC_, JML_NARGS(__VA_ARGS__)), __VA_ARGS__)
