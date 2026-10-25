@@ -1,5 +1,5 @@
-#ifndef JML_GEOMETRIC_COSH_H
-#define JML_GEOMETRIC_COSH_H
+#ifndef JML_TRIGONOMETRY_COSH_H
+#define JML_TRIGONOMETRY_COSH_H
 
 #include <math.h>
 

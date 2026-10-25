@@ -1,5 +1,5 @@
-#ifndef JML_GEOMETRIC_ATANH_H
-#define JML_GEOMETRIC_ATANH_H
+#ifndef JML_TRIGONOMETRY_ATANH_H
+#define JML_TRIGONOMETRY_ATANH_H
 
 #include <math.h>
 

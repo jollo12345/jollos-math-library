@@ -1,5 +1,5 @@
-#ifndef JML_GEOMETRIC_ASIN_H
-#define JML_GEOMETRIC_ASIN_H
+#ifndef JML_TRIGONOMETRY_ASIN_H
+#define JML_TRIGONOMETRY_ASIN_H
 
 #include <math.h>
 

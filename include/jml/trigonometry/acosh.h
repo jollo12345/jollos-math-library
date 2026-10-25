@@ -1,5 +1,5 @@
-#ifndef JML_GEOMETRIC_ACOSH_H
-#define JML_GEOMETRIC_ACOSH_H
+#ifndef JML_TRIGONOMETRY_ACOSH_H
+#define JML_TRIGONOMETRY_ACOSH_H
 
 #include <math.h>
 

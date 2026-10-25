@@ -1,5 +1,5 @@
-#ifndef JML_GEOMETRIC_COS_H
-#define JML_GEOMETRIC_COS_H
+#ifndef JML_TRIGONOMETRY_COS_H
+#define JML_TRIGONOMETRY_COS_H
 
 #include <math.h>
 
