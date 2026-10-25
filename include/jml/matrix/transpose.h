@@ -15,6 +15,7 @@
 #include "jml/types/mat4x4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Mat2x2d JML_transposeMat2x2d(
     const JML_Mat2x2d arg
 ) {
@@ -24,6 +25,7 @@ static inline JML_Mat2x2d JML_transposeMat2x2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat2x2f JML_transposeMat2x2f(
     const JML_Mat2x2f arg
 ) {
@@ -33,6 +35,7 @@ static inline JML_Mat2x2f JML_transposeMat2x2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat3x3d JML_transposeMat3x3d(
     const JML_Mat3x3d arg
 ) {
@@ -43,6 +46,7 @@ static inline JML_Mat3x3d JML_transposeMat3x3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat3x3f JML_transposeMat3x3f(
     const JML_Mat3x3f arg
 ) {
@@ -53,6 +57,7 @@ static inline JML_Mat3x3f JML_transposeMat3x3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat4x4d JML_transposeMat4x4d(
     const JML_Mat4x4d arg
 ) {
@@ -64,6 +69,7 @@ static inline JML_Mat4x4d JML_transposeMat4x4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat4x4f JML_transposeMat4x4f(
     const JML_Mat4x4f arg
 ) {

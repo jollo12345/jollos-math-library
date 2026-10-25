@@ -18,18 +18,21 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline double JML_asinD(
     const double opposite
 ) {
     return asin(opposite);
 }
 
+[[nodiscard]]
 static inline float JML_asinF(
     const float opposite
 ) {
     return asinf(opposite);
 }
 
+[[nodiscard]]
 static inline JML_Vec2d JML_asinVec2d(
     const JML_Vec2d opposite
 ) {
@@ -39,6 +42,7 @@ static inline JML_Vec2d JML_asinVec2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2f JML_asinVec2f(
     const JML_Vec2f opposite
 ) {
@@ -48,6 +52,7 @@ static inline JML_Vec2f JML_asinVec2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3d JML_asinVec3d(
     const JML_Vec3d opposite
 ) {
@@ -58,6 +63,7 @@ static inline JML_Vec3d JML_asinVec3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3f JML_asinVec3f(
     const JML_Vec3f opposite
 ) {
@@ -68,6 +74,7 @@ static inline JML_Vec3f JML_asinVec3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_asinVec4d(
     const JML_Vec4d opposite
 ) {
@@ -79,6 +86,7 @@ static inline JML_Vec4d JML_asinVec4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_asinVec4f(
     const JML_Vec4f opposite
 ) {

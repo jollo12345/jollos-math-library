@@ -6,6 +6,7 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec4f JML_vec4fFVec3f(
     const float arg_0,
     const JML_Vec3f arg_1
@@ -18,6 +19,7 @@ static inline JML_Vec4f JML_vec4fFVec3f(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_vec4fVec2fVec2f(
     const JML_Vec2f arg_0,
     const JML_Vec2f arg_1
@@ -30,6 +32,7 @@ static inline JML_Vec4f JML_vec4fVec2fVec2f(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_vec4fVec3fF(
     const JML_Vec3f arg_0,
     const float arg_1
@@ -62,6 +65,7 @@ static inline JML_Vec4f JML_vec4fVec3fF(
     default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
+[[nodiscard]]
 static inline JML_Vec4f JML_vec4fFFVec2f(
     const float arg_0,
     const float arg_1,
@@ -75,6 +79,7 @@ static inline JML_Vec4f JML_vec4fFFVec2f(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_vec4fFVec2fF(
     const float arg_0,
     const JML_Vec2f arg_1,
@@ -88,6 +93,7 @@ static inline JML_Vec4f JML_vec4fFVec2fF(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_vec4fVec2fFF(
     const JML_Vec2f arg_0,
     const float arg_1,
@@ -129,6 +135,7 @@ static inline JML_Vec4f JML_vec4fVec2fFF(
     default: JML_INVALID_ARGUMENT_TYPES                    \
 )(arg_0, arg_1, arg_2)
 
+[[nodiscard]]
 static inline JML_Vec4f JML_vec4fFFFF(
     const float arg_0,
     const float arg_1,

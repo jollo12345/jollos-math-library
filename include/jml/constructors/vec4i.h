@@ -6,6 +6,7 @@
 #include "jml/types/vec4i.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec4i JML_vec4iIVec3i(
     const int arg_0,
     const JML_Vec3i arg_1
@@ -18,6 +19,7 @@ static inline JML_Vec4i JML_vec4iIVec3i(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4i JML_vec4iVec2iVec2i(
     const JML_Vec2i arg_0,
     const JML_Vec2i arg_1
@@ -30,6 +32,7 @@ static inline JML_Vec4i JML_vec4iVec2iVec2i(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4i JML_vec4iVec3iI(
     const JML_Vec3i arg_0,
     const int arg_1
@@ -62,6 +65,7 @@ static inline JML_Vec4i JML_vec4iVec3iI(
     default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
+[[nodiscard]]
 static inline JML_Vec4i JML_vec4iIIVec2i(
     const int arg_0,
     const int arg_1,
@@ -75,6 +79,7 @@ static inline JML_Vec4i JML_vec4iIIVec2i(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4i JML_vec4iIVec2iI(
     const int arg_0,
     const JML_Vec2i arg_1,
@@ -88,6 +93,7 @@ static inline JML_Vec4i JML_vec4iIVec2iI(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4i JML_vec4iVec2iII(
     const JML_Vec2i arg_0,
     const int arg_1,
@@ -129,6 +135,7 @@ static inline JML_Vec4i JML_vec4iVec2iII(
     default: JML_INVALID_ARGUMENT_TYPES                    \
 )(arg_0, arg_1, arg_2)
 
+[[nodiscard]]
 static inline JML_Vec4i JML_vec4iIIII(
     const int arg_0,
     const int arg_1,

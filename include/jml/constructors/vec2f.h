@@ -4,6 +4,7 @@
 #include "jml/types/vec2f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec2f JML_vec2fBB(
     const float arg_0,
     const float arg_1

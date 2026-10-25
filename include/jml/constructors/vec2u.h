@@ -4,6 +4,7 @@
 #include "jml/types/vec2u.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec2u JML_vec2uBB(
     const unsigned arg_0,
     const unsigned arg_1

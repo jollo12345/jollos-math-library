@@ -7,6 +7,7 @@
 #include "jml/types/vec3f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec3d JML_crossVec3dVec3d(
     const JML_Vec3d arg_0,
     const JML_Vec3d arg_1
@@ -18,6 +19,7 @@ static inline JML_Vec3d JML_crossVec3dVec3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3f JML_crossVec3fVec3f(
     const JML_Vec3f arg_0,
     const JML_Vec3f arg_1

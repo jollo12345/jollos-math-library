@@ -16,18 +16,21 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline double JML_degreesD(
     const double radians
 ) {
     return (180.0 / JML_PI_D) * radians;
 }
 
+[[nodiscard]]
 static inline float JML_degreesF(
     const float radians
 ) {
     return (180.f / JML_PI_F) * radians;
 }
 
+[[nodiscard]]
 static inline JML_Vec2d JML_degreesVec2d(
     const JML_Vec2d radians
 ) {
@@ -37,6 +40,7 @@ static inline JML_Vec2d JML_degreesVec2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2f JML_degreesVec2f(
     const JML_Vec2f radians
 ) {
@@ -46,6 +50,7 @@ static inline JML_Vec2f JML_degreesVec2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3d JML_degreesVec3d(
     const JML_Vec3d radians
 ) {
@@ -56,6 +61,7 @@ static inline JML_Vec3d JML_degreesVec3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3f JML_degreesVec3f(
     const JML_Vec3f radians
 ) {
@@ -66,6 +72,7 @@ static inline JML_Vec3f JML_degreesVec3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_degreesVec4d(
     const JML_Vec4d radians
 ) {
@@ -77,6 +84,7 @@ static inline JML_Vec4d JML_degreesVec4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_degreesVec4f(
     const JML_Vec4f radians
 ) {

@@ -5,6 +5,7 @@
 #include "jml/types/vec3f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec3f JML_vec3fFVec2f(
     const float arg_0,
     const JML_Vec2f arg_1
@@ -16,6 +17,7 @@ static inline JML_Vec3f JML_vec3fFVec2f(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec3f JML_vec3fVec2fF(
     const JML_Vec2f arg_0,
     const float arg_1
@@ -42,6 +44,7 @@ static inline JML_Vec3f JML_vec3fVec2fF(
     default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
+[[nodiscard]]
 static inline JML_Vec3f JML_vec3fFFF(
     const float arg_0,
     const float arg_1,

@@ -11,6 +11,7 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline double JML_distanceVec2dVec2d(
     const JML_Vec2d arg_0,
     const JML_Vec2d arg_1
@@ -18,6 +19,7 @@ static inline double JML_distanceVec2dVec2d(
     return JML_length(JML_sub(arg_0, arg_1));
 }
 
+[[nodiscard]]
 static inline float JML_distanceVec2fVec2f(
     const JML_Vec2f arg_0,
     const JML_Vec2f arg_1
@@ -25,6 +27,7 @@ static inline float JML_distanceVec2fVec2f(
     return JML_length(JML_sub(arg_0, arg_1));
 }
 
+[[nodiscard]]
 static inline double JML_distanceVec3dVec3d(
     const JML_Vec3d arg_0,
     const JML_Vec3d arg_1
@@ -32,6 +35,7 @@ static inline double JML_distanceVec3dVec3d(
     return JML_length(JML_sub(arg_0, arg_1));
 }
 
+[[nodiscard]]
 static inline float JML_distanceVec3fVec3f(
     const JML_Vec3f arg_0,
     const JML_Vec3f arg_1
@@ -39,6 +43,7 @@ static inline float JML_distanceVec3fVec3f(
     return JML_length(JML_sub(arg_0, arg_1));
 }
 
+[[nodiscard]]
 static inline double JML_distanceVec4dVec4d(
     const JML_Vec4d arg_0,
     const JML_Vec4d arg_1
@@ -46,6 +51,7 @@ static inline double JML_distanceVec4dVec4d(
     return JML_length(JML_sub(arg_0, arg_1));
 }
 
+[[nodiscard]]
 static inline float JML_distanceVec4fVec4f(
     const JML_Vec4f arg_0,
     const JML_Vec4f arg_1

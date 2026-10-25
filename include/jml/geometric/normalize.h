@@ -11,36 +11,42 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec2d JML_normalizeVec2d(
     const JML_Vec2d arg
 ) {
     return JML_div(arg, JML_length(arg));
 }
 
+[[nodiscard]]
 static inline JML_Vec2f JML_normalizeVec2f(
     const JML_Vec2f arg
 ) {
     return JML_div(arg, JML_length(arg));
 }
 
+[[nodiscard]]
 static inline JML_Vec3d JML_normalizeVec3d(
     const JML_Vec3d arg
 ) {
     return JML_div(arg, JML_length(arg));
 }
 
+[[nodiscard]]
 static inline JML_Vec3f JML_normalizeVec3f(
     const JML_Vec3f arg
 ) {
     return JML_div(arg, JML_length(arg));
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_normalizeVec4d(
     const JML_Vec4d arg
 ) {
     return JML_div(arg, JML_length(arg));
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_normalizeVec4f(
     const JML_Vec4f arg
 ) {

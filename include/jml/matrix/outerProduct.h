@@ -21,6 +21,7 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Mat2x2d JML_outerProductVec2dVec2d(
     const JML_Vec2d column,
     const JML_Vec2d row
@@ -31,6 +32,7 @@ static inline JML_Mat2x2d JML_outerProductVec2dVec2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat2x2f JML_outerProductVec2fVec2f(
     const JML_Vec2f column,
     const JML_Vec2f row
@@ -41,6 +43,7 @@ static inline JML_Mat2x2f JML_outerProductVec2fVec2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat3x3d JML_outerProductVec3dVec3d(
     const JML_Vec3d column,
     const JML_Vec3d row
@@ -52,6 +55,7 @@ static inline JML_Mat3x3d JML_outerProductVec3dVec3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat3x3f JML_outerProductVec3fVec3f(
     const JML_Vec3f column,
     const JML_Vec3f row
@@ -63,6 +67,7 @@ static inline JML_Mat3x3f JML_outerProductVec3fVec3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat4x4d JML_outerProductVec4dVec4d(
     const JML_Vec4d column,
     const JML_Vec4d row
@@ -75,6 +80,7 @@ static inline JML_Mat4x4d JML_outerProductVec4dVec4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat4x4f JML_outerProductVec4fVec4f(
     const JML_Vec4f column,
     const JML_Vec4f row

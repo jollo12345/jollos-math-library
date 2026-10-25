@@ -6,6 +6,7 @@
 #include "jml/types/vec4d.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec4d JML_vec4dDVec3d(
     const double arg_0,
     const JML_Vec3d arg_1
@@ -18,6 +19,7 @@ static inline JML_Vec4d JML_vec4dDVec3d(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_vec4dVec2dVec2d(
     const JML_Vec2d arg_0,
     const JML_Vec2d arg_1
@@ -30,6 +32,7 @@ static inline JML_Vec4d JML_vec4dVec2dVec2d(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_vec4dVec3dD(
     const JML_Vec3d arg_0,
     const double arg_1
@@ -62,6 +65,7 @@ static inline JML_Vec4d JML_vec4dVec3dD(
     default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
+[[nodiscard]]
 static inline JML_Vec4d JML_vec4dDDVec2d(
     const double arg_0,
     const double arg_1,
@@ -75,6 +79,7 @@ static inline JML_Vec4d JML_vec4dDDVec2d(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_vec4dDVec2dD(
     const double arg_0,
     const JML_Vec2d arg_1,
@@ -88,6 +93,7 @@ static inline JML_Vec4d JML_vec4dDVec2dD(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_vec4dVec2dDD(
     const JML_Vec2d arg_0,
     const double arg_1,
@@ -129,6 +135,7 @@ static inline JML_Vec4d JML_vec4dVec2dDD(
     default: JML_INVALID_ARGUMENT_TYPES                    \
 )(arg_0, arg_1, arg_2)
 
+[[nodiscard]]
 static inline JML_Vec4d JML_vec4dDDDD(
     const double arg_0,
     const double arg_1,

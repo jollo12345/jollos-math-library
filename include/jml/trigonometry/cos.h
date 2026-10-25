@@ -18,18 +18,21 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline double JML_cosD(
     const double arg
 ) {
     return cos(arg);
 }
 
+[[nodiscard]]
 static inline float JML_cosF(
     const float arg
 ) {
     return cosf(arg);
 }
 
+[[nodiscard]]
 static inline JML_Vec2d JML_cosVec2d(
     const JML_Vec2d arg
 ) {
@@ -39,6 +42,7 @@ static inline JML_Vec2d JML_cosVec2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2f JML_cosVec2f(
     const JML_Vec2f arg
 ) {
@@ -48,6 +52,7 @@ static inline JML_Vec2f JML_cosVec2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3d JML_cosVec3d(
     const JML_Vec3d arg
 ) {
@@ -58,6 +63,7 @@ static inline JML_Vec3d JML_cosVec3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3f JML_cosVec3f(
     const JML_Vec3f arg
 ) {
@@ -68,6 +74,7 @@ static inline JML_Vec3f JML_cosVec3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_cosVec4d(
     const JML_Vec4d arg
 ) {
@@ -79,6 +86,7 @@ static inline JML_Vec4d JML_cosVec4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_cosVec4f(
     const JML_Vec4f arg
 ) {

@@ -9,6 +9,7 @@
 #include "jml/types/vec3f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Mat4x4d JML_translationVec3d(
     const JML_Vec3d offset
 ) {
@@ -20,6 +21,7 @@ static inline JML_Mat4x4d JML_translationVec3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat4x4f JML_translationVec3f(
     const JML_Vec3f offset
 ) {

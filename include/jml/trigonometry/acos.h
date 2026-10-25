@@ -18,18 +18,21 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline double JML_acosD(
     const double adjacent
 ) {
     return acos(adjacent);
 }
 
+[[nodiscard]]
 static inline float JML_acosF(
     const float adjacent
 ) {
     return acosf(adjacent);
 }
 
+[[nodiscard]]
 static inline JML_Vec2d JML_acosVec2d(
     const JML_Vec2d adjacent
 ) {
@@ -39,6 +42,7 @@ static inline JML_Vec2d JML_acosVec2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2f JML_acosVec2f(
     const JML_Vec2f adjacent
 ) {
@@ -48,6 +52,7 @@ static inline JML_Vec2f JML_acosVec2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3d JML_acosVec3d(
     const JML_Vec3d adjacent
 ) {
@@ -58,6 +63,7 @@ static inline JML_Vec3d JML_acosVec3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3f JML_acosVec3f(
     const JML_Vec3f adjacent
 ) {
@@ -68,6 +74,7 @@ static inline JML_Vec3f JML_acosVec3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_acosVec4d(
     const JML_Vec4d adjacent
 ) {
@@ -79,6 +86,7 @@ static inline JML_Vec4d JML_acosVec4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_acosVec4f(
     const JML_Vec4f adjacent
 ) {

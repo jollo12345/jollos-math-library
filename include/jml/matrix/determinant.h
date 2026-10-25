@@ -9,30 +9,35 @@
 #include "jml/types/mat4x4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline double JML_determinantMat2x2d(
     const JML_Mat2x2d arg
 ) {
     return arg.m00 * arg.m11 - arg.m01 * arg.m10;
 }
 
+[[nodiscard]]
 static inline float JML_determinantMat2x2f(
     const JML_Mat2x2f arg
 ) {
     return arg.m00 * arg.m11 - arg.m01 * arg.m10;
 }
 
+[[nodiscard]]
 static inline double JML_determinantMat3x3d(
     const JML_Mat3x3d arg
 ) {
     return arg.m00 * (arg.m11 * arg.m22 - arg.m12 * arg.m21) - arg.m01 * (arg.m10 * arg.m22 - arg.m12 * arg.m20) + arg.m02 * (arg.m10 * arg.m21 - arg.m11 * arg.m20);
 }
 
+[[nodiscard]]
 static inline float JML_determinantMat3x3f(
     const JML_Mat3x3f arg
 ) {
     return arg.m00 * (arg.m11 * arg.m22 - arg.m12 * arg.m21) - arg.m01 * (arg.m10 * arg.m22 - arg.m12 * arg.m20) + arg.m02 * (arg.m10 * arg.m21 - arg.m11 * arg.m20);
 }
 
+[[nodiscard]]
 static inline double JML_determinantMat4x4d(
     const JML_Mat4x4d arg
 ) {
@@ -53,6 +58,7 @@ static inline double JML_determinantMat4x4d(
     return s0 * c5 - s1 * c4 + s2 * c3 + s3 * c2 - s4 * c1 + s5 * c0;
 }
 
+[[nodiscard]]
 static inline float JML_determinantMat4x4f(
     const JML_Mat4x4f arg
 ) {

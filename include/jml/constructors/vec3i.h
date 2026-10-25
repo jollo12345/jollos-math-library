@@ -5,6 +5,7 @@
 #include "jml/types/vec3i.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec3i JML_vec3iIVec2i(
     const int arg_0,
     const JML_Vec2i arg_1
@@ -16,6 +17,7 @@ static inline JML_Vec3i JML_vec3iIVec2i(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec3i JML_vec3iVec2iI(
     const JML_Vec2i arg_0,
     const int arg_1
@@ -42,6 +44,7 @@ static inline JML_Vec3i JML_vec3iVec2iI(
     default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
+[[nodiscard]]
 static inline JML_Vec3i JML_vec3iIII(
     const int arg_0,
     const int arg_1,

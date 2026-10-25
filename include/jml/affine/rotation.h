@@ -11,6 +11,7 @@
 #include "jml/types/vec3f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Mat4x4d JML_rotationVec3dD(
     const JML_Vec3d axis,
     const double angle
@@ -27,6 +28,7 @@ static inline JML_Mat4x4d JML_rotationVec3dD(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat4x4f JML_rotationVec3fF(
     const JML_Vec3f axis,
     const float angle

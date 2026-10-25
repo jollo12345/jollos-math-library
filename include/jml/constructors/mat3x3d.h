@@ -5,6 +5,7 @@
 #include "jml/types/vec3d.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Mat3x3d JML_mat3x3dVec3dVec3dVec3d(
     const JML_Vec3d arg_0,
     const JML_Vec3d arg_1,
@@ -37,6 +38,7 @@ static inline JML_Mat3x3d JML_mat3x3dVec3dVec3dVec3d(
     default: JML_INVALID_ARGUMENT_TYPES                      \
 )(arg_0, arg_1, arg_2)
 
+[[nodiscard]]
 static inline JML_Mat3x3d JML_mat3x3dDDDDDDDDD(
     const double arg_0,
     const double arg_1,

@@ -5,6 +5,7 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Mat4x4f JML_mat4x4fVec4fVec4fVec4fVec4f(
     const JML_Vec4f arg_0,
     const JML_Vec4f arg_1,
@@ -49,6 +50,7 @@ static inline JML_Mat4x4f JML_mat4x4fVec4fVec4fVec4fVec4f(
     default: JML_INVALID_ARGUMENT_TYPES                             \
 )(arg_0, arg_1, arg_2, arg_3)
 
+[[nodiscard]]
 static inline JML_Mat4x4f JML_mat4x4fFFFFFFFFFFFFFFFF(
     const float arg_0,
     const float arg_1,

@@ -4,6 +4,7 @@
 #include "jml/types/vec2d.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec2d JML_vec2dDD(
     const double arg_0,
     const double arg_1

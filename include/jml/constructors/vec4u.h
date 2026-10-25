@@ -6,6 +6,7 @@
 #include "jml/types/vec4u.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec4u JML_vec4uFVec3u(
     const unsigned arg_0,
     const JML_Vec3u arg_1
@@ -18,6 +19,7 @@ static inline JML_Vec4u JML_vec4uFVec3u(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4u JML_vec4uVec2uVec2u(
     const JML_Vec2u arg_0,
     const JML_Vec2u arg_1
@@ -30,6 +32,7 @@ static inline JML_Vec4u JML_vec4uVec2uVec2u(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4u JML_vec4uVec3uF(
     const JML_Vec3u arg_0,
     const unsigned arg_1
@@ -62,6 +65,7 @@ static inline JML_Vec4u JML_vec4uVec3uF(
     default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
+[[nodiscard]]
 static inline JML_Vec4u JML_vec4uFFVec2u(
     const unsigned arg_0,
     const unsigned arg_1,
@@ -75,6 +79,7 @@ static inline JML_Vec4u JML_vec4uFFVec2u(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4u JML_vec4uFVec2uF(
     const unsigned arg_0,
     const JML_Vec2u arg_1,
@@ -88,6 +93,7 @@ static inline JML_Vec4u JML_vec4uFVec2uF(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4u JML_vec4uVec2uFF(
     const JML_Vec2u arg_0,
     const unsigned arg_1,
@@ -129,6 +135,7 @@ static inline JML_Vec4u JML_vec4uVec2uFF(
     default: JML_INVALID_ARGUMENT_TYPES                    \
 )(arg_0, arg_1, arg_2)
 
+[[nodiscard]]
 static inline JML_Vec4u JML_vec4uFFFF(
     const unsigned arg_0,
     const unsigned arg_1,

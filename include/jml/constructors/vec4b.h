@@ -6,6 +6,7 @@
 #include "jml/types/vec4b.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec4b JML_vec4bBVec3b(
     const bool arg_0,
     const JML_Vec3b arg_1
@@ -18,6 +19,7 @@ static inline JML_Vec4b JML_vec4bBVec3b(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4b JML_vec4bVec2bVec2b(
     const JML_Vec2b arg_0,
     const JML_Vec2b arg_1
@@ -30,6 +32,7 @@ static inline JML_Vec4b JML_vec4bVec2bVec2b(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4b JML_vec4bVec3bB(
     const JML_Vec3b arg_0,
     const bool arg_1
@@ -62,6 +65,7 @@ static inline JML_Vec4b JML_vec4bVec3bB(
     default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
+[[nodiscard]]
 static inline JML_Vec4b JML_vec4bBBVec2b(
     const bool arg_0,
     const bool arg_1,
@@ -75,6 +79,7 @@ static inline JML_Vec4b JML_vec4bBBVec2b(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4b JML_vec4bBVec2bB(
     const bool arg_0,
     const JML_Vec2b arg_1,
@@ -88,6 +93,7 @@ static inline JML_Vec4b JML_vec4bBVec2bB(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec4b JML_vec4bVec2bBB(
     const JML_Vec2b arg_0,
     const bool arg_1,
@@ -129,6 +135,7 @@ static inline JML_Vec4b JML_vec4bVec2bBB(
     default: JML_INVALID_ARGUMENT_TYPES                    \
 )(arg_0, arg_1, arg_2)
 
+[[nodiscard]]
 static inline JML_Vec4b JML_vec4bBBBB(
     const bool arg_0,
     const bool arg_1,

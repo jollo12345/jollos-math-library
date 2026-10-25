@@ -6,18 +6,21 @@
 #include "jml/types/vec4b.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline bool JML_anyVec2b(
     const JML_Vec2b arg
 ) {
     return (bool)(arg.x || arg.y);
 }
 
+[[nodiscard]]
 static inline bool JML_anyVec3b(
     const JML_Vec3b arg
 ) {
     return (bool)(arg.x || arg.y || arg.z);
 }
 
+[[nodiscard]]
 static inline bool JML_anyVec4b(
     const JML_Vec4b arg
 ) {

@@ -17,48 +17,56 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline double JML_sqrtD(
     const double arg
 ) {
     return sqrt(arg);
 }
 
+[[nodiscard]]
 static inline float JML_sqrtF(
     const float arg
 ) {
     return sqrtf(arg);
 }
 
+[[nodiscard]]
 static inline JML_Vec2d JML_sqrtVec2d(
     const JML_Vec2d arg
 ) {
     return JML_vec2d(sqrt(arg.x), sqrt(arg.y));
 }
 
+[[nodiscard]]
 static inline JML_Vec2f JML_sqrtVec2f(
     const JML_Vec2f arg
 ) {
     return JML_vec2f(sqrtf(arg.x), sqrtf(arg.y));
 }
 
+[[nodiscard]]
 static inline JML_Vec3d JML_sqrtVec3d(
     const JML_Vec3d arg
 ) {
     return JML_vec3d(sqrt(arg.x), sqrt(arg.y), sqrt(arg.z));
 }
 
+[[nodiscard]]
 static inline JML_Vec3f JML_sqrtVec3f(
     const JML_Vec3f arg
 ) {
     return JML_vec3f(sqrtf(arg.x), sqrtf(arg.y), sqrtf(arg.z));
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_sqrtVec4d(
     const JML_Vec4d arg
 ) {
     return JML_vec4d(sqrt(arg.x), sqrt(arg.y), sqrt(arg.z), sqrt(arg.w));
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_sqrtVec4f(
     const JML_Vec4f arg
 ) {

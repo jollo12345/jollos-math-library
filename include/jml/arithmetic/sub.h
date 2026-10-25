@@ -39,6 +39,7 @@
 #include "jml/types/vec4u.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Mat2x2d JML_subMat2x2dMat2x2d(
     const JML_Mat2x2d arg_0,
     const JML_Mat2x2d arg_1
@@ -51,6 +52,7 @@ static inline JML_Mat2x2d JML_subMat2x2dMat2x2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat2x2f JML_subMat2x2fMat2x2f(
     const JML_Mat2x2f arg_0,
     const JML_Mat2x2f arg_1
@@ -63,6 +65,7 @@ static inline JML_Mat2x2f JML_subMat2x2fMat2x2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat3x3d JML_subMat3x3dMat3x3d(
     const JML_Mat3x3d arg_0,
     const JML_Mat3x3d arg_1
@@ -80,6 +83,7 @@ static inline JML_Mat3x3d JML_subMat3x3dMat3x3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat3x3f JML_subMat3x3fMat3x3f(
     const JML_Mat3x3f arg_0,
     const JML_Mat3x3f arg_1
@@ -97,6 +101,7 @@ static inline JML_Mat3x3f JML_subMat3x3fMat3x3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat4x4d JML_subMat4x4dMat4x4d(
     const JML_Mat4x4d arg_0,
     const JML_Mat4x4d arg_1
@@ -121,6 +126,7 @@ static inline JML_Mat4x4d JML_subMat4x4dMat4x4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat4x4f JML_subMat4x4fMat4x4f(
     const JML_Mat4x4f arg_0,
     const JML_Mat4x4f arg_1
@@ -145,6 +151,7 @@ static inline JML_Mat4x4f JML_subMat4x4fMat4x4f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2d JML_subVec2dVec2d(
     const JML_Vec2d arg_0,
     const JML_Vec2d arg_1
@@ -155,6 +162,7 @@ static inline JML_Vec2d JML_subVec2dVec2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2f JML_subVec2fVec2f(
     const JML_Vec2f arg_0,
     const JML_Vec2f arg_1
@@ -165,6 +173,7 @@ static inline JML_Vec2f JML_subVec2fVec2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2i JML_subVec2iVec2i(
     const JML_Vec2i arg_0,
     const JML_Vec2i arg_1
@@ -175,6 +184,7 @@ static inline JML_Vec2i JML_subVec2iVec2i(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2u JML_subVec2uVec2u(
     const JML_Vec2u arg_0,
     const JML_Vec2u arg_1
@@ -185,6 +195,7 @@ static inline JML_Vec2u JML_subVec2uVec2u(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3d JML_subVec3dVec3d(
     const JML_Vec3d arg_0,
     const JML_Vec3d arg_1
@@ -196,6 +207,7 @@ static inline JML_Vec3d JML_subVec3dVec3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3f JML_subVec3fVec3f(
     const JML_Vec3f arg_0,
     const JML_Vec3f arg_1
@@ -207,6 +219,7 @@ static inline JML_Vec3f JML_subVec3fVec3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3i JML_subVec3iVec3i(
     const JML_Vec3i arg_0,
     const JML_Vec3i arg_1
@@ -218,6 +231,7 @@ static inline JML_Vec3i JML_subVec3iVec3i(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3u JML_subVec3uVec3u(
     const JML_Vec3u arg_0,
     const JML_Vec3u arg_1
@@ -229,6 +243,7 @@ static inline JML_Vec3u JML_subVec3uVec3u(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_subVec4dVec4d(
     const JML_Vec4d arg_0,
     const JML_Vec4d arg_1
@@ -241,6 +256,7 @@ static inline JML_Vec4d JML_subVec4dVec4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_subVec4fVec4f(
     const JML_Vec4f arg_0,
     const JML_Vec4f arg_1
@@ -253,6 +269,7 @@ static inline JML_Vec4f JML_subVec4fVec4f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4i JML_subVec4iVec4i(
     const JML_Vec4i arg_0,
     const JML_Vec4i arg_1
@@ -265,6 +282,7 @@ static inline JML_Vec4i JML_subVec4iVec4i(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4u JML_subVec4uVec4u(
     const JML_Vec4u arg_0,
     const JML_Vec4u arg_1

@@ -21,6 +21,7 @@
 #include "jml/types/vec4u.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec2b JML_lessThanEqualVec2dVec2d(
     const JML_Vec2d arg_0,
     const JML_Vec2d arg_1
@@ -31,6 +32,7 @@ static inline JML_Vec2b JML_lessThanEqualVec2dVec2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2b JML_lessThanEqualVec2fVec2f(
     const JML_Vec2f arg_0,
     const JML_Vec2f arg_1
@@ -41,6 +43,7 @@ static inline JML_Vec2b JML_lessThanEqualVec2fVec2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2b JML_lessThanEqualVec2iVec2i(
     const JML_Vec2i arg_0,
     const JML_Vec2i arg_1
@@ -51,6 +54,7 @@ static inline JML_Vec2b JML_lessThanEqualVec2iVec2i(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2b JML_lessThanEqualVec2uVec2u(
     const JML_Vec2u arg_0,
     const JML_Vec2u arg_1
@@ -61,6 +65,7 @@ static inline JML_Vec2b JML_lessThanEqualVec2uVec2u(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3b JML_lessThanEqualVec3dVec3d(
     const JML_Vec3d arg_0,
     const JML_Vec3d arg_1
@@ -72,6 +77,7 @@ static inline JML_Vec3b JML_lessThanEqualVec3dVec3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3b JML_lessThanEqualVec3fVec3f(
     const JML_Vec3f arg_0,
     const JML_Vec3f arg_1
@@ -83,6 +89,7 @@ static inline JML_Vec3b JML_lessThanEqualVec3fVec3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3b JML_lessThanEqualVec3iVec3i(
     const JML_Vec3i arg_0,
     const JML_Vec3i arg_1
@@ -94,6 +101,7 @@ static inline JML_Vec3b JML_lessThanEqualVec3iVec3i(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3b JML_lessThanEqualVec3uVec3u(
     const JML_Vec3u arg_0,
     const JML_Vec3u arg_1
@@ -105,6 +113,7 @@ static inline JML_Vec3b JML_lessThanEqualVec3uVec3u(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4b JML_lessThanEqualVec4dVec4d(
     const JML_Vec4d arg_0,
     const JML_Vec4d arg_1
@@ -117,6 +126,7 @@ static inline JML_Vec4b JML_lessThanEqualVec4dVec4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4b JML_lessThanEqualVec4fVec4f(
     const JML_Vec4f arg_0,
     const JML_Vec4f arg_1
@@ -129,6 +139,7 @@ static inline JML_Vec4b JML_lessThanEqualVec4fVec4f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4b JML_lessThanEqualVec4iVec4i(
     const JML_Vec4i arg_0,
     const JML_Vec4i arg_1
@@ -141,6 +152,7 @@ static inline JML_Vec4b JML_lessThanEqualVec4iVec4i(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4b JML_lessThanEqualVec4uVec4u(
     const JML_Vec4u arg_0,
     const JML_Vec4u arg_1

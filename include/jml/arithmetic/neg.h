@@ -39,6 +39,7 @@
 #include "jml/types/vec4u.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Mat2x2d JML_negMat2x2d(
     const JML_Mat2x2d arg
 ) {
@@ -50,6 +51,7 @@ static inline JML_Mat2x2d JML_negMat2x2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat2x2f JML_negMat2x2f(
     const JML_Mat2x2f arg
 ) {
@@ -61,6 +63,7 @@ static inline JML_Mat2x2f JML_negMat2x2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat3x3d JML_negMat3x3d(
     const JML_Mat3x3d arg
 ) {
@@ -77,6 +80,7 @@ static inline JML_Mat3x3d JML_negMat3x3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat3x3f JML_negMat3x3f(
     const JML_Mat3x3f arg
 ) {
@@ -93,6 +97,7 @@ static inline JML_Mat3x3f JML_negMat3x3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat4x4d JML_negMat4x4d(
     const JML_Mat4x4d arg
 ) {
@@ -116,6 +121,7 @@ static inline JML_Mat4x4d JML_negMat4x4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat4x4f JML_negMat4x4f(
     const JML_Mat4x4f arg
 ) {
@@ -139,6 +145,7 @@ static inline JML_Mat4x4f JML_negMat4x4f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2d JML_negVec2d(
     const JML_Vec2d arg
 ) {
@@ -148,6 +155,7 @@ static inline JML_Vec2d JML_negVec2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2f JML_negVec2f(
     const JML_Vec2f arg
 ) {
@@ -157,6 +165,7 @@ static inline JML_Vec2f JML_negVec2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2i JML_negVec2i(
     const JML_Vec2i arg
 ) {
@@ -166,6 +175,7 @@ static inline JML_Vec2i JML_negVec2i(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2u JML_negVec2u(
     const JML_Vec2u arg
 ) {
@@ -175,6 +185,7 @@ static inline JML_Vec2u JML_negVec2u(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3d JML_negVec3d(
     const JML_Vec3d arg
 ) {
@@ -185,6 +196,7 @@ static inline JML_Vec3d JML_negVec3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3f JML_negVec3f(
     const JML_Vec3f arg
 ) {
@@ -195,6 +207,7 @@ static inline JML_Vec3f JML_negVec3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3i JML_negVec3i(
     const JML_Vec3i arg
 ) {
@@ -205,6 +218,7 @@ static inline JML_Vec3i JML_negVec3i(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3u JML_negVec3u(
     const JML_Vec3u arg
 ) {
@@ -215,6 +229,7 @@ static inline JML_Vec3u JML_negVec3u(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_negVec4d(
     const JML_Vec4d arg
 ) {
@@ -226,6 +241,7 @@ static inline JML_Vec4d JML_negVec4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_negVec4f(
     const JML_Vec4f arg
 ) {
@@ -237,6 +253,7 @@ static inline JML_Vec4f JML_negVec4f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4i JML_negVec4i(
     const JML_Vec4i arg
 ) {
@@ -248,6 +265,7 @@ static inline JML_Vec4i JML_negVec4i(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4u JML_negVec4u(
     const JML_Vec4u arg
 ) {

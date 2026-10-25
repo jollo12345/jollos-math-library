@@ -5,6 +5,7 @@
 #include "jml/types/vec3d.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec3d JML_vec3dDVec2d(
     const double arg_0,
     const JML_Vec2d arg_1
@@ -16,6 +17,7 @@ static inline JML_Vec3d JML_vec3dDVec2d(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec3d JML_vec3dVec2dD(
     const JML_Vec2d arg_0,
     const double arg_1
@@ -42,6 +44,7 @@ static inline JML_Vec3d JML_vec3dVec2dD(
     default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
+[[nodiscard]]
 static inline JML_Vec3d JML_vec3dDDD(
     const double arg_0,
     const double arg_1,

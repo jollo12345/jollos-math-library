@@ -5,6 +5,7 @@
 #include "jml/types/vec3b.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec3b JML_vec3bBVec2b(
     const bool arg_0,
     const JML_Vec2b arg_1
@@ -16,6 +17,7 @@ static inline JML_Vec3b JML_vec3bBVec2b(
     return result;
 }
 
+[[nodiscard]]
 static inline JML_Vec3b JML_vec3bVec2bB(
     const JML_Vec2b arg_0,
     const bool arg_1
@@ -42,6 +44,7 @@ static inline JML_Vec3b JML_vec3bVec2bB(
     default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
+[[nodiscard]]
 static inline JML_Vec3b JML_vec3bBBB(
     const bool arg_0,
     const bool arg_1,

@@ -13,36 +13,42 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline double JML_lengthVec2d(
     const JML_Vec2d arg
 ) {
     return JML_sqrt(JML_dot(arg, arg));
 }
 
+[[nodiscard]]
 static inline float JML_lengthVec2f(
     const JML_Vec2f arg
 ) {
     return JML_sqrt(JML_dot(arg, arg));
 }
 
+[[nodiscard]]
 static inline double JML_lengthVec3d(
     const JML_Vec3d arg
 ) {
     return JML_sqrt(JML_dot(arg, arg));
 }
 
+[[nodiscard]]
 static inline float JML_lengthVec3f(
     const JML_Vec3f arg
 ) {
     return JML_sqrt(JML_dot(arg, arg));
 }
 
+[[nodiscard]]
 static inline double JML_lengthVec4d(
     const JML_Vec4d arg
 ) {
     return JML_sqrt(JML_dot(arg, arg));
 }
 
+[[nodiscard]]
 static inline float JML_lengthVec4f(
     const JML_Vec4f arg
 ) {

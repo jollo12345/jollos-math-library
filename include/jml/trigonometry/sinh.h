@@ -18,18 +18,21 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline double JML_sinhD(
     const double arg
 ) {
     return sinh(arg);
 }
 
+[[nodiscard]]
 static inline float JML_sinhF(
     const float arg
 ) {
     return sinhf(arg);
 }
 
+[[nodiscard]]
 static inline JML_Vec2d JML_sinhVec2d(
     const JML_Vec2d arg
 ) {
@@ -39,6 +42,7 @@ static inline JML_Vec2d JML_sinhVec2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2f JML_sinhVec2f(
     const JML_Vec2f arg
 ) {
@@ -48,6 +52,7 @@ static inline JML_Vec2f JML_sinhVec2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3d JML_sinhVec3d(
     const JML_Vec3d arg
 ) {
@@ -58,6 +63,7 @@ static inline JML_Vec3d JML_sinhVec3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3f JML_sinhVec3f(
     const JML_Vec3f arg
 ) {
@@ -68,6 +74,7 @@ static inline JML_Vec3f JML_sinhVec3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_sinhVec4d(
     const JML_Vec4d arg
 ) {
@@ -79,6 +86,7 @@ static inline JML_Vec4d JML_sinhVec4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_sinhVec4f(
     const JML_Vec4f arg
 ) {

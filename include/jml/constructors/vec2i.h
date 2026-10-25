@@ -4,6 +4,7 @@
 #include "jml/types/vec2i.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec2i JML_vec2iII(
     const int arg_0,
     const int arg_1

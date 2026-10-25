@@ -21,6 +21,7 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Mat2x2d JML_matrixCompMulMat2x2dMat2x2d(
     const JML_Mat2x2d arg_1,
     const JML_Mat2x2d arg_2
@@ -31,6 +32,7 @@ static inline JML_Mat2x2d JML_matrixCompMulMat2x2dMat2x2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat2x2f JML_matrixCompMulMat2x2fMat2x2f(
     const JML_Mat2x2f arg_1,
     const JML_Mat2x2f arg_2
@@ -41,6 +43,7 @@ static inline JML_Mat2x2f JML_matrixCompMulMat2x2fMat2x2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat3x3d JML_matrixCompMulMat3x3dMat3x3d(
     const JML_Mat3x3d arg_1,
     const JML_Mat3x3d arg_2
@@ -52,6 +55,7 @@ static inline JML_Mat3x3d JML_matrixCompMulMat3x3dMat3x3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat3x3f JML_matrixCompMulMat3x3fMat3x3f(
     const JML_Mat3x3f arg_1,
     const JML_Mat3x3f arg_2
@@ -63,6 +67,7 @@ static inline JML_Mat3x3f JML_matrixCompMulMat3x3fMat3x3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat4x4d JML_matrixCompMulMat4x4dMat4x4d(
     const JML_Mat4x4d arg_1,
     const JML_Mat4x4d arg_2
@@ -75,6 +80,7 @@ static inline JML_Mat4x4d JML_matrixCompMulMat4x4dMat4x4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat4x4f JML_matrixCompMulMat4x4fMat4x4f(
     const JML_Mat4x4f arg_1,
     const JML_Mat4x4f arg_2

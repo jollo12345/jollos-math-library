@@ -4,6 +4,7 @@
 #include "jml/types/vec2b.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec2b JML_vec2bBB(
     const bool arg_0,
     const bool arg_1

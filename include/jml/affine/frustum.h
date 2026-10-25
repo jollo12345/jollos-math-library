@@ -9,6 +9,7 @@
 #include "jml/types/vec3f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Mat4x4d JML_frustumDDDDDD(
     const double left,
     const double right,
@@ -29,6 +30,7 @@ static inline JML_Mat4x4d JML_frustumDDDDDD(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat4x4f JML_frustumFFFFFF(
     const float left,
     const float right,

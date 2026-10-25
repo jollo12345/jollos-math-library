@@ -5,6 +5,7 @@
 #include "jml/types/vec4d.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Mat4x4d JML_mat4x4dVec4dVec4dVec4dVec4d(
     const JML_Vec4d arg_0,
     const JML_Vec4d arg_1,
@@ -49,6 +50,7 @@ static inline JML_Mat4x4d JML_mat4x4dVec4dVec4dVec4dVec4d(
     default: JML_INVALID_ARGUMENT_TYPES                             \
 )(arg_0, arg_1, arg_2, arg_3)
 
+[[nodiscard]]
 static inline JML_Mat4x4d JML_mat4x4dDDDDDDDDDDDDDDDD(
     const double arg_0,
     const double arg_1,

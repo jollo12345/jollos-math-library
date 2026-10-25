@@ -18,18 +18,21 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline double JML_acoshD(
     const double arg
 ) {
     return acosh(arg);
 }
 
+[[nodiscard]]
 static inline float JML_acoshF(
     const float arg
 ) {
     return acoshf(arg);
 }
 
+[[nodiscard]]
 static inline JML_Vec2d JML_acoshVec2d(
     const JML_Vec2d arg
 ) {
@@ -39,6 +42,7 @@ static inline JML_Vec2d JML_acoshVec2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2f JML_acoshVec2f(
     const JML_Vec2f arg
 ) {
@@ -48,6 +52,7 @@ static inline JML_Vec2f JML_acoshVec2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3d JML_acoshVec3d(
     const JML_Vec3d arg
 ) {
@@ -58,6 +63,7 @@ static inline JML_Vec3d JML_acoshVec3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3f JML_acoshVec3f(
     const JML_Vec3f arg
 ) {
@@ -68,6 +74,7 @@ static inline JML_Vec3f JML_acoshVec3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_acoshVec4d(
     const JML_Vec4d arg
 ) {
@@ -79,6 +86,7 @@ static inline JML_Vec4d JML_acoshVec4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_acoshVec4f(
     const JML_Vec4f arg
 ) {

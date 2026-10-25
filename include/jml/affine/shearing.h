@@ -7,6 +7,7 @@
 #include "jml/types/mat4x4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Mat4x4d JML_shearingDDDDDD(
     const double xy,
     const double xz,
@@ -23,6 +24,7 @@ static inline JML_Mat4x4d JML_shearingDDDDDD(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat4x4f JML_shearingFFFFFF(
     const float xy,
     const float xz,

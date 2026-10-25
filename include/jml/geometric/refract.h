@@ -19,6 +19,7 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Vec2d JML_refractVec2dVec2dD(
     const JML_Vec2d arg_0,
     const JML_Vec2d arg_1,
@@ -31,6 +32,7 @@ static inline JML_Vec2d JML_refractVec2dVec2dD(
     return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_sqrt(k), arg_1));
 }
 
+[[nodiscard]]
 static inline JML_Vec2f JML_refractVec2fVec2fF(
     const JML_Vec2f arg_0,
     const JML_Vec2f arg_1,
@@ -43,6 +45,7 @@ static inline JML_Vec2f JML_refractVec2fVec2fF(
     return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_sqrt(k), arg_1));
 }
 
+[[nodiscard]]
 static inline JML_Vec3d JML_refractVec3dVec3dD(
     const JML_Vec3d arg_0,
     const JML_Vec3d arg_1,
@@ -55,6 +58,7 @@ static inline JML_Vec3d JML_refractVec3dVec3dD(
     return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_sqrt(k), arg_1));
 }
 
+[[nodiscard]]
 static inline JML_Vec3f JML_refractVec3fVec3fF(
     const JML_Vec3f arg_0,
     const JML_Vec3f arg_1,
@@ -67,6 +71,7 @@ static inline JML_Vec3f JML_refractVec3fVec3fF(
     return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_sqrt(k), arg_1));
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_refractVec4dVec4dD(
     const JML_Vec4d arg_0,
     const JML_Vec4d arg_1,
@@ -79,6 +84,7 @@ static inline JML_Vec4d JML_refractVec4dVec4dD(
     return JML_sub(JML_mul(arg_2, arg_0), JML_mul(arg_2 * JML_dot(arg_1, arg_0) + JML_sqrt(k), arg_1));
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_refractVec4fVec4fF(
     const JML_Vec4f arg_0,
     const JML_Vec4f arg_1,

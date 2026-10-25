@@ -9,6 +9,7 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Mat4x4d JML_scalingDDD(
     const double x,
     const double y,
@@ -22,6 +23,7 @@ static inline JML_Mat4x4d JML_scalingDDD(
     );
 }
 
+[[nodiscard]]
 static inline JML_Mat4x4f JML_scalingFFF(
     const float x,
     const float y,

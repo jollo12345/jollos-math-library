@@ -18,18 +18,21 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline double JML_atanD(
     const double ratio
 ) {
     return atan(ratio);
 }
 
+[[nodiscard]]
 static inline float JML_atanF(
     const float ratio
 ) {
     return atanf(ratio);
 }
 
+[[nodiscard]]
 static inline JML_Vec2d JML_atanVec2d(
     const JML_Vec2d ratio
 ) {
@@ -39,6 +42,7 @@ static inline JML_Vec2d JML_atanVec2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2f JML_atanVec2f(
     const JML_Vec2f ratio
 ) {
@@ -48,6 +52,7 @@ static inline JML_Vec2f JML_atanVec2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3d JML_atanVec3d(
     const JML_Vec3d ratio
 ) {
@@ -58,6 +63,7 @@ static inline JML_Vec3d JML_atanVec3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3f JML_atanVec3f(
     const JML_Vec3f ratio
 ) {
@@ -68,6 +74,7 @@ static inline JML_Vec3f JML_atanVec3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_atanVec4d(
     const JML_Vec4d ratio
 ) {
@@ -79,6 +86,7 @@ static inline JML_Vec4d JML_atanVec4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_atanVec4f(
     const JML_Vec4f ratio
 ) {

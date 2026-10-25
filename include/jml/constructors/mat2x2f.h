@@ -5,6 +5,7 @@
 #include "jml/types/vec2f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline JML_Mat2x2f JML_mat2x2fVec2fVec2f(
     const JML_Vec2f arg_0,
     const JML_Vec2f arg_1
@@ -27,6 +28,7 @@ static inline JML_Mat2x2f JML_mat2x2fVec2fVec2f(
     default: JML_INVALID_ARGUMENT_TYPES               \
 )(arg_0, arg_1)
 
+[[nodiscard]]
 static inline JML_Mat2x2f JML_mat2x2fFFFF(
     const float arg_0,
     const float arg_1,

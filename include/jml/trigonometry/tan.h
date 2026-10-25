@@ -18,18 +18,21 @@
 #include "jml/types/vec4f.h"
 #include "jml/util.h"
 
+[[nodiscard]]
 static inline double JML_tanD(
     const double angle
 ) {
     return tan(angle);
 }
 
+[[nodiscard]]
 static inline float JML_tanF(
     const float angle
 ) {
     return tanf(angle);
 }
 
+[[nodiscard]]
 static inline JML_Vec2d JML_tanVec2d(
     const JML_Vec2d angle
 ) {
@@ -39,6 +42,7 @@ static inline JML_Vec2d JML_tanVec2d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec2f JML_tanVec2f(
     const JML_Vec2f angle
 ) {
@@ -48,6 +52,7 @@ static inline JML_Vec2f JML_tanVec2f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3d JML_tanVec3d(
     const JML_Vec3d angle
 ) {
@@ -58,6 +63,7 @@ static inline JML_Vec3d JML_tanVec3d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec3f JML_tanVec3f(
     const JML_Vec3f angle
 ) {
@@ -68,6 +74,7 @@ static inline JML_Vec3f JML_tanVec3f(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4d JML_tanVec4d(
     const JML_Vec4d angle
 ) {
@@ -79,6 +86,7 @@ static inline JML_Vec4d JML_tanVec4d(
     );
 }
 
+[[nodiscard]]
 static inline JML_Vec4f JML_tanVec4f(
     const JML_Vec4f angle
 ) {
