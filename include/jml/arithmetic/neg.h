@@ -279,7 +279,7 @@ static inline JML_Vec4u JML_negVec4u(
     JML_Vec4f: JML_negVec4f,             \
     JML_Vec4i: JML_negVec4i,             \
     JML_Vec4u: JML_negVec4u,             \
-    default: (void (*)(void))0           \
+    default: JML_INVALID_ARGUMENT_TYPES  \
 )(arg)
 
 #define JML_neg(...) \

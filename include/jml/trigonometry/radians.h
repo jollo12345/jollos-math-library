@@ -98,7 +98,7 @@ static inline JML_Vec4f JML_radiansVec4f(
     JML_Vec3f: JML_radiansVec3f,                 \
     JML_Vec4d: JML_radiansVec4d,                 \
     JML_Vec4f: JML_radiansVec4f,                 \
-    default: (void (*)(void))0                   \
+    default: JML_INVALID_ARGUMENT_TYPES          \
 )(degrees)
 
 #define JML_radians(...) \

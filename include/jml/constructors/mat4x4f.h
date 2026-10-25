@@ -40,13 +40,13 @@ static inline JML_Mat4x4f JML_mat4x4fVec4fVec4fVec4fVec4f(
             JML_Vec4f: _Generic(                                    \
                 (arg_3),                                            \
                 JML_Vec4f: JML_mat4x4fVec4fVec4fVec4fVec4f,         \
-                default: (void (*)(void))0                          \
+                default: JML_INVALID_ARGUMENT_TYPES                 \
             ),                                                      \
-            default: (void (*)(void))0                              \
+            default: JML_INVALID_ARGUMENT_TYPES                     \
         ),                                                          \
-        default: (void (*)(void))0                                  \
+        default: JML_INVALID_ARGUMENT_TYPES                         \
     ),                                                              \
-    default: (void (*)(void))0                                      \
+    default: JML_INVALID_ARGUMENT_TYPES                             \
 )(arg_0, arg_1, arg_2, arg_3)
 
 static inline JML_Mat4x4f JML_mat4x4fFFFFFFFFFFFFFFFF(
@@ -120,37 +120,37 @@ static inline JML_Mat4x4f JML_mat4x4fFFFFFFFFFFFFFFFF(
                                                             float: _Generic(                                                                                   \
                                                                 (arg_15),                                                                                      \
                                                                 float: JML_mat4x4fFFFFFFFFFFFFFFFF,                                                            \
-                                                                default: (void (*)(void))0                                                                     \
+                                                                default: JML_INVALID_ARGUMENT_TYPES                                                            \
                                                             ),                                                                                                 \
-                                                            default: (void (*)(void))0                                                                         \
+                                                            default: JML_INVALID_ARGUMENT_TYPES                                                                \
                                                         ),                                                                                                     \
-                                                        default: (void (*)(void))0                                                                             \
+                                                        default: JML_INVALID_ARGUMENT_TYPES                                                                    \
                                                     ),                                                                                                         \
-                                                    default: (void (*)(void))0                                                                                 \
+                                                    default: JML_INVALID_ARGUMENT_TYPES                                                                        \
                                                 ),                                                                                                             \
-                                                default: (void (*)(void))0                                                                                     \
+                                                default: JML_INVALID_ARGUMENT_TYPES                                                                            \
                                             ),                                                                                                                 \
-                                            default: (void (*)(void))0                                                                                         \
+                                            default: JML_INVALID_ARGUMENT_TYPES                                                                                \
                                         ),                                                                                                                     \
-                                        default: (void (*)(void))0                                                                                             \
+                                        default: JML_INVALID_ARGUMENT_TYPES                                                                                    \
                                     ),                                                                                                                         \
-                                    default: (void (*)(void))0                                                                                                 \
+                                    default: JML_INVALID_ARGUMENT_TYPES                                                                                        \
                                 ),                                                                                                                             \
-                                default: (void (*)(void))0                                                                                                     \
+                                default: JML_INVALID_ARGUMENT_TYPES                                                                                            \
                             ),                                                                                                                                 \
-                            default: (void (*)(void))0                                                                                                         \
+                            default: JML_INVALID_ARGUMENT_TYPES                                                                                                \
                         ),                                                                                                                                     \
-                        default: (void (*)(void))0                                                                                                             \
+                        default: JML_INVALID_ARGUMENT_TYPES                                                                                                    \
                     ),                                                                                                                                         \
-                    default: (void (*)(void))0                                                                                                                 \
+                    default: JML_INVALID_ARGUMENT_TYPES                                                                                                        \
                 ),                                                                                                                                             \
-                default: (void (*)(void))0                                                                                                                     \
+                default: JML_INVALID_ARGUMENT_TYPES                                                                                                            \
             ),                                                                                                                                                 \
-            default: (void (*)(void))0                                                                                                                         \
+            default: JML_INVALID_ARGUMENT_TYPES                                                                                                                \
         ),                                                                                                                                                     \
-        default: (void (*)(void))0                                                                                                                             \
+        default: JML_INVALID_ARGUMENT_TYPES                                                                                                                    \
     ),                                                                                                                                                         \
-    default: (void (*)(void))0                                                                                                                                 \
+    default: JML_INVALID_ARGUMENT_TYPES                                                                                                                        \
 )(arg_0, arg_1, arg_2, arg_3, arg_4, arg_5, arg_6, arg_7, arg_8, arg_9, arg_10, arg_11, arg_12, arg_13, arg_14, arg_15)
 
 #define JML_mat4x4f(...) \

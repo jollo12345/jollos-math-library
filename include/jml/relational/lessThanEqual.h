@@ -158,64 +158,64 @@ static inline JML_Vec4b JML_lessThanEqualVec4uVec4u(
     JML_Vec2d: _Generic(                                    \
         (arg_1),                                            \
         JML_Vec2d: JML_lessThanEqualVec2dVec2d,             \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Vec2f: _Generic(                                    \
         (arg_1),                                            \
         JML_Vec2f: JML_lessThanEqualVec2fVec2f,             \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Vec2i: _Generic(                                    \
         (arg_1),                                            \
         JML_Vec2i: JML_lessThanEqualVec2iVec2i,             \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Vec2u: _Generic(                                    \
         (arg_1),                                            \
         JML_Vec2u: JML_lessThanEqualVec2uVec2u,             \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Vec3d: _Generic(                                    \
         (arg_1),                                            \
         JML_Vec3d: JML_lessThanEqualVec3dVec3d,             \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Vec3f: _Generic(                                    \
         (arg_1),                                            \
         JML_Vec3f: JML_lessThanEqualVec3fVec3f,             \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Vec3i: _Generic(                                    \
         (arg_1),                                            \
         JML_Vec3i: JML_lessThanEqualVec3iVec3i,             \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Vec3u: _Generic(                                    \
         (arg_1),                                            \
         JML_Vec3u: JML_lessThanEqualVec3uVec3u,             \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Vec4d: _Generic(                                    \
         (arg_1),                                            \
         JML_Vec4d: JML_lessThanEqualVec4dVec4d,             \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Vec4f: _Generic(                                    \
         (arg_1),                                            \
         JML_Vec4f: JML_lessThanEqualVec4fVec4f,             \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Vec4i: _Generic(                                    \
         (arg_1),                                            \
         JML_Vec4i: JML_lessThanEqualVec4iVec4i,             \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Vec4u: _Generic(                                    \
         (arg_1),                                            \
         JML_Vec4u: JML_lessThanEqualVec4uVec4u,             \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
-    default: (void (*)(void))0                              \
+    default: JML_INVALID_ARGUMENT_TYPES                     \
 )(arg_0, arg_1)
 
 #define JML_lessThanEqual(...) \

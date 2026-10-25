@@ -202,7 +202,7 @@ static inline JML_Mat4x4f JML_inverseMat4x4f(
     JML_Mat3x3f: JML_inverseMat3x3f,         \
     JML_Mat4x4d: JML_inverseMat4x4d,         \
     JML_Mat4x4f: JML_inverseMat4x4f,         \
-    default: (void (*)(void))0               \
+    default: JML_INVALID_ARGUMENT_TYPES      \
 )(arg)
 
 #define JML_inverse(...) \

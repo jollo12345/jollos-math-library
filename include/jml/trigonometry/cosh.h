@@ -100,7 +100,7 @@ static inline JML_Vec4f JML_coshVec4f(
     JML_Vec3f: JML_coshVec3f,             \
     JML_Vec4d: JML_coshVec4d,             \
     JML_Vec4f: JML_coshVec4f,             \
-    default: (void (*)(void))0            \
+    default: JML_INVALID_ARGUMENT_TYPES   \
 )(arg)
 
 #define JML_cosh(...) \

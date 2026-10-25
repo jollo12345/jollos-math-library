@@ -19,9 +19,9 @@ static inline JML_Vec2u JML_vec2uBB(
     unsigned: _Generic(                             \
         (arg_1),                                    \
         unsigned: JML_vec2uBB,                      \
-        default: (void (*)(void))0                  \
+        default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
-    default: (void (*)(void))0                      \
+    default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
 #define JML_vec2u(...) \

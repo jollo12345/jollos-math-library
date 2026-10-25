@@ -92,34 +92,34 @@ static inline JML_Mat4x4f JML_outerProductVec4fVec4f(
     JML_Vec2d: _Generic(                                  \
         (row),                                            \
         JML_Vec2d: JML_outerProductVec2dVec2d,            \
-        default: (void (*)(void))0                        \
+        default: JML_INVALID_ARGUMENT_TYPES               \
     ),                                                    \
     JML_Vec2f: _Generic(                                  \
         (row),                                            \
         JML_Vec2f: JML_outerProductVec2fVec2f,            \
-        default: (void (*)(void))0                        \
+        default: JML_INVALID_ARGUMENT_TYPES               \
     ),                                                    \
     JML_Vec3d: _Generic(                                  \
         (row),                                            \
         JML_Vec3d: JML_outerProductVec3dVec3d,            \
-        default: (void (*)(void))0                        \
+        default: JML_INVALID_ARGUMENT_TYPES               \
     ),                                                    \
     JML_Vec3f: _Generic(                                  \
         (row),                                            \
         JML_Vec3f: JML_outerProductVec3fVec3f,            \
-        default: (void (*)(void))0                        \
+        default: JML_INVALID_ARGUMENT_TYPES               \
     ),                                                    \
     JML_Vec4d: _Generic(                                  \
         (row),                                            \
         JML_Vec4d: JML_outerProductVec4dVec4d,            \
-        default: (void (*)(void))0                        \
+        default: JML_INVALID_ARGUMENT_TYPES               \
     ),                                                    \
     JML_Vec4f: _Generic(                                  \
         (row),                                            \
         JML_Vec4f: JML_outerProductVec4fVec4f,            \
-        default: (void (*)(void))0                        \
+        default: JML_INVALID_ARGUMENT_TYPES               \
     ),                                                    \
-    default: (void (*)(void))0                            \
+    default: JML_INVALID_ARGUMENT_TYPES                   \
 )(column, row)
 
 #define JML_outerProduct(...) \

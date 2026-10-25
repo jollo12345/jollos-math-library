@@ -19,9 +19,9 @@ static inline JML_Vec2d JML_vec2dDD(
     double: _Generic(                               \
         (arg_1),                                    \
         double: JML_vec2dDD,                        \
-        default: (void (*)(void))0                  \
+        default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
-    default: (void (*)(void))0                      \
+    default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
 #define JML_vec2d(...) \

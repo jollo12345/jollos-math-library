@@ -29,7 +29,7 @@ static inline bool JML_allVec4b(
     JML_Vec2b: JML_allVec2b,             \
     JML_Vec3b: JML_allVec3b,             \
     JML_Vec4b: JML_allVec4b,             \
-    default: (void (*)(void))0           \
+    default: JML_INVALID_ARGUMENT_TYPES  \
 )(arg)
 
 #define JML_all(...) \

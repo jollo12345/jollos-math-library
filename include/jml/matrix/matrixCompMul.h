@@ -92,34 +92,34 @@ static inline JML_Mat4x4f JML_matrixCompMulMat4x4fMat4x4f(
     JML_Mat2x2d: _Generic(                                  \
         (arg_2),                                            \
         JML_Mat2x2d: JML_matrixCompMulMat2x2dMat2x2d,       \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Mat2x2f: _Generic(                                  \
         (arg_2),                                            \
         JML_Mat2x2f: JML_matrixCompMulMat2x2fMat2x2f,       \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Mat3x3d: _Generic(                                  \
         (arg_2),                                            \
         JML_Mat3x3d: JML_matrixCompMulMat3x3dMat3x3d,       \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Mat3x3f: _Generic(                                  \
         (arg_2),                                            \
         JML_Mat3x3f: JML_matrixCompMulMat3x3fMat3x3f,       \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Mat4x4d: _Generic(                                  \
         (arg_2),                                            \
         JML_Mat4x4d: JML_matrixCompMulMat4x4dMat4x4d,       \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
     JML_Mat4x4f: _Generic(                                  \
         (arg_2),                                            \
         JML_Mat4x4f: JML_matrixCompMulMat4x4fMat4x4f,       \
-        default: (void (*)(void))0                          \
+        default: JML_INVALID_ARGUMENT_TYPES                 \
     ),                                                      \
-    default: (void (*)(void))0                              \
+    default: JML_INVALID_ARGUMENT_TYPES                     \
 )(arg_1, arg_2)
 
 #define JML_matrixCompMul(...) \

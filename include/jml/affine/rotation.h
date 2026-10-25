@@ -46,14 +46,14 @@ static inline JML_Mat4x4f JML_rotationVec3fF(
     JML_Vec3d: _Generic(                              \
         (angle),                                      \
         double: JML_rotationVec3dD,                   \
-        default: (void (*)(void))0                    \
+        default: JML_INVALID_ARGUMENT_TYPES           \
     ),                                                \
     JML_Vec3f: _Generic(                              \
         (angle),                                      \
         float: JML_rotationVec3fF,                    \
-        default: (void (*)(void))0                    \
+        default: JML_INVALID_ARGUMENT_TYPES           \
     ),                                                \
-    default: (void (*)(void))0                        \
+    default: JML_INVALID_ARGUMENT_TYPES               \
 )(axis, angle)
 
 #define JML_rotation(...) \

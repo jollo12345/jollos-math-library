@@ -35,7 +35,7 @@ static inline JML_Mat4x4f JML_translationVec3f(
     (offset),                                       \
     JML_Vec3d: JML_translationVec3d,                \
     JML_Vec3f: JML_translationVec3f,                \
-    default: (void (*)(void))0                      \
+    default: JML_INVALID_ARGUMENT_TYPES             \
 )(offset)
 
 #define JML_translation(...) \

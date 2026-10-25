@@ -100,7 +100,7 @@ static inline JML_Vec4f JML_atanVec4f(
     JML_Vec3f: JML_atanVec3f,               \
     JML_Vec4d: JML_atanVec4d,               \
     JML_Vec4f: JML_atanVec4f,               \
-    default: (void (*)(void))0              \
+    default: JML_INVALID_ARGUMENT_TYPES     \
 )(ratio)
 
 static inline double JML_atanDD(
@@ -188,44 +188,44 @@ static inline JML_Vec4f JML_atanVec4fVec4f(
     double: _Generic(                                    \
         (opposite),                                      \
         double: JML_atanDD,                              \
-        default: (void (*)(void))0                       \
+        default: JML_INVALID_ARGUMENT_TYPES              \
     ),                                                   \
     float: _Generic(                                     \
         (opposite),                                      \
         float: JML_atanFF,                               \
-        default: (void (*)(void))0                       \
+        default: JML_INVALID_ARGUMENT_TYPES              \
     ),                                                   \
     Vec2d: _Generic(                                     \
         (opposite),                                      \
         Vec2d: JML_atanVec2dVec2d,                       \
-        default: (void (*)(void))0                       \
+        default: JML_INVALID_ARGUMENT_TYPES              \
     ),                                                   \
     Vec2f: _Generic(                                     \
         (opposite),                                      \
         Vec2f: JML_atanVec2fVec2f,                       \
-        default: (void (*)(void))0                       \
+        default: JML_INVALID_ARGUMENT_TYPES              \
     ),                                                   \
     Vec3d: _Generic(                                     \
         (opposite),                                      \
         Vec3d: JML_atanVec3dVec3d,                       \
-        default: (void (*)(void))0                       \
+        default: JML_INVALID_ARGUMENT_TYPES              \
     ),                                                   \
     Vec3f: _Generic(                                     \
         (opposite),                                      \
         Vec3f: JML_atanVec3fVec3f,                       \
-        default: (void (*)(void))0                       \
+        default: JML_INVALID_ARGUMENT_TYPES              \
     ),                                                   \
     Vec4d: _Generic(                                     \
         (opposite),                                      \
         Vec4d: JML_atanVec4dVec4d,                       \
-        default: (void (*)(void))0                       \
+        default: JML_INVALID_ARGUMENT_TYPES              \
     ),                                                   \
     Vec4f: _Generic(                                     \
         (opposite),                                      \
         Vec4f: JML_atanVec4fVec4f,                       \
-        default: (void (*)(void))0                       \
+        default: JML_INVALID_ARGUMENT_TYPES              \
     ),                                                   \
-    default: (void (*)(void))0                           \
+    default: JML_INVALID_ARGUMENT_TYPES                  \
 )(adjacent, opposite)
 
 #define JML_atan(...) \

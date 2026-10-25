@@ -42,20 +42,20 @@ static inline JML_Mat4x4f JML_scalingFFF(
         double: _Generic(                        \
             (z),                                 \
             double: JML_scalingDDD,              \
-            default: (void (*)(void))0           \
+            default: JML_INVALID_ARGUMENT_TYPES  \
         ),                                       \
-        default: (void (*)(void))0               \
+        default: JML_INVALID_ARGUMENT_TYPES      \
     ),                                           \
     float: _Generic(                             \
         (y),                                     \
         float: _Generic(                         \
             (z),                                 \
             float: JML_scalingFFF,               \
-            default: (void (*)(void))0           \
+            default: JML_INVALID_ARGUMENT_TYPES  \
         ),                                       \
-        default: (void (*)(void))0               \
+        default: JML_INVALID_ARGUMENT_TYPES      \
     ),                                           \
-    default: (void (*)(void))0                   \
+    default: JML_INVALID_ARGUMENT_TYPES          \
 )(x, y, z)
 
 #define JML_scaling(...) \

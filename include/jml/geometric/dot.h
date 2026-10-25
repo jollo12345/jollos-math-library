@@ -56,34 +56,34 @@ static inline float JML_dotVec4fVec4f(
     JML_Vec2d: _Generic(                          \
         (arg_1),                                  \
         JML_Vec2d: JML_dotVec2dVec2d,             \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec2f: _Generic(                          \
         (arg_1),                                  \
         JML_Vec2f: JML_dotVec2fVec2f,             \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec3d: _Generic(                          \
         (arg_1),                                  \
         JML_Vec3d: JML_dotVec3dVec3d,             \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec3f: _Generic(                          \
         (arg_1),                                  \
         JML_Vec3f: JML_dotVec3fVec3f,             \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec4d: _Generic(                          \
         (arg_1),                                  \
         JML_Vec4d: JML_dotVec4dVec4d,             \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec4f: _Generic(                          \
         (arg_1),                                  \
         JML_Vec4f: JML_dotVec4fVec4f,             \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
-    default: (void (*)(void))0                    \
+    default: JML_INVALID_ARGUMENT_TYPES           \
 )(arg_0, arg_1)
 
 #define JML_dot(...) \

@@ -100,7 +100,7 @@ static inline JML_Vec4f JML_asinVec4f(
     JML_Vec3f: JML_asinVec3f,                  \
     JML_Vec4d: JML_asinVec4d,                  \
     JML_Vec4f: JML_asinVec4f,                  \
-    default: (void (*)(void))0                 \
+    default: JML_INVALID_ARGUMENT_TYPES        \
 )(opposite)
 
 #define JML_asin(...) \

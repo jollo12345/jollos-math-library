@@ -97,56 +97,56 @@ static inline JML_Vec4f JML_refractVec4fVec4fF(
         JML_Vec2d: _Generic(                                 \
             (arg_2),                                         \
             double: JML_refractVec2dVec2dD,                  \
-            default: (void (*)(void))0                       \
+            default: JML_INVALID_ARGUMENT_TYPES              \
         ),                                                   \
-        default: (void (*)(void))0                           \
+        default: JML_INVALID_ARGUMENT_TYPES                  \
     ),                                                       \
     JML_Vec2f: _Generic(                                     \
         (arg_1),                                             \
         JML_Vec2f: _Generic(                                 \
             (arg_2),                                         \
             float: JML_refractVec2fVec2fF,                   \
-            default: (void (*)(void))0                       \
+            default: JML_INVALID_ARGUMENT_TYPES              \
         ),                                                   \
-        default: (void (*)(void))0                           \
+        default: JML_INVALID_ARGUMENT_TYPES                  \
     ),                                                       \
     JML_Vec3d: _Generic(                                     \
         (arg_1),                                             \
         JML_Vec3d: _Generic(                                 \
             (arg_2),                                         \
             double: JML_refractVec3dVec3dD,                  \
-            default: (void (*)(void))0                       \
+            default: JML_INVALID_ARGUMENT_TYPES              \
         ),                                                   \
-        default: (void (*)(void))0                           \
+        default: JML_INVALID_ARGUMENT_TYPES                  \
     ),                                                       \
     JML_Vec3f: _Generic(                                     \
         (arg_1),                                             \
         JML_Vec3f: _Generic(                                 \
             (arg_2),                                         \
             float: JML_refractVec3fVec3fF,                   \
-            default: (void (*)(void))0                       \
+            default: JML_INVALID_ARGUMENT_TYPES              \
         ),                                                   \
-        default: (void (*)(void))0                           \
+        default: JML_INVALID_ARGUMENT_TYPES                  \
     ),                                                       \
     JML_Vec4d: _Generic(                                     \
         (arg_1),                                             \
         JML_Vec4d: _Generic(                                 \
             (arg_2),                                         \
             double: JML_refractVec4dVec4dD,                  \
-            default: (void (*)(void))0                       \
+            default: JML_INVALID_ARGUMENT_TYPES              \
         ),                                                   \
-        default: (void (*)(void))0                           \
+        default: JML_INVALID_ARGUMENT_TYPES                  \
     ),                                                       \
     JML_Vec4f: _Generic(                                     \
         (arg_1),                                             \
         JML_Vec4f: _Generic(                                 \
             (arg_2),                                         \
             float: JML_refractVec4fVec4fF,                   \
-            default: (void (*)(void))0                       \
+            default: JML_INVALID_ARGUMENT_TYPES              \
         ),                                                   \
-        default: (void (*)(void))0                           \
+        default: JML_INVALID_ARGUMENT_TYPES                  \
     ),                                                       \
-    default: (void (*)(void))0                               \
+    default: JML_INVALID_ARGUMENT_TYPES                      \
 )(arg_0, arg_1, arg_2)
 
 #define JML_refract(...) \

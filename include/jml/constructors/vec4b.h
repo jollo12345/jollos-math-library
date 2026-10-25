@@ -47,19 +47,19 @@ static inline JML_Vec4b JML_vec4bVec3bB(
     bool: _Generic(                                 \
         (arg_1),                                    \
         JML_Vec3b: JML_vec4bBVec3b,                 \
-        default: (void (*)(void))0                  \
+        default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
     JML_Vec2b: _Generic(                            \
         (arg_1),                                    \
         JML_Vec2b: JML_vec4bVec2bVec2b,             \
-        default: (void (*)(void))0                  \
+        default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
     JML_Vec3b: _Generic(                            \
         (arg_1),                                    \
         bool: JML_vec4bVec3bB,                      \
-        default: (void (*)(void))0                  \
+        default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
-    default: (void (*)(void))0                      \
+    default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
 static inline JML_Vec4b JML_vec4bBBVec2b(
@@ -108,25 +108,25 @@ static inline JML_Vec4b JML_vec4bVec2bBB(
         bool: _Generic(                                    \
             (arg_2),                                       \
             JML_Vec2b: JML_vec4bBBVec2b,                   \
-            default: (void (*)(void))0                     \
+            default: JML_INVALID_ARGUMENT_TYPES            \
         ),                                                 \
         JML_Vec2b: _Generic(                               \
             (arg_2),                                       \
             bool: JML_vec4bBVec2bB,                        \
-            default: (void (*)(void))0                     \
+            default: JML_INVALID_ARGUMENT_TYPES            \
         ),                                                 \
-        default: (void (*)(void))0                         \
+        default: JML_INVALID_ARGUMENT_TYPES                \
     ),                                                     \
     JML_Vec2b: _Generic(                                   \
         (arg_1),                                           \
         bool: _Generic(                                    \
             (arg_2),                                       \
             bool: JML_vec4bVec2bBB,                        \
-            default: (void (*)(void))0                     \
+            default: JML_INVALID_ARGUMENT_TYPES            \
         ),                                                 \
-        default: (void (*)(void))0                         \
+        default: JML_INVALID_ARGUMENT_TYPES                \
     ),                                                     \
-    default: (void (*)(void))0                             \
+    default: JML_INVALID_ARGUMENT_TYPES                    \
 )(arg_0, arg_1, arg_2)
 
 static inline JML_Vec4b JML_vec4bBBBB(
@@ -152,13 +152,13 @@ static inline JML_Vec4b JML_vec4bBBBB(
             bool: _Generic(                                       \
                 (arg_3),                                          \
                 bool: JML_vec4bBBBB,                              \
-                default: (void (*)(void))0                        \
+                default: JML_INVALID_ARGUMENT_TYPES               \
             ),                                                    \
-            default: (void (*)(void))0                            \
+            default: JML_INVALID_ARGUMENT_TYPES                   \
         ),                                                        \
-        default: (void (*)(void))0                                \
+        default: JML_INVALID_ARGUMENT_TYPES                       \
     ),                                                            \
-    default: (void (*)(void))0                                    \
+    default: JML_INVALID_ARGUMENT_TYPES                           \
 )(arg_0, arg_1, arg_2, arg_3)
 
 #define JML_vec4b(...) \

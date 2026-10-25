@@ -62,15 +62,15 @@ static inline JML_Mat4x4f JML_frustumFFFFFF(
                     double: _Generic(                                        \
                         (far),                                               \
                         double: JML_frustumDDDDDD,                           \
-                        default: (void (*)(void))0                           \
+                        default: JML_INVALID_ARGUMENT_TYPES                  \
                     ),                                                       \
-                    default: (void (*)(void))0                               \
+                    default: JML_INVALID_ARGUMENT_TYPES                      \
                 ),                                                           \
-                default: (void (*)(void))0                                   \
+                default: JML_INVALID_ARGUMENT_TYPES                          \
             ),                                                               \
-            default: (void (*)(void))0                                       \
+            default: JML_INVALID_ARGUMENT_TYPES                              \
         ),                                                                   \
-        default: (void (*)(void))0                                           \
+        default: JML_INVALID_ARGUMENT_TYPES                                  \
     ),                                                                       \
     float: _Generic(                                                         \
         (right),                                                             \
@@ -83,17 +83,17 @@ static inline JML_Mat4x4f JML_frustumFFFFFF(
                     float: _Generic(                                         \
                         (far),                                               \
                         float: JML_frustumFFFFFF,                            \
-                        default: (void (*)(void))0                           \
+                        default: JML_INVALID_ARGUMENT_TYPES                  \
                     ),                                                       \
-                    default: (void (*)(void))0                               \
+                    default: JML_INVALID_ARGUMENT_TYPES                      \
                 ),                                                           \
-                default: (void (*)(void))0                                   \
+                default: JML_INVALID_ARGUMENT_TYPES                          \
             ),                                                               \
-            default: (void (*)(void))0                                       \
+            default: JML_INVALID_ARGUMENT_TYPES                              \
         ),                                                                   \
-        default: (void (*)(void))0                                           \
+        default: JML_INVALID_ARGUMENT_TYPES                                  \
     ),                                                                       \
-    default: (void (*)(void))0                                               \
+    default: JML_INVALID_ARGUMENT_TYPES                                      \
 )(left, right, bottom, top, near, far)
 
 #define JML_frustum(...) \

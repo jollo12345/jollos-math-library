@@ -32,14 +32,14 @@ static inline JML_Vec3i JML_vec3iVec2iI(
     int: _Generic(                                  \
         (arg_1),                                    \
         JML_Vec2i: JML_vec3iIVec2i,                 \
-        default: (void (*)(void))0                  \
+        default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
     JML_Vec2i: _Generic(                            \
         (arg_1),                                    \
         int: JML_vec3iVec2iI,                       \
-        default: (void (*)(void))0                  \
+        default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
-    default: (void (*)(void))0                      \
+    default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
 static inline JML_Vec3i JML_vec3iIII(
@@ -61,11 +61,11 @@ static inline JML_Vec3i JML_vec3iIII(
         int: _Generic(                                     \
             (arg_2),                                       \
             int: JML_vec3iIII,                             \
-            default: (void (*)(void))0                     \
+            default: JML_INVALID_ARGUMENT_TYPES            \
         ),                                                 \
-        default: (void (*)(void))0                         \
+        default: JML_INVALID_ARGUMENT_TYPES                \
     ),                                                     \
-    default: (void (*)(void))0                             \
+    default: JML_INVALID_ARGUMENT_TYPES                    \
 )(arg_0, arg_1, arg_2)
 
 #define JML_vec3i(...) \

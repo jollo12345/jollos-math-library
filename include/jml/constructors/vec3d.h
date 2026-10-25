@@ -32,14 +32,14 @@ static inline JML_Vec3d JML_vec3dVec2dD(
     double: _Generic(                               \
         (arg_1),                                    \
         JML_Vec2d: JML_vec3dDVec2d,                 \
-        default: (void (*)(void))0                  \
+        default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
     JML_Vec2d: _Generic(                            \
         (arg_1),                                    \
         double: JML_vec3dVec2dD,                    \
-        default: (void (*)(void))0                  \
+        default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
-    default: (void (*)(void))0                      \
+    default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
 static inline JML_Vec3d JML_vec3dDDD(
@@ -61,11 +61,11 @@ static inline JML_Vec3d JML_vec3dDDD(
         double: _Generic(                                  \
             (arg_2),                                       \
             double: JML_vec3dDDD,                          \
-            default: (void (*)(void))0                     \
+            default: JML_INVALID_ARGUMENT_TYPES            \
         ),                                                 \
-        default: (void (*)(void))0                         \
+        default: JML_INVALID_ARGUMENT_TYPES                \
     ),                                                     \
-    default: (void (*)(void))0                             \
+    default: JML_INVALID_ARGUMENT_TYPES                    \
 )(arg_0, arg_1, arg_2)
 
 #define JML_vec3d(...) \

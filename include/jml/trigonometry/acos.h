@@ -100,7 +100,7 @@ static inline JML_Vec4f JML_acosVec4f(
     JML_Vec3f: JML_acosVec3f,                  \
     JML_Vec4d: JML_acosVec4d,                  \
     JML_Vec4f: JML_acosVec4f,                  \
-    default: (void (*)(void))0                 \
+    default: JML_INVALID_ARGUMENT_TYPES        \
 )(adjacent)
 
 #define JML_acos(...) \

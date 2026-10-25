@@ -30,11 +30,11 @@ static inline JML_Mat3x3f JML_mat3x3fVec3fVec3fVec3f(
         JML_Vec3f: _Generic(                                 \
             (arg_2),                                         \
             JML_Vec3f: JML_mat3x3fVec3fVec3fVec3f,           \
-            default: (void (*)(void))0                       \
+            default: JML_INVALID_ARGUMENT_TYPES              \
         ),                                                   \
-        default: (void (*)(void))0                           \
+        default: JML_INVALID_ARGUMENT_TYPES                  \
     ),                                                       \
-    default: (void (*)(void))0                               \
+    default: JML_INVALID_ARGUMENT_TYPES                      \
 )(arg_0, arg_1, arg_2)
 
 static inline JML_Mat3x3f JML_mat3x3fFFFFFFFFF(
@@ -80,23 +80,23 @@ static inline JML_Mat3x3f JML_mat3x3fFFFFFFFFF(
                                 float: _Generic(                                                       \
                                     (arg_8),                                                           \
                                     float: JML_mat3x3fFFFFFFFFF,                                       \
-                                    default: (void (*)(void))0                                         \
+                                    default: JML_INVALID_ARGUMENT_TYPES                                \
                                 ),                                                                     \
-                                default: (void (*)(void))0                                             \
+                                default: JML_INVALID_ARGUMENT_TYPES                                    \
                             ),                                                                         \
-                            default: (void (*)(void))0                                                 \
+                            default: JML_INVALID_ARGUMENT_TYPES                                        \
                         ),                                                                             \
-                        default: (void (*)(void))0                                                     \
+                        default: JML_INVALID_ARGUMENT_TYPES                                            \
                     ),                                                                                 \
-                    default: (void (*)(void))0                                                         \
+                    default: JML_INVALID_ARGUMENT_TYPES                                                \
                 ),                                                                                     \
-                default: (void (*)(void))0                                                             \
+                default: JML_INVALID_ARGUMENT_TYPES                                                    \
             ),                                                                                         \
-            default: (void (*)(void))0                                                                 \
+            default: JML_INVALID_ARGUMENT_TYPES                                                        \
         ),                                                                                             \
-        default: (void (*)(void))0                                                                     \
+        default: JML_INVALID_ARGUMENT_TYPES                                                            \
     ),                                                                                                 \
-    default: (void (*)(void))0                                                                         \
+    default: JML_INVALID_ARGUMENT_TYPES                                                                \
 )(arg_0, arg_1, arg_2, arg_3, arg_4, arg_5, arg_6, arg_7, arg_8)
 
 #define JML_mat3x3f(...) \

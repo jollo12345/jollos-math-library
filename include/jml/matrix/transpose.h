@@ -83,7 +83,7 @@ static inline JML_Mat4x4f JML_transposeMat4x4f(
     JML_Mat3x3f: JML_transposeMat3x3f,         \
     JML_Mat4x4d: JML_transposeMat4x4d,         \
     JML_Mat4x4f: JML_transposeMat4x4f,         \
-    default: (void (*)(void))0                 \
+    default: JML_INVALID_ARGUMENT_TYPES        \
 )(arg)
 
 #define JML_transpose(...) \

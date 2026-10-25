@@ -34,14 +34,14 @@ static inline JML_Vec3f JML_crossVec3fVec3f(
     JML_Vec3d: _Generic(                            \
         (arg_1),                                    \
         JML_Vec3d: JML_crossVec3dVec3d,             \
-        default: (void (*)(void))0                  \
+        default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
     JML_Vec3f: _Generic(                            \
         (arg_1),                                    \
         JML_Vec3f: JML_crossVec3fVec3f,             \
-        default: (void (*)(void))0                  \
+        default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
-    default: (void (*)(void))0                      \
+    default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
 #define JML_cross(...) \

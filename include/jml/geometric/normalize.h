@@ -55,7 +55,7 @@ static inline JML_Vec4f JML_normalizeVec4f(
     JML_Vec3f: JML_normalizeVec3f,             \
     JML_Vec4d: JML_normalizeVec4d,             \
     JML_Vec4f: JML_normalizeVec4f,             \
-    default: (void (*)(void))0                 \
+    default: JML_INVALID_ARGUMENT_TYPES        \
 )(arg)
 
 #define JML_normalize(...) \

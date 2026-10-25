@@ -19,9 +19,9 @@ static inline JML_Vec2i JML_vec2iII(
     int: _Generic(                                  \
         (arg_1),                                    \
         int: JML_vec2iII,                           \
-        default: (void (*)(void))0                  \
+        default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
-    default: (void (*)(void))0                      \
+    default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
 #define JML_vec2i(...) \

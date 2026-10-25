@@ -52,15 +52,15 @@ static inline JML_Mat4x4f JML_shearingFFFFFF(
                     double: _Generic(                            \
                         (zy),                                    \
                         double: JML_shearingDDDDDD,              \
-                        default: (void (*)(void))0               \
+                        default: JML_INVALID_ARGUMENT_TYPES      \
                     ),                                           \
-                    default: (void (*)(void))0                   \
+                    default: JML_INVALID_ARGUMENT_TYPES          \
                 ),                                               \
-                default: (void (*)(void))0                       \
+                default: JML_INVALID_ARGUMENT_TYPES              \
             ),                                                   \
-            default: (void (*)(void))0                           \
+            default: JML_INVALID_ARGUMENT_TYPES                  \
         ),                                                       \
-        default: (void (*)(void))0                               \
+        default: JML_INVALID_ARGUMENT_TYPES                      \
     ),                                                           \
     float: _Generic(                                             \
         (xz),                                                    \
@@ -73,17 +73,17 @@ static inline JML_Mat4x4f JML_shearingFFFFFF(
                     float: _Generic(                             \
                         (zy),                                    \
                         float: JML_shearingFFFFFF,               \
-                        default: (void (*)(void))0               \
+                        default: JML_INVALID_ARGUMENT_TYPES      \
                     ),                                           \
-                    default: (void (*)(void))0                   \
+                    default: JML_INVALID_ARGUMENT_TYPES          \
                 ),                                               \
-                default: (void (*)(void))0                       \
+                default: JML_INVALID_ARGUMENT_TYPES              \
             ),                                                   \
-            default: (void (*)(void))0                           \
+            default: JML_INVALID_ARGUMENT_TYPES                  \
         ),                                                       \
-        default: (void (*)(void))0                               \
+        default: JML_INVALID_ARGUMENT_TYPES                      \
     ),                                                           \
-    default: (void (*)(void))0                                   \
+    default: JML_INVALID_ARGUMENT_TYPES                          \
 )(xy, xz, yx, yz, zx, zy)
 
 #define JML_shearing(...) \

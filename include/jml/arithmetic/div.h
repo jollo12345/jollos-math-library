@@ -282,94 +282,94 @@ static inline JML_Vec4u JML_divVec4uU(
     JML_Mat2x2d: _Generic(                        \
         (arg_1),                                  \
         double: JML_divMat2x2dD,                  \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Mat2x2f: _Generic(                        \
         (arg_1),                                  \
         float: JML_divMat2x2fF,                   \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Mat3x3d: _Generic(                        \
         (arg_1),                                  \
         double: JML_divMat3x3dD,                  \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Mat3x3f: _Generic(                        \
         (arg_1),                                  \
         float: JML_divMat3x3fF,                   \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Mat4x4d: _Generic(                        \
         (arg_1),                                  \
         double: JML_divMat4x4dD,                  \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Mat4x4f: _Generic(                        \
         (arg_1),                                  \
         float: JML_divMat4x4fF,                   \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec2d: _Generic(                          \
         (arg_1),                                  \
         double: JML_divVec2dD,                    \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec2f: _Generic(                          \
         (arg_1),                                  \
         float: JML_divVec2fF,                     \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec2i: _Generic(                          \
         (arg_1),                                  \
         int: JML_divVec2iI,                       \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec2u: _Generic(                          \
         (arg_1),                                  \
         unsigned: JML_divVec2uU,                  \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec3d: _Generic(                          \
         (arg_1),                                  \
         double: JML_divVec3dD,                    \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec3f: _Generic(                          \
         (arg_1),                                  \
         float: JML_divVec3fF,                     \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec3i: _Generic(                          \
         (arg_1),                                  \
         int: JML_divVec3iI,                       \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec3u: _Generic(                          \
         (arg_1),                                  \
         unsigned: JML_divVec3uU,                  \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec4d: _Generic(                          \
         (arg_1),                                  \
         double: JML_divVec4dD,                    \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec4f: _Generic(                          \
         (arg_1),                                  \
         float: JML_divVec4fF,                     \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec4i: _Generic(                          \
         (arg_1),                                  \
         int: JML_divVec4iI,                       \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
     JML_Vec4u: _Generic(                          \
         (arg_1),                                  \
         unsigned: JML_divVec4uU,                  \
-        default: (void (*)(void))0                \
+        default: JML_INVALID_ARGUMENT_TYPES       \
     ),                                            \
-    default: (void (*)(void))0                    \
+    default: JML_INVALID_ARGUMENT_TYPES           \
 )(arg_0, arg_1)
 
 #define JML_div(...) \

@@ -19,9 +19,9 @@ static inline JML_Vec2b JML_vec2bBB(
     bool: _Generic(                                 \
         (arg_1),                                    \
         bool: JML_vec2bBB,                          \
-        default: (void (*)(void))0                  \
+        default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
-    default: (void (*)(void))0                      \
+    default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
 #define JML_vec2b(...) \

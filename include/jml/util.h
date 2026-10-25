@@ -27,4 +27,6 @@
 
 #define JML_DISPATCH(macro, ...) macro(__VA_ARGS__)
 
+void JML_INVALID_ARGUMENT_TYPES();
+
 #endif

@@ -22,9 +22,9 @@ static inline JML_Mat2x2f JML_mat2x2fVec2fVec2f(
     JML_Vec2f: _Generic(                              \
         (arg_1),                                      \
         JML_Vec2f: JML_mat2x2fVec2fVec2f,             \
-        default: (void (*)(void))0                    \
+        default: JML_INVALID_ARGUMENT_TYPES           \
     ),                                                \
-    default: (void (*)(void))0                        \
+    default: JML_INVALID_ARGUMENT_TYPES               \
 )(arg_0, arg_1)
 
 static inline JML_Mat2x2f JML_mat2x2fFFFF(
@@ -50,13 +50,13 @@ static inline JML_Mat2x2f JML_mat2x2fFFFF(
             float: _Generic(                                        \
                 (arg_3),                                            \
                 float: JML_mat2x2fFFFF,                             \
-                default: (void (*)(void))0                          \
+                default: JML_INVALID_ARGUMENT_TYPES                 \
             ),                                                      \
-            default: (void (*)(void))0                              \
+            default: JML_INVALID_ARGUMENT_TYPES                     \
         ),                                                          \
-        default: (void (*)(void))0                                  \
+        default: JML_INVALID_ARGUMENT_TYPES                         \
     ),                                                              \
-    default: (void (*)(void))0                                      \
+    default: JML_INVALID_ARGUMENT_TYPES                             \
 )(arg_0, arg_1, arg_2, arg_3)
 
 #define JML_mat2x2f(...) \
