@@ -35,12 +35,26 @@ static inline JML_Vec3f JML_normalizeVec3f(
     return JML_div(arg, JML_length(arg));
 }
 
+static inline JML_Vec4d JML_normalizeVec4d(
+    const JML_Vec4d arg
+) {
+    return JML_div(arg, JML_length(arg));
+}
+
+static inline JML_Vec4f JML_normalizeVec4f(
+    const JML_Vec4f arg
+) {
+    return JML_div(arg, JML_length(arg));
+}
+
 #define JML_normalize_GENERIC_1(arg) _Generic( \
     (arg),                                     \
     JML_Vec2d: JML_normalizeVec2d,             \
     JML_Vec2f: JML_normalizeVec2f,             \
     JML_Vec3d: JML_normalizeVec3d,             \
     JML_Vec3f: JML_normalizeVec3f,             \
+    JML_Vec4d: JML_normalizeVec4d,             \
+    JML_Vec4f: JML_normalizeVec4f,             \
     default: (void (*)(void))0                 \
 )(arg)
 

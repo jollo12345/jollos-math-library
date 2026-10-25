@@ -39,6 +39,20 @@ static inline float JML_distanceVec3fVec3f(
     return JML_length(JML_sub(arg_0, arg_1));
 }
 
+static inline double JML_distanceVec4dVec4d(
+    const JML_Vec4d arg_0,
+    const JML_Vec4d arg_1
+) {
+    return JML_length(JML_sub(arg_0, arg_1));
+}
+
+static inline float JML_distanceVec4fVec4f(
+    const JML_Vec4f arg_0,
+    const JML_Vec4f arg_1
+) {
+    return JML_length(JML_sub(arg_0, arg_1));
+}
+
 #define JML_distance_GENERIC_2(arg_0, arg_1) _Generic( \
     (arg_0),                                           \
     JML_Vec2d: _Generic(                               \
@@ -59,6 +73,16 @@ static inline float JML_distanceVec3fVec3f(
     JML_Vec3f: _Generic(                               \
         (arg_1),                                       \
         JML_Vec3f: JML_distanceVec3fVec3f,             \
+        default: (void (*)(void))0                     \
+    ),                                                 \
+    JML_Vec4d: _Generic(                               \
+        (arg_1),                                       \
+        JML_Vec4d: JML_distanceVec4dVec4d,             \
+        default: (void (*)(void))0                     \
+    ),                                                 \
+    JML_Vec4f: _Generic(                               \
+        (arg_1),                                       \
+        JML_Vec4f: JML_distanceVec4fVec4f,             \
         default: (void (*)(void))0                     \
     ),                                                 \
     default: (void (*)(void))0                         \

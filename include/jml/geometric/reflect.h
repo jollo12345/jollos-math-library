@@ -2,6 +2,7 @@
 #define JML_GEOMETRIC_REFLECT_H
 
 #include "jml/arithmetic/add.h"
+#include "jml/arithmetic/mul.h"
 #include "jml/arithmetic/sub.h"
 #include "jml/constructors/vec2d.h"
 #include "jml/constructors/vec2f.h"

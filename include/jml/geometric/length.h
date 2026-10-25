@@ -33,12 +33,26 @@ static inline float JML_lengthVec3f(
     return JML_SQRT_F((arg.x * arg.x) + (arg.y * arg.y) + (arg.z * arg.z));
 }
 
+static inline double JML_lengthVec4d(
+    const JML_Vec4d arg
+) {
+    return JML_SQRT_D((arg.x * arg.x) + (arg.y * arg.y) + (arg.z * arg.z) + (arg.w * arg.w));
+}
+
+static inline float JML_lengthVec4f(
+    const JML_Vec4f arg
+) {
+    return JML_SQRT_F((arg.x * arg.x) + (arg.y * arg.y) + (arg.z * arg.z) + (arg.w * arg.w));
+}
+
 #define JML_length_GENERIC_1(arg) _Generic( \
     (arg),                                  \
     JML_Vec2d: JML_lengthVec2d,             \
     JML_Vec2f: JML_lengthVec2f,             \
     JML_Vec3d: JML_lengthVec3d,             \
     JML_Vec3f: JML_lengthVec3f,             \
+    JML_Vec4d: JML_lengthVec4d,             \
+    JML_Vec4f: JML_lengthVec4f,             \
     default: (void (*)(void))0              \
 )(arg)
 
