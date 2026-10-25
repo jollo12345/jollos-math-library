@@ -985,7 +985,7 @@ static inline JML_Vec4u JML_mulVec4uVec4u(
     ),                                            \
     JML_Vec2u: _Generic(                          \
         (arg_1),                                  \
-        unsigned: JML_mulVec2uU,                       \
+        unsigned: JML_mulVec2uU,                  \
         JML_Vec2u: JML_mulVec2uVec2u,             \
         default: (void (*)(void))0                \
     ),                                            \
@@ -1011,7 +1011,7 @@ static inline JML_Vec4u JML_mulVec4uVec4u(
     ),                                            \
     JML_Vec3u: _Generic(                          \
         (arg_1),                                  \
-        unsigned: JML_mulVec3uU,                       \
+        unsigned: JML_mulVec3uU,                  \
         JML_Vec3u: JML_mulVec3uVec3u,             \
         default: (void (*)(void))0                \
     ),                                            \
