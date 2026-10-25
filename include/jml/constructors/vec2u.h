@@ -5,7 +5,7 @@
 #include "jml/util.h"
 
 [[nodiscard]]
-static inline JML_Vec2u JML_vec2uBB(
+static inline JML_Vec2u JML_vec2uUU(
     const unsigned arg_0,
     const unsigned arg_1
 ) {
@@ -19,7 +19,7 @@ static inline JML_Vec2u JML_vec2uBB(
     (arg_0),                                        \
     unsigned: _Generic(                             \
         (arg_1),                                    \
-        unsigned: JML_vec2uBB,                      \
+        unsigned: JML_vec2uUU,                      \
         default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
     default: JML_INVALID_ARGUMENT_TYPES             \

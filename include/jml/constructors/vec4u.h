@@ -7,7 +7,7 @@
 #include "jml/util.h"
 
 [[nodiscard]]
-static inline JML_Vec4u JML_vec4uFVec3u(
+static inline JML_Vec4u JML_vec4uUVec3u(
     const unsigned arg_0,
     const JML_Vec3u arg_1
 ) {
@@ -33,7 +33,7 @@ static inline JML_Vec4u JML_vec4uVec2uVec2u(
 }
 
 [[nodiscard]]
-static inline JML_Vec4u JML_vec4uVec3uF(
+static inline JML_Vec4u JML_vec4uVec3uU(
     const JML_Vec3u arg_0,
     const unsigned arg_1
 ) {
@@ -49,7 +49,7 @@ static inline JML_Vec4u JML_vec4uVec3uF(
     (arg_0),                                        \
     unsigned: _Generic(                             \
         (arg_1),                                    \
-        JML_Vec3u: JML_vec4uFVec3u,                 \
+        JML_Vec3u: JML_vec4uUVec3u,                 \
         default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
     JML_Vec2u: _Generic(                            \
@@ -59,14 +59,14 @@ static inline JML_Vec4u JML_vec4uVec3uF(
     ),                                              \
     JML_Vec3u: _Generic(                            \
         (arg_1),                                    \
-        unsigned: JML_vec4uVec3uF,                  \
+        unsigned: JML_vec4uVec3uU,                  \
         default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
     default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
 [[nodiscard]]
-static inline JML_Vec4u JML_vec4uFFVec2u(
+static inline JML_Vec4u JML_vec4uUUVec2u(
     const unsigned arg_0,
     const unsigned arg_1,
     const JML_Vec2u arg_2
@@ -80,7 +80,7 @@ static inline JML_Vec4u JML_vec4uFFVec2u(
 }
 
 [[nodiscard]]
-static inline JML_Vec4u JML_vec4uFVec2uF(
+static inline JML_Vec4u JML_vec4uUVec2uU(
     const unsigned arg_0,
     const JML_Vec2u arg_1,
     const unsigned arg_2
@@ -94,7 +94,7 @@ static inline JML_Vec4u JML_vec4uFVec2uF(
 }
 
 [[nodiscard]]
-static inline JML_Vec4u JML_vec4uVec2uFF(
+static inline JML_Vec4u JML_vec4uVec2uUU(
     const JML_Vec2u arg_0,
     const unsigned arg_1,
     const unsigned arg_2
@@ -113,12 +113,12 @@ static inline JML_Vec4u JML_vec4uVec2uFF(
         (arg_1),                                           \
         unsigned: _Generic(                                \
             (arg_2),                                       \
-            JML_Vec2u: JML_vec4uFFVec2u,                   \
+            JML_Vec2u: JML_vec4uUUVec2u,                   \
             default: JML_INVALID_ARGUMENT_TYPES            \
         ),                                                 \
         JML_Vec2u: _Generic(                               \
             (arg_2),                                       \
-            unsigned: JML_vec4uFVec2uF,                    \
+            unsigned: JML_vec4uUVec2uU,                    \
             default: JML_INVALID_ARGUMENT_TYPES            \
         ),                                                 \
         default: JML_INVALID_ARGUMENT_TYPES                \
@@ -127,7 +127,7 @@ static inline JML_Vec4u JML_vec4uVec2uFF(
         (arg_1),                                           \
         unsigned: _Generic(                                \
             (arg_2),                                       \
-            unsigned: JML_vec4uVec2uFF,                    \
+            unsigned: JML_vec4uVec2uUU,                    \
             default: JML_INVALID_ARGUMENT_TYPES            \
         ),                                                 \
         default: JML_INVALID_ARGUMENT_TYPES                \
@@ -136,7 +136,7 @@ static inline JML_Vec4u JML_vec4uVec2uFF(
 )(arg_0, arg_1, arg_2)
 
 [[nodiscard]]
-static inline JML_Vec4u JML_vec4uFFFF(
+static inline JML_Vec4u JML_vec4uUUUU(
     const unsigned arg_0,
     const unsigned arg_1,
     const unsigned arg_2,
@@ -158,7 +158,7 @@ static inline JML_Vec4u JML_vec4uFFFF(
             (arg_2),                                              \
             unsigned: _Generic(                                   \
                 (arg_3),                                          \
-                unsigned: JML_vec4uFFFF,                          \
+                unsigned: JML_vec4uUUUU,                          \
                 default: JML_INVALID_ARGUMENT_TYPES               \
             ),                                                    \
             default: JML_INVALID_ARGUMENT_TYPES                   \

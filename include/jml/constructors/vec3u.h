@@ -6,7 +6,7 @@
 #include "jml/util.h"
 
 [[nodiscard]]
-static inline JML_Vec3u JML_vec3uFVec2u(
+static inline JML_Vec3u JML_vec3uUVec2u(
     const unsigned arg_0,
     const JML_Vec2u arg_1
 ) {
@@ -18,7 +18,7 @@ static inline JML_Vec3u JML_vec3uFVec2u(
 }
 
 [[nodiscard]]
-static inline JML_Vec3u JML_vec3uVec2uF(
+static inline JML_Vec3u JML_vec3uVec2uU(
     const JML_Vec2u arg_0,
     const unsigned arg_1
 ) {
@@ -33,19 +33,19 @@ static inline JML_Vec3u JML_vec3uVec2uF(
     (arg_0),                                        \
     unsigned: _Generic(                             \
         (arg_1),                                    \
-        JML_Vec2u: JML_vec3uFVec2u,                 \
+        JML_Vec2u: JML_vec3uUVec2u,                 \
         default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
     JML_Vec2u: _Generic(                            \
         (arg_1),                                    \
-        unsigned: JML_vec3uVec2uF,                  \
+        unsigned: JML_vec3uVec2uU,                  \
         default: JML_INVALID_ARGUMENT_TYPES         \
     ),                                              \
     default: JML_INVALID_ARGUMENT_TYPES             \
 )(arg_0, arg_1)
 
 [[nodiscard]]
-static inline JML_Vec3u JML_vec3uFFF(
+static inline JML_Vec3u JML_vec3uUUU(
     const unsigned arg_0,
     const unsigned arg_1,
     const unsigned arg_2
@@ -63,7 +63,7 @@ static inline JML_Vec3u JML_vec3uFFF(
         (arg_1),                                           \
         unsigned: _Generic(                                \
             (arg_2),                                       \
-            unsigned: JML_vec3uFFF,                        \
+            unsigned: JML_vec3uUUU,                        \
             default: JML_INVALID_ARGUMENT_TYPES            \
         ),                                                 \
         default: JML_INVALID_ARGUMENT_TYPES                \
