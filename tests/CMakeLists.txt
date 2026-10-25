@@ -32,6 +32,8 @@ foreach(src IN LISTS ${PROJECT_NAME}_TEST_SOURCES)
   target_include_directories(${target} PRIVATE include src)
   add_test(NAME ${target} COMMAND ${target})
 
+  target_compile_options(${target} PRIVATE -Wall -Werror)
+
   if(${PROJECT_NAME}_ENABLE_COVERAGE)
     target_compile_options(
       ${target} PRIVATE --coverage -O0 -g -fkeep-inline-functions -fno-inline)
