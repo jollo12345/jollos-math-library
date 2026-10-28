@@ -12,25 +12,25 @@
 #include "jml/constructors/vec4f.h"
 #include "jml/trigonometry/atan.h"
 
-static void atan_test_scalard_1() {
+static void atan_test_double_1() {
     const double value = atan(1.0);
 
     TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, JML_PI_D / 4.0, value);
 }
 
-static void atan_test_scalard_2() {
+static void atan_test_double_2() {
     const double value = atan(-1.7320508075688772);
 
     TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -JML_PI_D / 3.0, value);
 }
 
-static void atan_test_scalarf_1() {
+static void atan_test_float_1() {
     const float value = atan(1.f);
 
     TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, JML_PI_F / 4.f, value);
 }
 
-static void atan_test_scalarf_2() {
+static void atan_test_float_2() {
     const float value = atan(-1.7320508f);
 
     TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -JML_PI_F / 3.f, value);
@@ -139,11 +139,11 @@ void tearDown() {}
 int main(int argc, char* argv[]) {
     UNITY_BEGIN();
 
-    RUN_TEST(atan_test_scalard_1);
-    RUN_TEST(atan_test_scalard_2);
+    RUN_TEST(atan_test_double_1);
+    RUN_TEST(atan_test_double_2);
 
-    RUN_TEST(atan_test_scalarf_1);
-    RUN_TEST(atan_test_scalarf_2);
+    RUN_TEST(atan_test_float_1);
+    RUN_TEST(atan_test_float_2);
 
     RUN_TEST(atan_test_vec2d_1);
     RUN_TEST(atan_test_vec2d_2);

@@ -1,0 +1,6 @@
+#include "exponential/exp.h"
+#include "exponential/exp2.h"
+#include "exponential/log.h"
+#include "exponential/log2.h"
+#include "exponential/pow.h"
+#include "exponential/sqrt.h"

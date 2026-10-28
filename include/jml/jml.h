@@ -2,6 +2,7 @@
 #include "jml/arithmetic.h"
 #include "jml/common.h"
 #include "jml/constructors.h"
+#include "jml/exponential.h"
 #include "jml/geometric.h"
 #include "jml/matrix.h"
 #include "jml/relational.h"

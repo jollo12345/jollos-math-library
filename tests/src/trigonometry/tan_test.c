@@ -12,25 +12,25 @@
 #include "jml/constructors/vec4f.h"
 #include "jml/trigonometry/tan.h"
 
-static void tan_test_scalard_1() {
+static void tan_test_double_1() {
     const double value = tan(JML_PI_D / 4.0);
 
     TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 1.0, value);
 }
 
-static void tan_test_scalard_2() {
+static void tan_test_double_2() {
     const double value = tan(-JML_PI_D / 3.0);
 
     TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -1.732050807568877, value);
 }
 
-static void tan_test_scalarf_1() {
+static void tan_test_float_1() {
     const float value = tan(JML_PI_F / 4.f);
 
     TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 1.f, value);
 }
 
-static void tan_test_scalarf_2() {
+static void tan_test_float_2() {
     const float value = tan(-JML_PI_F / 3.f);
 
     TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -1.7320508f, value);
@@ -139,11 +139,11 @@ void tearDown() {}
 int main(int argc, char* argv[]) {
     UNITY_BEGIN();
 
-    RUN_TEST(tan_test_scalard_1);
-    RUN_TEST(tan_test_scalard_2);
+    RUN_TEST(tan_test_double_1);
+    RUN_TEST(tan_test_double_2);
 
-    RUN_TEST(tan_test_scalarf_1);
-    RUN_TEST(tan_test_scalarf_2);
+    RUN_TEST(tan_test_float_1);
+    RUN_TEST(tan_test_float_2);
 
     RUN_TEST(tan_test_vec2d_1);
     RUN_TEST(tan_test_vec2d_2);

@@ -11,25 +11,25 @@
 #include "jml/constructors/vec4f.h"
 #include "jml/trigonometry/radians.h"
 
-static void radians_test_scalard_1() {
+static void radians_test_double_1() {
     const double value = radians(180.0);
 
     TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 3.141592653589793, value);
 }
 
-static void radians_test_scalard_2() {
+static void radians_test_double_2() {
     const double value = radians(-90.0);
 
     TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -1.5707963267948966, value);
 }
 
-static void radians_test_scalarf_1() {
+static void radians_test_float_1() {
     const float value = radians(180.f);
 
     TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 3.1415927f, value);
 }
 
-static void radians_test_scalarf_2() {
+static void radians_test_float_2() {
     const float value = radians(-90.f);
 
     TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -1.5707964f, value);
@@ -138,11 +138,11 @@ void tearDown() {}
 int main(int argc, char* argv[]) {
     UNITY_BEGIN();
 
-    RUN_TEST(radians_test_scalard_1);
-    RUN_TEST(radians_test_scalard_2);
+    RUN_TEST(radians_test_double_1);
+    RUN_TEST(radians_test_double_2);
 
-    RUN_TEST(radians_test_scalarf_1);
-    RUN_TEST(radians_test_scalarf_2);
+    RUN_TEST(radians_test_float_1);
+    RUN_TEST(radians_test_float_2);
 
     RUN_TEST(radians_test_vec2d_1);
     RUN_TEST(radians_test_vec2d_2);

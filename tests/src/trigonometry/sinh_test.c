@@ -11,25 +11,25 @@
 #include "jml/constructors/vec4f.h"
 #include "jml/trigonometry/sinh.h"
 
-static void sinh_test_scalard_1() {
+static void sinh_test_double_1() {
     const double value = sinh(1.0);
 
     TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 1.175201193643801, value);
 }
 
-static void sinh_test_scalard_2() {
+static void sinh_test_double_2() {
     const double value = sinh(-0.5);
 
     TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -0.521095305493747, value);
 }
 
-static void sinh_test_scalarf_1() {
+static void sinh_test_float_1() {
     const float value = sinh(1.f);
 
     TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 1.1752012f, value);
 }
 
-static void sinh_test_scalarf_2() {
+static void sinh_test_float_2() {
     const float value = sinh(-0.5f);
 
     TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -0.5210953f, value);
@@ -138,11 +138,11 @@ void tearDown() {}
 int main(int argc, char* argv[]) {
     UNITY_BEGIN();
 
-    RUN_TEST(sinh_test_scalard_1);
-    RUN_TEST(sinh_test_scalard_2);
+    RUN_TEST(sinh_test_double_1);
+    RUN_TEST(sinh_test_double_2);
 
-    RUN_TEST(sinh_test_scalarf_1);
-    RUN_TEST(sinh_test_scalarf_2);
+    RUN_TEST(sinh_test_float_1);
+    RUN_TEST(sinh_test_float_2);
 
     RUN_TEST(sinh_test_vec2d_1);
     RUN_TEST(sinh_test_vec2d_2);

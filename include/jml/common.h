@@ -1,1 +1,5 @@
+#include "jml/common/ceil.h"
+#include "jml/common/floor.h"
+#include "jml/common/max.h"
+#include "jml/common/min.h"
 #include "jml/common/pi.h"

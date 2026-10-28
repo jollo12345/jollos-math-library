@@ -12,25 +12,25 @@
 #include "jml/constructors/vec4f.h"
 #include "jml/trigonometry/asin.h"
 
-static void asin_test_scalard_1() {
+static void asin_test_double_1() {
     const double value = asin(0.5);
 
     TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, JML_PI_D / 6.0, value);
 }
 
-static void asin_test_scalard_2() {
+static void asin_test_double_2() {
     const double value = asin(-0.8660254037844386);
 
     TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, -JML_PI_D / 3.0, value);
 }
 
-static void asin_test_scalarf_1() {
+static void asin_test_float_1() {
     const float value = asin(0.5f);
 
     TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, JML_PI_F / 6.f, value);
 }
 
-static void asin_test_scalarf_2() {
+static void asin_test_float_2() {
     const float value = asin(-0.8660254f);
 
     TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, -JML_PI_F / 3.f, value);
@@ -139,11 +139,11 @@ void tearDown() {}
 int main(int argc, char* argv[]) {
     UNITY_BEGIN();
 
-    RUN_TEST(asin_test_scalard_1);
-    RUN_TEST(asin_test_scalard_2);
+    RUN_TEST(asin_test_double_1);
+    RUN_TEST(asin_test_double_2);
 
-    RUN_TEST(asin_test_scalarf_1);
-    RUN_TEST(asin_test_scalarf_2);
+    RUN_TEST(asin_test_float_1);
+    RUN_TEST(asin_test_float_2);
 
     RUN_TEST(asin_test_vec2d_1);
     RUN_TEST(asin_test_vec2d_2);

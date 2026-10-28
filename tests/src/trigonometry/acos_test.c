@@ -12,25 +12,25 @@
 #include "jml/constructors/vec4f.h"
 #include "jml/trigonometry/acos.h"
 
-static void acos_test_scalard_1() {
+static void acos_test_double_1() {
     const double value = acos(0.5);
 
     TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, JML_PI_D / 3.0, value);
 }
 
-static void acos_test_scalard_2() {
+static void acos_test_double_2() {
     const double value = acos(-0.5);
 
     TEST_ASSERT_DOUBLE_WITHIN(EPSILON_D, 2.0 * JML_PI_D / 3.0, value);
 }
 
-static void acos_test_scalarf_1() {
+static void acos_test_float_1() {
     const float value = acos(0.5f);
 
     TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, JML_PI_F / 3.f, value);
 }
 
-static void acos_test_scalarf_2() {
+static void acos_test_float_2() {
     const float value = acos(-0.5f);
 
     TEST_ASSERT_FLOAT_WITHIN(EPSILON_F, 2.f * JML_PI_F / 3.f, value);
@@ -139,11 +139,11 @@ void tearDown() {}
 int main(int argc, char* argv[]) {
     UNITY_BEGIN();
 
-    RUN_TEST(acos_test_scalard_1);
-    RUN_TEST(acos_test_scalard_2);
+    RUN_TEST(acos_test_double_1);
+    RUN_TEST(acos_test_double_2);
 
-    RUN_TEST(acos_test_scalarf_1);
-    RUN_TEST(acos_test_scalarf_2);
+    RUN_TEST(acos_test_float_1);
+    RUN_TEST(acos_test_float_2);
 
     RUN_TEST(acos_test_vec2d_1);
     RUN_TEST(acos_test_vec2d_2);
